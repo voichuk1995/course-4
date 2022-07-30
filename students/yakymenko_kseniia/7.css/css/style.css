@@ -1,0 +1,51 @@
+/* * {
+    padding: 0;
+    margin: 0;
+} */
+html {
+    font-size: 10 px;
+}
+
+html {
+    font-size: 10px;
+}
+
+h1 {
+    color: #000;
+    font-size: 100px;
+}
+
+body {
+    background-image: url("../images/01.jpg");
+    background-size: contain;
+    background-position: center bottom, center center;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-repeat: no-repeat;
+
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    border: 10px solid #000;
+    font-size: 5px;
+    min-height: calc(100vh - 10px);
+    border-width: 5px;
+    border-style: dashed;
+    /* background-color: black; */
+}
+
+header {
+    background-color: rgba(255, 0, 0, .5);
+    font-size: 50 px;
+    background-color: rgba(255, 0, 0, .5);
+    /* opacity: .5; */
+}
+
+header h1 {
+    width: 50%;
+    color: rgb(0, 0, 0);
+     !important;
+    font-size: 3rem;
+    background-color: inherit;
+
+}
