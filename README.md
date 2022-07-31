@@ -1,2 +1,1 @@
-# course-4
-https://maryna-kaliuzhna.github.io/course-4/students/maryna_kaliuzhna/home_work7_figma/index.html
+https://maryna-kaliuzhna.github.io/course-4/students/maryna_kaliuzhna/home_work7_figma/
