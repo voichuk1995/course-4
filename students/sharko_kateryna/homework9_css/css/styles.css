@@ -1,0 +1,195 @@
+* {
+    font-family: 'Open Sans';
+}
+
+.nav_menu>li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.portfolio_list {
+    list-style-type: none;
+}
+
+
+.landing-wrapper,
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+.nav_menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 28px 0;
+    align-items: center;
+    height: 25px;
+    letter-spacing: 0.02em;
+    width: 970px;
+    border-bottom: 1px solid #828282;
+    margin: 0;
+}
+
+.nav_text {
+    color: #828282;
+    text-decoration: none;
+}
+
+.nav_text_home {
+    color: #070707;
+    text-decoration: none;
+}
+
+.images_width {
+    max-width: 100%;
+}
+
+.block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 970px;
+    padding: 100px 0;
+}
+
+.photo_cv {
+    width: 970px;
+}
+
+.portfolio_img,
+.personal_photo {
+    width: 100%;
+}
+
+.name {
+    color: #070707;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 50px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 46px;
+    padding: 0;
+    margin: 0 0 50px 0;
+    text-align: center;
+    color: #070707;
+
+}
+
+.skills_title,
+.contacts_title {
+    margin: 0 0 20px 0;
+}
+
+.skills_text {
+    margin-bottom: 50px;
+}
+
+.contacts_text_conteiner {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+
+.about_me {
+    background: #F6F6F6;
+}
+
+.about_me_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.programs {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 97px;
+}
+
+.program_item {
+    height: 230px;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.program_item_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 90px;
+    text-align: center;
+}
+
+.braun_landing {
+    padding: 0;
+}
+
+.contacts_button_conteiner,
+.contacts_text_conteiner,
+.skills_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+}
+
+.caption_pictures {
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #070707;
+    height: 24px;
+    margin: 40px 70px;
+}
+
+.social_network {
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #828282;
+
+}
+
+.button_send_message {
+    padding: 0px 16px;
+    width: 180px;
+    height: 44px;
+    background: #070707;
+    border-radius: 22px;
+    margin-bottom: 30px;
+}
+
+.send_message_button_text {
+    color: #FFFFFF;
+    letter-spacing: 0.1em;
+}
+
+.contacts_button_conteiner {
+    margin-bottom: 60px;
+}
+
+.grey_background {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #F6F6F6;
+}
