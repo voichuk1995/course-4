@@ -1,0 +1,50 @@
+span {
+    color: red;
+}
+
+header {
+    text-align: center;
+}
+
+header img {
+    display: block;
+    width: 200px;
+    margin: auto;
+}
+
+header nav ul {
+    padding: 0;
+}
+
+header nav li {
+    display: inline-block;
+}
+
+
+header nav a {
+    margin: 20px;
+}
+
+main {
+    width: 700px;
+    margin: auto;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+}
+
+footer a {
+    margin-right: 20px;
+}
+
+a.active {
+    color: red;
+}
+
+.hobby {
+    width: 33%;
+    float: left;
+    text-align: center;
+}
