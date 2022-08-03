@@ -1,6 +1,5 @@
 * {
     font-family: 'Open Sans', sans-serif;
-    ;
 }
 
 .nav_menu>li {
@@ -82,7 +81,6 @@
     margin: 0 0 50px 0;
     text-align: center;
     color: #070707;
-
 }
 
 .skills_title,
@@ -167,7 +165,6 @@
     line-height: 19px;
     text-align: center;
     color: #828282;
-
 }
 
 .button_send_message {
