@@ -1,6 +1,6 @@
 * {
     font-family: 'Roboto', sans-serif;
-    transition: .1s ease-in;
+    transition: all .1s ease-in;
 }
 
 .headlines,
@@ -57,23 +57,26 @@ small::after {
 
 .block {
     width: 522px;
-    padding-top: 12px;
-    padding-bottom: 17px;
+    padding-top: 9px;
+    padding-bottom: 14px;
     padding-left: 12px;
+
 }
 
 .block:nth-child(odd) {
     background-color: #88839E;
+    border-top: 3px solid #88839E;
+    border-bottom: 3px solid #88839E;
 }
 
 .block:nth-child(even) {
     background-color: #7A7593;
+    border-top: 3px solid #7A7593;
+    border-bottom: 3px solid #7A7593;
 }
 
 .block:hover {
     background-color: #625E77;
-    padding-top: 9px;
-    padding-bottom: 14px;
     border-top: 3px solid white;
     border-bottom: 3px solid white;
 }
