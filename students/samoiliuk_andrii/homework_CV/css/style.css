@@ -1,16 +1,20 @@
-* {
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-
 body {
-    padding-left: 5%;
-    padding-right: 5%;
+    font-family: sans-serif;
+    padding: 5%;
 }
 
 header {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+header>h1 {
+    font-weight: 700;
+}
+
+header>h1>span {
+    font-size: 0.6em;
 }
 
 .container {
@@ -19,17 +23,12 @@ header {
 }
 
 nav ul {
-    margin-top: 1em;
-    padding: 0;
-    /* Safari */
-    position: -webkit-sticky;
     position: sticky;
-    top: 1em;
+    top: 20px;
 }
 
 nav li {
-    list-style: none;
-    margin-top: 1em;
+    margin-top: 20px;
 }
 
 nav a:link {
@@ -41,29 +40,40 @@ nav a:visited {
 }
 
 h3 {
-    padding-top: 1em;
-    margin-top: 0em;
+    font-weight: 600;
+    padding-top: 20px;
 }
 
+p {
+    margin-top: 20px;
+    line-height: 1.2em;
+}
 
 a:link {
-    color: black;
+    color: #000;
 }
 
 a:visited {
-    color: black;
+    color: #000;
 }
 
 table {
-    width: 100%
+    width: 100%;
+    margin-top: 20px;
+}
+
+table td,
+.contacts li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+table li {
+    margin-top: 10px;
 }
 
 td {
     vertical-align: top;
-}
-
-ul.nodot>li {
-    list-style: none;
 }
 
 section.container_about {
@@ -73,7 +83,7 @@ section.container_about {
 }
 
 section.container_about img {
-    margin-top: 1em;
+    margin-top: 20px;
     width: 100%;
     border-radius: 3%;
 }
