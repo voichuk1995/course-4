@@ -1,0 +1,190 @@
+/* montserrat-regular - latin-ext */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('./fonts/montserrat-v25-latin-ext-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('./fonts/montserrat-v25-latin-ext-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-600 - latin-ext */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+        url('./fonts/montserrat-v25-latin-ext-600.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('./fonts/montserrat-v25-latin-ext-600.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-700 - latin-ext */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+        url('./fonts/montserrat-v25-latin-ext-700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('./fonts/montserrat-v25-latin-ext-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* poppins-regular - latin-ext */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('./fonts/poppins-v20-latin-ext-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('./fonts/poppins-v20-latin-ext-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* poppins-700 - latin-ext */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+        url('./fonts/poppins-v20-latin-ext-700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('./fonts/poppins-v20-latin-ext-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body {
+    max-width: 1200px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #544837;
+}
+
+.logo {
+    float: left;
+    clear: left;
+    margin-right: 197px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.navigation {
+    float: left;
+    padding-top: 26px;
+    padding-bottom: 26px;
+}
+
+.navigation__item {
+    float: left;
+    margin-right: 19px;
+}
+
+.navigation__item:last-of-type {
+    float: left;
+    margin-right: 197px;
+}
+
+a.navigation__link {
+    font-size: 16px;
+    line-height: 28px;
+    color: #2F281E;
+    text-decoration: none;
+}
+
+a.navigation__link:visited {
+    color: #2F281E;
+}
+
+li.navigation__item:first-of-type>a.navigation__link {
+    color: #FF9900;
+}
+
+.authorization {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    float: left;
+    clear: right;
+    font-size: 0;
+}
+
+.authorization__sign-in {
+    margin-right: 30px;
+    padding: 13px 26px;
+    border: 1px solid #BCD0E5;
+    border-radius: 4px;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #2F281E;
+    cursor: pointer;
+}
+
+.authorization__sign-up {
+    padding: 13px 26px;
+    left: 1090px;
+    top: 0px;
+    background: #FF9900;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    border: 1px solid #FF9900;
+    cursor: pointer;
+}
+
+.hero {
+    clear: left;
+    float: left;
+    padding-right: 56px;
+    width: 500px;
+}
+
+.hero-image {
+    float: left;
+    clear: right;
+    padding-top: 70px;
+    width: 644px;
+}
+
+.hero__header {
+    padding-top: 167px;
+    margin: 0;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 54px;
+    color: #2F281E;
+}
+
+.hero__paragraph {
+    padding-top: 30px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #544837;
+}
+
+.hero__get-started {
+    margin-top: 20px;
+    background: #FF9900;
+    border-radius: 4px;
+    border: none;
+    padding: 13px 43.5px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
