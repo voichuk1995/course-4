@@ -1,14 +1,10 @@
-* {
-    font-family: 'Roboto', sans-serif;
-    transition: all .1s ease-in;
-}
-
 .headlines,
 main,
 footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -39,6 +35,7 @@ h1+h2 {
 }
 
 .text_subtitles {
+    font-weight: 400;
     font-size: 16px;
     line-height: 19px;
 }
@@ -56,11 +53,17 @@ small::after {
 }
 
 .block {
-    width: 522px;
-    padding-top: 9px;
-    padding-bottom: 14px;
-    padding-left: 12px;
+    transition: .1s ease-in;
+}
 
+.checkbox_block {
+    display: block;
+    box-sizing: border-box;
+    width: 534px;
+    height: 45px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 12px;
 }
 
 .block:nth-child(odd) {
@@ -81,27 +84,30 @@ small::after {
     border-bottom: 3px solid white;
 }
 
-
-input[type="checkbox"]:checked+label {
+input[type="checkbox"]:checked+span {
     text-decoration: line-through;
 }
-
 
 .block:active {
     background-color: rgb(202, 96, 96);
 }
 
-.button_style::after {
-    content: ":)";
+.button_text_style::after {
+    content: " :)";
 }
 
 .button_style {
     background-color: #4A4F56;
+    padding: 12px 225px 12px 197px;
+    width: 534px;
+    margin-top: 25px;
+    margin-bottom: 45px;
+}
+
+
+.button_text_style {
+    font-weight: 400;
     color: #FF8984;
     font-size: 18px;
     line-height: 21px;
-    padding: 12px 230px 12px 197px;
-    width: 534px;
-    margin-top: 45px;
-    margin-bottom: 45px;
 }
