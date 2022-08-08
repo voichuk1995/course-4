@@ -1,0 +1,69 @@
+.img_header {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 28px;
+    line-height: 48px;
+    margin-top: 70px;
+}
+
+.heading_style {
+    font-family: 'PT Sans', sans-serif;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+
+.subtitles {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    height: 20px;
+}
+
+p {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.thickness {
+    font-weight: bolder;
+}
+
+
+section:last-of-type {
+    margin-bottom: 90px;
+}
+
+.block+p {
+    margin-top: 40px;
+}
+
+p+p {
+    margin-bottom: 40px;
+}
+
+.state {
+    margin-bottom: 0px;
+}
+
+mark {
+    background-color: rgb(218, 216, 216);
+}
+
+.style_italics {
+    font-style: italic;
+}
+
+.text_decor {
+    text-decoration: underline;
+}
+
+.text_back_color {
+    background-color: rgb(204, 203, 203);
+}
