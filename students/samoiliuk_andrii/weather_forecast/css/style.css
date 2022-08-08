@@ -7,10 +7,12 @@ body {
     width: 100%;
     min-height: 100vh;
     box-sizing: border-box;
+    padding-left: 25px;
+    padding-right: 25px;
     background-color: #3399CC;
     border: 25px solid #2B81AC;
     color: #fff;
-    font-family: "Lucida Sans Unicode";
+    font-family: "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
 }
 
 header.header>h1 {
