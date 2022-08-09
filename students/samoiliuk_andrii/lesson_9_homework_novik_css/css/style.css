@@ -1,22 +1,18 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     text-align: center;
     color: #070707;
     font-style: normal;
     font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
 }
 
-header,
-main,
-footer {
+.container {
     max-width: 970px;
     margin: 0 auto;
-}
-
-header {
-    position: sticky;
-    top: 0;
-    background-color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 header>nav li {
@@ -30,12 +26,7 @@ header>nav li:last-child {
     margin-right: 0;
 }
 
-
 header>nav a:link {
-
-
-    font-size: 18px;
-    line-height: 25px;
     letter-spacing: 0.02em;
     color: #828282;
     text-decoration: none;
@@ -49,11 +40,11 @@ header>nav a:hover {
     color: #070707;
 }
 
-header hr {
-    margin: 0;
+nav.container>ul {
+    border-bottom: 1px solid #828282;
 }
 
-main h1 {
+h1 {
     font-weight: 700;
     font-size: 48px;
     line-height: 65px;
@@ -63,19 +54,23 @@ main h1 {
 }
 
 h2 {
-    margin-top: 200px;
     font-weight: 700;
     font-size: 34px;
     line-height: 46px;
 }
 
-section.about_me h2 {
-    margin-top: 100px;
+section:nth-of-type(even) {
+    background-color: #F6F6F6;
 }
 
-p {
-    font-size: 18px;
-    line-height: 25px;
+section,
+footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+section:first-of-type {
+    padding: 0;
 }
 
 section.about_me p {
@@ -119,38 +114,37 @@ section.portfolio h2 {
 }
 
 section.portfolio figcaption {
-    font-size: 18px;
-    line-height: 25px;
     text-align: center;
     text-decoration-line: underline;
     margin-top: 40px;
     margin-bottom: 70px;
 }
 
+section.portfolio figcaption.last {
+    margin-bottom: 0;
+}
+
 footer h2 {
     margin-bottom: 20px;
 }
 
-footer p {
-    font-style: normal;
-    font-size: 18px;
-    line-height: 25px;
-    color: #070707;
-}
-
-footer button {
-    width: 180px;
-    height: 44px;
+a.button:link {
+    display: inline-block;
+    min-width: 180px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background: #070707;
     border-radius: 22px;
     font-weight: 700;
-    font-size: 18px;
-    line-height: 25px;
-    text-align: center;
     letter-spacing: 0.1em;
     color: #FFFFFF;
     margin-top: 70px;
     margin-bottom: 40px;
+    text-decoration: none;
+}
+
+a.button:visited {
+    color: #FFFFFF;
 }
 
 footer li {
@@ -165,8 +159,6 @@ footer li:last-of-type {
 footer p.like_me {
     font-size: 14px;
     line-height: 19px;
-    text-align: center;
     color: #828282;
     margin-top: 60px;
-    margin-bottom: 100px;
 }
