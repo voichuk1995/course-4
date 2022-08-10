@@ -8,10 +8,6 @@
     <title>CSS Dinner Shopping List</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -23,42 +19,50 @@
         </h1>
     </header>
     <main>
-        <form action="submit" method="post">
-            <input type="checkbox" name="shopping_list" id="in1">
-            <label for="in1">
-                <span class="custom_checkbox"></span>
-                <span class="maintext">A lot of pickles</span>
-                <span class="subtext">for the next lessons about CSS</span>
-            </label>
-            <input type="checkbox" name="shopping_list" id="in2">
-            <label for="in2">
-                <span class="custom_checkbox"></span>
-                <span class="maintext">10 apples</span>
-                <span class="subtext">for more CSS manipulations</span>
-            </label>
-            <input type="checkbox" name="shopping_list" id="in3">
-            <label for="in3">
-                <span class="custom_checkbox"></span>
-                <span class="maintext">20 oranges</span>
-                <span class="subtext">because they are awesome</span>
-            </label>
-            <input type="checkbox" name="shopping_list" id="in4">
-            <label for="in4">
-                <span class="custom_checkbox"></span>
-                <span class="maintext">13 plates</span>
-                <span class="subtext">hm... they always disappear</span>
-            </label>
-            <input type="checkbox" name="shopping_list" id="in5">
-            <label for="in5">
-                <span class="custom_checkbox"></span>
-                <span class="maintext">15 benthos</span>
-            </label>
-            <input type="checkbox" name="shopping_list" id="in6">
-            <label for="in6">
-                <span class="custom_checkbox"></span>
-                <span class="maintext">1 bottle of Sake</span>
-                <span class="subtext">for my friends</span>
-            </label>
+        <form action="index.html" method="post">
+            <ul>
+                <li>
+                    <label for="in1">
+                        <input type="checkbox" name="shopping_list" id="in1">
+                        <span class="maintext">A lot of pickles</span>
+                        <span class="subtext">for the next lessons about CSS</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="in2">
+                        <input type="checkbox" name="shopping_list" id="in2">
+                        <span class="maintext">10 apples</span>
+                        <span class="subtext">for more CSS manipulations</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="in3">
+                        <input type="checkbox" name="shopping_list" id="in3">
+                        <span class="maintext">20 oranges</span>
+                        <span class="subtext">because they are awesome</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="in4">
+                        <input type="checkbox" name="shopping_list" id="in4">
+                        <span class="maintext">13 plates</span>
+                        <span class="subtext">hm... they always disappear</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="in5">
+                        <input type="checkbox" name="shopping_list" id="in5">
+                        <span class="maintext">15 benthos</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="in6">
+                        <input type="checkbox" name="shopping_list" id="in6">
+                        <span class="maintext">1 bottle of Sake</span>
+                        <span class="subtext">for my friends</span>
+                    </label>
+                </li>
+            </ul>
         </form>
     </main>
     <footer class="footer">
