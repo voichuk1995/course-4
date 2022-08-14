@@ -1,49 +1,37 @@
-/* montserrat-regular - latin-ext */
 @font-face {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     src: local(''),
         url('./fonts/montserrat-v25-latin-ext-regular.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
         url('./fonts/montserrat-v25-latin-ext-regular.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* montserrat-600 - latin-ext */
 @font-face {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     src: local(''),
         url('./fonts/montserrat-v25-latin-ext-600.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
         url('./fonts/montserrat-v25-latin-ext-600.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* montserrat-700 - latin-ext */
 @font-face {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     src: local(''),
         url('./fonts/montserrat-v25-latin-ext-700.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
         url('./fonts/montserrat-v25-latin-ext-700.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
-/* poppins-regular - latin-ext */
 @font-face {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     src: local(''),
         url('./fonts/poppins-v20-latin-ext-regular.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
         url('./fonts/poppins-v20-latin-ext-regular.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* poppins-700 - latin-ext */
@@ -53,15 +41,21 @@
     font-weight: 700;
     src: local(''),
         url('./fonts/poppins-v20-latin-ext-700.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
         url('./fonts/poppins-v20-latin-ext-700.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
 }
 
 body {
     max-width: 1200px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin: 0 auto;
     font-family: Montserrat, Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -97,7 +91,6 @@ a.navigation__link {
     font-size: 16px;
     line-height: 28px;
     color: #2F281E;
-    text-decoration: none;
 }
 
 a.navigation__link:visited {
@@ -116,31 +109,27 @@ li.navigation__item:first-of-type>a.navigation__link {
     font-size: 0;
 }
 
-.authorization__sign-in {
-    margin-right: 30px;
+.authorization__sign-in,
+.authorization__sign-up {
+    display: inline-block;
     padding: 13px 26px;
-    border: 1px solid #BCD0E5;
     border-radius: 4px;
-    background-color: transparent;
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
+}
+
+.authorization__sign-in {
+    margin-right: 30px;
+    border: 1px solid #BCD0E5;
+    background-color: transparent;
     color: #2F281E;
-    cursor: pointer;
 }
 
 .authorization__sign-up {
-    padding: 13px 26px;
-    left: 1090px;
-    top: 0px;
     background: #FF9900;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
     color: #FFFFFF;
     border: 1px solid #FF9900;
-    cursor: pointer;
 }
 
 .hero {
@@ -173,7 +162,8 @@ li.navigation__item:first-of-type>a.navigation__link {
     color: #544837;
 }
 
-.hero__get-started {
+.button {
+    display: inline-block;
     margin-top: 20px;
     background: #FF9900;
     border-radius: 4px;
@@ -186,5 +176,4 @@ li.navigation__item:first-of-type>a.navigation__link {
     line-height: 24px;
     text-align: center;
     color: #FFFFFF;
-    cursor: pointer;
 }
