@@ -1,0 +1,35 @@
+@mixin clear {
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin font-face($_font-file, $_font-name: $default-font-name, $_font-weight: 400, $_font-style: normal) {
+    @font-face {
+        font-family: $_font-name;
+        font-style: $_font-style;
+        font-weight: $_font-weight;
+        src: local(''),
+        url('#{$path-fonts}#{$_font-file}.woff2') format('woff2'),
+        url('#{$path-fonts}#{$_font-file}.woff') format('woff');
+    }
+}
+
+@mixin dflex($_jst, $_wrap: wrap, $_items: stretch) {
+    display: flex;
+    justify-content: $_jst;
+    flex-wrap: $_wrap;
+    align-items: $_items;
+}
+
+@mixin test {
+    @include dflex(space-between);
+    display: inline;
+
+    @content;
+}
+
+
+@mixin default-btn() {}
