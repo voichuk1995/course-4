@@ -1,0 +1,7 @@
+@import "./vars", "./reset", "./page-layout";
+@import "./mixin";
+@import "header", "left_part", "right_part";
+@include font-face ('Raleway', normal, 400, '../fonts/raleway-v28-latin-ext-regular');
+@include font-face ('Raleway', normal, 500, '../fonts/raleway-v28-latin-ext-500');
+@include font-face ('Roboto', normal, 900, '../fonts/roboto-v30-latin-ext-900');
+@include font-face ('Open Sans', normal, 700, '../fonts/open-sans-v29-latin-ext-700');
