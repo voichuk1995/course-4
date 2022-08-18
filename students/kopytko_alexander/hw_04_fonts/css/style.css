@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+    url('fonts/pt-sans-v17-latin-regular.woff2') format('woff2'),
+    url('fonts/pt-sans-v17-latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: local(''),
+    url('fonts/pt-sans-v17-latin-italic.woff2') format('woff2'),
+    url('fonts/pt-sans-v17-latin-italic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+    url('fonts/pt-sans-v17-latin-700.woff2') format('woff2'),
+    url('fonts/pt-sans-v17-latin-700.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Francois One';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+    url('fonts/francois-one-v20-latin-regular.woff2') format('woff2'),
+    url('fonts/francois-one-v20-latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Farro';
+    font-style: normal;
+    font-weight: 300;
+    src: local(''),
+    url('fonts/farro-v14-latin-300.woff2') format('woff2'),
+    url('fonts/farro-v14-latin-300.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Staatliches';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+    url('fonts/staatliches-v11-latin-regular.woff2') format('woff2'),
+    url('fonts/staatliches-v11-latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Tourney';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+    url('fonts/tourney-v7-latin-600.woff2') format('woff2'),
+    url('fonts/tourney-v7-latin-600.woff') format('woff');
+}
+
+body {
+    counter-reset: section;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.header {
+    padding: 13px 0;
+}
+
+.lang,
+.nav {
+    float: left;
+    display: inline-block;
+    padding: 13px 0;
+}
+
+.lang {
+    margin-right: 50px;
+    font-family: 'Tourney', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.04em;
+}
+
+.logo {
+    float: right;
+}
+
+.nav__menu {
+    list-style-type: none;
+    font-family: 'Staatliches', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    margin: 0;
+}
+
+.nav__item {
+    display: inline-block;
+}
+
+.nav__item:not(:last-child)::after {
+    content: "/";
+}
+
+.nav__link {
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.section {
+    margin-top: 70px;
+}
+
+.section-heading {
+    font-family: 'Francois One', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.section-heading::after {
+    counter-increment: section;
+    content: "Chapter " counter(section);
+    font-family: 'Farro', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    position: absolute;
+    bottom: 25px;
+    margin-left: 10px;
+}
+
+.paragraph {
+    font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+    margin: 40px 0;
+}
+.paragraph i {
+    font-style: italic;
+}
+.paragraph b {
+    font-weight: 700;
+}
+.grey {
+    background-color: #DADADA;
+}
