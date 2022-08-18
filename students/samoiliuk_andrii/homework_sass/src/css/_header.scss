@@ -1,0 +1,39 @@
+h2.h2 {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 66px;
+    text-transform: uppercase;
+    color: $color_contrast;
+    margin-top: 120px;
+    margin-bottom: 40px;
+}
+
+span.h2-subheader {
+    display: block;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: $color_upper_title;
+    margin-bottom: 15px;
+}
+
+.img-bonefire-container {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 40px;
+}
+
+.img-bonefire-container::before,
+.img-bonefire-container::after {
+    content: ' ';
+    box-sizing: border-box;
+    display: inline-block;
+    width: calc($grid_content-max-width / 100 * 18);
+    height: 1px;
+    border-bottom: 1px solid $color_contrast;
+    margin-bottom: 5px;
+}
