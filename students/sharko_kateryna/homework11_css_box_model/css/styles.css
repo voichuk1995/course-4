@@ -1,13 +1,26 @@
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 .header_size {
     box-sizing: border-box;
     height: 80px;
-    padding: 17px 120px 17px 120px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    margin-bottom: 70px;
 }
 
 .header_float {
-    max-width: 1200px;
-    max-height: 46px;
-    margin: 0 auto;
+    height: 46px;
     float: left;
 }
 
@@ -22,19 +35,17 @@
 }
 
 .header_float+.header_float {
-    margin-left: 198px;
+    margin-left: 188px;
 }
 
 .menu {
-    font-family: 'Montserrat', sans-serif;
-    width: 400;
-    size: 16px;
-    line-height: 28px;
+    font-size: 16px;
     text-decoration: none;
 }
 
 .menu_decoration {
     text-decoration: none;
+    color: #2F281E;
 }
 
 a:hover {
@@ -50,9 +61,8 @@ li+li {
 }
 
 .sing_in {
-    font-family: 'Montserrat', sans-serif;
-    width: 600;
-    size: 13px;
+    font-weight: 600;
+    font-size: 13px;
     line-height: 19.5px;
 }
 
@@ -63,6 +73,8 @@ li+li {
 
 .first_but_style {
     padding: 13px 25px;
+    background-color: white;
+    border: 1px solid #BCD0E5;
 }
 
 .second_but_style {
@@ -70,20 +82,12 @@ li+li {
     margin-left: 32px;
     color: #FFFFFF;
     padding: 13px 22.5px;
+    border: none;
 }
 
 .block {
     float: left;
     height: 495px;
-}
-
-main {
-    height: 495px;
-    padding: 70px 120px 100px 120px;
-}
-
-.container {
-    width: 1200px;
 }
 
 .get_started {
@@ -92,31 +96,23 @@ main {
 }
 
 .img_people {
-    width: 644px;
+    max-width: 644px;
     height: 495px;
 }
 
 .block_text {
-    width: 500px;
+    max-width: 500px;
     height: 301px;
-
 }
 
 .block_text_header {
-    font-family: 'Montserrat', sans-serif;
-    width: 700px;
-    font-weight: bolder;
+    font-weight: 700;
     font-size: 44px;
     line-height: 54px;
     color: #2F281E;
-    ;
 }
 
 .block_text_description {
-    font-family: 'Montserrat', sans-serif;
-    width: 400px;
-    size: 18px;
-    line-height: 28px;
     color: #544837;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -127,13 +123,13 @@ main {
     height: 50px;
     padding: 13px 40px;
     background-color: #FF9900;
-
+    border: none;
 }
 
 .get_started_button_text {
-    font-family: 'Poppins', sans-serif;
-    width: 700;
-    size: 13px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
     text-align: center;
