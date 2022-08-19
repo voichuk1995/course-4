@@ -13,21 +13,21 @@
     <form action="#">
         <div>
             <img src="images/Image.png" alt="Photo profile">
-            <input type="file" name="photo">
+            <input type="file" name="photo_file">
             <button><i class="fa-solid fa-trash-can"></i></button>
             <p><small>Up to 1 MB (300x300 px)</small></p>
         </div>
         <div>
-            <div>
-                <label for="name">Name</label>
-            </div>
-            <input type="text" id="name">
+            <label for="name">
+                <p>Name</p>
+            </label>
+            <input type="text" id="name" name="name">
         </div>
         <div>
-            <div>
-                <label for="email">E-mail</label>
-            </div>
-            <input type="email" id="email">
+            <label for="email">
+                <p>E-mail</p>
+            </label>
+            <input type="email" id="email" name="email">
         </div>
         <div>
             <p>Country</p>
@@ -70,16 +70,16 @@
             </select>
         </div>
         <div>
-            <div>
-                <label for="zip_code">Zip Code</label>
-            </div>
-            <input type="text" id="zip_code">
+            <label for="zip_code">
+                <p>Zip Code</p>
+            </label>
+            <input type="text" id="zip_code" name="zip_code">
         </div>
         <div>
-            <div>
-                <label for="phone_number">Phone Number</label>
-            </div>
-            <input type="number" id="phone_number">
+            <label for="phone_number">
+                <p>Phone Number</p>
+            </label>
+            <input type="number" id="phone_number" name="phone_number">
         </div>
         <div>
             <p><button type="submit">Updait</button></p>
