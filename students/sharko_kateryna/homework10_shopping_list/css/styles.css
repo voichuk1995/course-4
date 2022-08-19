@@ -16,7 +16,6 @@ header {
 
 .back_color {
     background-color: #3B3F45;
-    padding-top: 20px;
 }
 
 
@@ -38,6 +37,10 @@ h1+h2 {
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
+}
+
+.menu {
+    padding-top: 20px;
 }
 
 .menu>li {
