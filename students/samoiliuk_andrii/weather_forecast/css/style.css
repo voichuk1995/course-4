@@ -43,22 +43,8 @@ main>ul>li {
     text-align: center;
 }
 
-.w25 {
-    width: 25%;
-
-}
-
-.w50 {
-    width: 50%;
-
-}
-
-.w100 {
-    width: 100%;
-
-}
-
-div.city {
+p.city {
+    display: block;
     font-size: 22px;
     line-height: 26px;
 }
@@ -75,6 +61,10 @@ div.weather>* {
 span.temperature {
     font-size: 22px;
     line-height: 26px;
+}
+
+span.temperature::after {
+    content: "°C";
 }
 
 .wi {
@@ -96,46 +86,57 @@ footer.footer>p {
 
 main>ul>li:nth-child(1) {
     background: #3399CC;
+    width: 50%;
 }
 
 main>ul>li:nth-child(2) {
     background: #33CCCC;
+    width: 25%;
 }
 
 main>ul>li:nth-child(3) {
     background: #996699;
+    width: 25%;
 }
 
 main>ul>li:nth-child(4) {
     background: #C24747;
+    width: 25%;
 }
 
 main>ul>li:nth-child(5) {
     background: #E2674A;
+    width: 25%;
 }
 
 main>ul>li:nth-child(6) {
     background: #FFCC66;
+    width: 25%;
 }
 
 main>ul>li:nth-child(7) {
     background: #99CC99;
+    width: 25%;
 }
 
 main>ul>li:nth-child(8) {
     background: #669999;
+    width: 25%;
 }
 
 main>ul>li:nth-child(9) {
     background: #CC6699;
+    width: 50%;
 }
 
 main>ul>li:nth-child(10) {
     background: #339966;
+    width: 25%;
 }
 
 main>ul>li:nth-child(11) {
     background-color: #666699;
+    width: 100%;
 }
 
 
