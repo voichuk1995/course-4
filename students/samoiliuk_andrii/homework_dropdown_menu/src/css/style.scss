@@ -1,0 +1,75 @@
+@use "sass:math";
+@import './vars';
+@import './reset';
+@import './grid';
+@import './mixin';
+@include grid(12);
+@include font-face('montserrat', normal, 600, '../fonts/montserrat-v25-latin-ext-600');
+@include font-face("montserrat", normal, 700, '../fonts/montserrat-v25-latin-ext-700');
+@include font-face('montserrat', normal, 400, '../fonts/montserrat-v25-latin-ext-regular');
+@include font-face('poppins', normal, 700, '../fonts/poppins-v20-latin-ext-700');
+@include font-face('poppins', normal, 400, '../fonts/poppins-v20-latin-ext-regular');
+
+html {
+    font-size: 10px;
+}
+
+.page {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    color: $color_main;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+
+    &__header {
+        margin-bottom: 70px;
+    }
+
+    &__section-hero {
+        margin-bottom: 100px;
+    }
+
+    &__section-features {
+        margin-bottom: 100px;
+        padding-bottom: 60px;
+        background-image: url(../images/bg-large.png);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+
+    &__sections {
+        margin-bottom: 100px;
+    }
+
+    &__footer {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        border-top: 1px solid $color_borders;
+    }
+
+}
+
+.h1 {
+    font-weight: 700;
+    font-size: 4.4rem;
+    line-height: 5.4rem;
+    color: $color_header;
+}
+
+.h2 {
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 4.4rem;
+    color: $color_header;
+
+    &_center {
+        text-align: center;
+    }
+
+}
+
+@import './section-hero';
+@import './sections';
+@import './header';
+@import './footer';
