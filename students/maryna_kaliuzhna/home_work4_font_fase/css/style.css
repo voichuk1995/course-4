@@ -1,0 +1,50 @@
+/* francois-one-regular - latin-ext_latin */
+@font-face {
+    font-family: 'Francois One';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('./fonts/francois-one-v20-latin-ext_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('./fonts/francois-one-v20-latin-ext_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+/* staatliches-regular - latin-ext_latin */
+@font-face {
+    font-family: 'Staatliches';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('./fonts/staatliches-v11-latin-ext_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('./fonts/staatliches-v11-latin-ext_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+/* pt-sans-regular - latin-ext_latin */
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('./fonts/pt-sans-v17-latin-ext_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('./fonts/pt-sans-v17-latin-ext_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* pt-sans-700 - latin-ext_latin */
+  @font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('./fonts/pt-sans-v17-latin-ext_latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('./fonts/pt-sans-v17-latin-ext_latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+li{
+    font-family: Staatliches, Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    display: inline-flex;
+    margin: 0 auto;
+    margin-right: 50px;
+    padding: 0;
+}
+h3{
+    font-family: Francois One, Arial, Helvetica, sans-serif;
+}
+p{
+    font-family: PT Sans, Arial, Helvetica, sans-serif;
+}
