@@ -1,0 +1,106 @@
+span.h1 {
+    display: block;
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 42px;
+    text-transform: capitalize;
+    color: $color_headers;
+    margin-top: 10px;
+}
+
+.main-subheader::before {
+    display: block;
+    content: '';
+    width: 100px;
+    height: 1px;
+    border-bottom: 1px solid $color_contrast;
+    margin: 30px auto;
+    align-self: center;
+}
+
+.main-subheader {
+    display: block;
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+ul.logo-list {
+    display: flex;
+    justify-content: space-between;
+    width: 135px;
+    margin-top: 30px;
+    margin-bottom: 49px;
+}
+
+
+li.logo-list__item {
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    border: 2px solid $color_icons;
+    border-radius: 50%;
+    text-align: center;
+}
+
+li.logo-list__item>a {
+    display: block;
+    padding-top: 4px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+}
+
+li.logo-list__item>a>img {
+    display: inline-block;
+}
+
+.simple-text {
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: $color_text;
+}
+
+a.view-profile {
+    display: block;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: $color_headers;
+    margin-top: 49px;
+    padding: 5px 10px;
+    border: 1px solid $color_contrast;
+    position: relative;
+}
+
+a.view-profile::before {
+    content: '';
+    z-index: 100;
+    display: block;
+    width: 50px;
+    height: 4px;
+    box-sizing: border-box;
+    border: 2px solid $color_contrast;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: -30px;
+}
+
+.view-profile::after {
+    content: '';
+    z-index: 200;
+    display: block;
+    width: 20px;
+    height: 4px;
+    border: 5px solid $color_bg;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: -35px;
+}
