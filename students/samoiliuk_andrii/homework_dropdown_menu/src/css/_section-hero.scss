@@ -28,6 +28,10 @@
     padding-bottom: 13px;
     cursor: pointer;
 
+    &:link {
+        color: $color_bg;
+    }
+
     &:visited {
         color: $color_bg;
     }

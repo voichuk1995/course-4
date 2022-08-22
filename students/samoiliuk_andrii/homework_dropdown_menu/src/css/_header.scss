@@ -13,9 +13,9 @@
 
 %arrow-right {
     &::after {
-        content: '>';
-        position: absolute;
-        right: 5px;
+        margin-left: 10px;
+        display: block;
+        content: '»';
         color: $color_borders;
     }
 }
@@ -44,11 +44,9 @@
         box-sizing: border-box;
         padding: 9px 10px;
         position: relative;
-        border: 1px solid transparent;
 
         &:hover {
             background-color: $color_bg;
-
             @extend %line;
 
             .navigation__submenu {
@@ -73,9 +71,8 @@
         box-sizing: border-box;
         position: absolute;
         left: -1px;
-        top: 46px;
+        top: 45px;
         background-color: $color_bg;
-        border-radius: 4px;
     }
 }
 
@@ -84,11 +81,16 @@
 
 .submenu {
     &__item {
-        padding: 9px 25px 9px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 9px 10px;
         position: relative;
-        background-color: $color_bg;
-
         @extend %arrow-right;
+
+        &:not(:last-of-type) {
+            border-bottom: 1px solid $color_borders;
+        }
 
         &:hover {
             @extend %line;
@@ -106,16 +108,22 @@
         left: 100%;
         background-color: $color_bg;
         @extend %invisible;
-        border-radius: 4px;
     }
 }
 
 .sub1 {
 
     &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 9px 10px;
         position: relative;
-        padding: 9px 25px 9px 10px;
         @extend %arrow-right;
+
+        &:not(:last-of-type) {
+            border-bottom: 1px solid $color_borders;
+        }
 
         &:hover {
             @extend %line;
@@ -127,9 +135,6 @@
         }
     }
 
-
-
-
     &__sub2 {
         box-sizing: border-box;
         position: absolute;
@@ -137,28 +142,24 @@
         left: 100%;
         background-color: $color_bg;
         @extend %invisible;
-        border-radius: 4px;
     }
-
-
 }
 
 .sub2 {
-
-
     &__item {
         padding: 9px 25px 9px 10px;
         position: relative;
         background-color: $color_bg;
 
+        &:not(:last-of-type) {
+            border-bottom: 1px solid $color_borders;
+        }
+
         &:hover {
             @extend %line;
         }
-
     }
-
 }
-
 
 %header-button {
     display: block;
@@ -199,5 +200,4 @@
     &__sign-up:visited {
         color: $color_bg;
     }
-
 }

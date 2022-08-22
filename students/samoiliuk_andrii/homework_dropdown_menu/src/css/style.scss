@@ -3,12 +3,12 @@
 @import './reset';
 @import './grid';
 @import './mixin';
-@include grid(12);
 @include font-face('montserrat', normal, 600, '../fonts/montserrat-v25-latin-ext-600');
 @include font-face("montserrat", normal, 700, '../fonts/montserrat-v25-latin-ext-700');
 @include font-face('montserrat', normal, 400, '../fonts/montserrat-v25-latin-ext-regular');
 @include font-face('poppins', normal, 700, '../fonts/poppins-v20-latin-ext-700');
 @include font-face('poppins', normal, 400, '../fonts/poppins-v20-latin-ext-regular');
+@include grid(12);
 
 html {
     font-size: 10px;
