@@ -1,0 +1,21 @@
+@mixin visibility-hidden {
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0) !important;
+    margin: -1px !important;
+}
+
+@mixin usefont($_font-family, $_font-style, $_font-weight, $_font-url) {
+    @font-face {
+        font-family: $_font-family;
+        font-style: $_font-style;
+        font-weight: $_font-weight;
+        src: local(''),
+        url('#{$_font-url}.woff2') format('woff2'),
+        url('#{$_font-url}.woff') format('woff');
+    }
+}

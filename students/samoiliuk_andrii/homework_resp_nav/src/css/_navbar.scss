@@ -1,0 +1,217 @@
+.nav-switch {
+    display: inline-block;
+    position: absolute;
+    top: 36px;
+    left: 185px;
+    transition: left .3s ease-in-out, transform .3s ease-in-out;
+    cursor: pointer;
+
+    &>svg {
+        background-color: $color-bg;
+        border-radius: 50%;
+    }
+}
+
+.nav-switch-checkbox {
+    @include visibility-hidden();
+
+    &:checked {
+        &~.nav {
+            max-width: 86px;
+        }
+
+        &+.nav-switch {
+            left: 76px;
+            transform: rotate(180deg);
+        }
+
+        &~.nav>.logo {
+            padding: 30px 30px 40px 30px;
+        }
+
+        &~.nav>.logo>.logo__img {
+            margin-right: 30px;
+        }
+
+        &~.nav>.nav__div>.nav__item {
+            padding: 10px 30px;
+        }
+
+        &~.nav>.nav__div>.nav__header-wrapper {
+            left: 0;
+        }
+
+        &~.nav>.nav__div>.nav__header-wrapper>.nav__header {
+            padding-left: 30px;
+        }
+
+        &~.nav>.nav__div>ul>.nav__item {
+            padding: 10px 30px;
+        }
+
+        &~.nav>.nav__div>.nav__item>.nav__link>div>.nav__image {
+            margin-right: 30px;
+        }
+
+        &~.nav>.nav__div>ul>.nav__item>.nav__link>.nav__link-text {
+            margin-left: 30px;
+        }
+
+    }
+}
+
+.page {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-main;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 0px 40px 13px;
+    transition: padding .3s ease-in-out;
+
+    &__img {
+        display: block;
+        max-width: 32px;
+        margin-right: 7px;
+        transition: margin-right .3s ease-in-out;
+    }
+}
+
+.h1 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: $color-headers;
+}
+
+
+.nav {
+    overflow: hidden;
+    max-width: 220px;
+    box-shadow: 0px 0px 20px $color-nav-shadow;
+    transition: max-width .3s ease-in-out;
+
+    &__div {
+        margin-bottom: 30px;
+    }
+
+    &__header-wrapper {
+        width: 150%;
+        position: relative;
+        left: -70px;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        transition: left 0.3s ease-in-out;
+    }
+
+    &__header {
+        text-transform: uppercase;
+        padding: 0 15px 0px 15px;
+        flex-shrink: 0;
+        transition: padding-left .3s ease-in-out;
+        color: $color-subheader;
+
+        &-line {
+            display: flex;
+            align-items: center;
+            position: relative;
+            flex-shrink: 0;
+            width: 14px;
+            height: 4px;
+            box-sizing: border-box;
+            border: 1px solid $color-contrast;
+            background-color: $color-contrast;
+            border-radius: 2px;
+            margin-right: 19px;
+            margin-left: 36px;
+
+
+            &::before {
+                position: absolute;
+                left: -14px;
+                content: '';
+                display: block;
+                width: 9px;
+                height: 4px;
+                box-sizing: border-box;
+                border: 1px solid $color-contrast;
+                background-color: $color-contrast;
+                border-radius: 2px;
+            }
+
+            &::after {
+                position: absolute;
+                right: -14px;
+                content: '';
+                display: block;
+                width: 9px;
+                height: 4px;
+                box-sizing: border-box;
+                border: 1px solid $color-contrast;
+                background-color: $color-contrast;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    &__header-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 2px;
+    }
+
+    &__item {
+        padding: 10px 15px;
+        transition: padding .3s ease-in-out;
+
+        &:hover {
+            background-color: $color-contrast;
+            box-shadow: 0px 0px 20px $color-item-shadow;
+
+            &>.nav__link:link {
+                color: $color-bg;
+            }
+
+            &>.nav__link:visited {
+                color: $color-bg;
+            }
+
+            &>.nav__link>div>.nav__image path {
+                fill: $color-bg;
+            }
+        }
+    }
+
+    &__image {
+        position: relative;
+        display: block;
+        max-width: 28px;
+        margin-right: 20px;
+        flex-shrink: 0;
+        transition: margin-right .3s ease-in-out;
+
+        & path {
+            fill: $color-main;
+        }
+    }
+
+    &__link-text {
+        flex-shrink: 0;
+        transition: margin-left .3s ease-in-out;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}

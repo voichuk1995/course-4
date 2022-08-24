@@ -1,0 +1,50 @@
+%common {
+    box-sizing: border-box;
+    position: absolute;
+    display: block;
+    padding-top: 3px;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    top: -6px;
+    right: 10px;
+    pointer-events: none;
+}
+
+.red-message {
+    position: relative;
+
+    &::after {
+        content: '10';
+        background-color: #EA5455;
+        color: $color-bg;
+        @extend %common;
+    }
+}
+
+
+.green-message {
+    position: relative;
+
+    &::after {
+        content: '5';
+        background-color: #6FCF97;
+        color: #4F4F4F;
+        @extend %common;
+    }
+}
+
+.yellow-message {
+    position: relative;
+
+    &::after {
+        content: '7';
+        background-color: #F2C94C;
+        color: #4F4F4F;
+        @extend %common;
+    }
+}
