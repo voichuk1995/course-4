@@ -62,9 +62,9 @@ li+li {
 
 .sing_in {
     font-weight: 600;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 20px;
-    vertical-align: sub;
+    vertical-align: top;
 }
 
 .but_sign_in {
@@ -80,6 +80,8 @@ li+li {
     background-color: white;
     border: 1px solid #BCD0E5;
     text-align: center;
+    padding: 13px 24px;
+    box-sizing: border-box;
 }
 
 .second_but_style {
@@ -89,6 +91,8 @@ li+li {
     color: #FFFFFF;
     border: none;
     text-align: center;
+    padding: 13px 22px;
+    box-sizing: border-box;
 }
 
 .block {
