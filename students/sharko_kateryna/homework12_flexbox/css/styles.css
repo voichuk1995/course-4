@@ -2,7 +2,6 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/montserrat-v25-latin-regular.eot');
     src: local(''),
         url('../fonts/montserrat-v25-latin-regular.woff2') format('woff2'),
         url('../fonts/montserrat-v25-latin-regular.woff') format('woff'),
@@ -12,10 +11,9 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    src: url('../fonts/montserrat-v25-latin-500.eot');
     src: local(''),
         url('../fonts/montserrat-v25-latin-500.woff2') format('woff2'),
-        url('../fonts/montserrat-v25-latin-500.woff') format('woff'),
+        url('../fonts/montserrat-v25-latin-500.woff') format('woff');
 }
 
 
@@ -23,30 +21,27 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
-    src: url('../fonts/montserrat-v25-latin-600.eot');
     src: local(''),
         url('../fonts/montserrat-v25-latin-600.woff2') format('woff2'),
-        url('../fonts/montserrat-v25-latin-600.woff') format('woff'),
+        url('../fonts/montserrat-v25-latin-600.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    src: url('../fonts/montserrat-v25-latin-700.eot');
     src: local(''),
         url('../fonts/montserrat-v25-latin-700.woff2') format('woff2'),
-        url('../fonts/montserrat-v25-latin-700.woff') format('woff'),
+        url('../fonts/montserrat-v25-latin-700.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    src: url('../fonts/poppins-v20-latin-700.eot');
     src: local(''),
         url('../fonts/poppins-v20-latin-700.woff2') format('woff2'),
-        url('../fonts/poppins-v20-latin-700.woff') format('woff'),
+        url('../fonts/poppins-v20-latin-700.woff') format('woff');
 }
 
 
@@ -90,10 +85,7 @@ a {
 }
 
 .menu_decoration {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
     font-size: 16px;
-    line-height: 28px;
     color: #2F281E;
 }
 
@@ -112,13 +104,14 @@ a {
     justify-content: center;
     align-items: center;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
 .first_but_style {
     display: inline-block;
     background-color: white;
     border: 1px solid #BCD0E5;
-    text-align: center;
+    padding: 13px 24px;
 }
 
 .second_but_style {
@@ -127,17 +120,15 @@ a {
     margin-left: 32px;
     color: #FFFFFF;
     border: none;
-    text-align: center;
+    padding: 13px 22px;
 }
 
 .sing_in {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
-    vertical-align: sub;
+    vertical-align: top;
 }
-
 
 .button_design {
     width: 180px;
@@ -157,7 +148,7 @@ a {
     font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
-    text-align: center;
+    vertical-align: top;
 }
 
 .design_thinking_block {
@@ -178,7 +169,6 @@ a {
 }
 
 .block_text_header {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 44px;
     line-height: 54px;
@@ -186,15 +176,10 @@ a {
 }
 
 .block_text_description {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
     color: #544837;
     margin-top: 30px;
     margin-bottom: 30px;
 }
-
 
 .design_tools {
     display: flex;
@@ -213,10 +198,10 @@ a {
     justify-content: space-between;
     margin-top: 50px;
     margin-bottom: 70px;
+    width: 100%;
 }
 
 .design_tools_header {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 36px;
     line-height: 44px;
@@ -234,7 +219,6 @@ a {
 }
 
 .icons_title {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 22px;
     line-height: 27px;
@@ -243,7 +227,6 @@ a {
 }
 
 .icons_text {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 26px;
@@ -251,6 +234,7 @@ a {
 
 .footer_block {
     padding-top: 70px;
+    padding-bottom: 70px;
     display: flex;
     align-items: stretch;
     justify-content: space-between;
@@ -280,10 +264,11 @@ p+ul {
 }
 
 .tel_number_design::placeholder {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400px;
     font-size: 16px;
     color: #BCD0E5;
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .footer_part {
@@ -295,7 +280,6 @@ p+ul {
 }
 
 .footer_menu {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 500px;
     font-size: 16px;
     line-height: 26px;
@@ -308,8 +292,7 @@ p+ul {
 }
 
 .footer_title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bolder;
+    font-weight: 700;
     font-size: 20px;
     line-height: 30px;
 }
