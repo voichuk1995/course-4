@@ -62,6 +62,7 @@
 }
 
 body {
+    font-family: 'PT Sans', Arial, Helvetica, sans-serif;
     counter-reset: section;
 }
 
@@ -160,7 +161,6 @@ body {
 }
 
 .paragraph {
-    font-family: 'PT Sans', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
