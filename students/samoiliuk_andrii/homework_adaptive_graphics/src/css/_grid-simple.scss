@@ -1,0 +1,26 @@
+.container {
+    max-width: $grid_max-width;
+    padding-left: $grid-gap;
+    padding-right: $grid-gap;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: -$grid-gap;
+    margin-right: -$grid-gap;
+}
+
+.col-12 {
+    width: 100%;
+    padding: $grid-gap;
+    box-sizing: border-box;
+}
+
+.col-6 {
+    width: 50%;
+    padding: $grid-gap;
+    box-sizing: border-box;
+}
