@@ -1,0 +1,24 @@
+@mixin font-face($_font-name, $_font-file, $_font-weight, $_font-style: normal) {
+    @font-face {
+        font-family: $_font-name;
+        font-style: $_font-style;
+        font-weight: $_font-weight;
+        src: local(''),
+        url('#{$path-fonts}#{$_font-file}.woff2') format('woff2'),
+        url('#{$path-fonts}#{$_font-file}.woff') format('woff');
+    }
+}
+
+@mixin class-col($width, $padding: $gap, $box-sizing: border-box) {
+    padding: $padding;
+    box-sizing: $box-sizing;
+    width: $width;
+}
+
+@mixin link-button-size($width, $height, $border-radius, $border-width, $border-style, $border-color, $display: block) {
+    display: $display;
+    width: $width;
+    height: $height;
+    border-radius: $border-radius;
+    border: $border-width $border-style $border-color;
+}
