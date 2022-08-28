@@ -19,8 +19,28 @@
     box-sizing: border-box;
 }
 
+.col-9 {
+    width: 75%;
+    padding: $grid-gap;
+    box-sizing: border-box;
+}
+
 .col-6 {
     width: 50%;
     padding: $grid-gap;
     box-sizing: border-box;
+}
+
+.col-3 {
+    width: 25%;
+    padding: $grid-gap;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:$md) {
+    .col-md-12 {
+        width: 100%;
+        padding: $grid-gap;
+        box-sizing: border-box;
+    }
 }
