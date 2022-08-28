@@ -1,0 +1,74 @@
+$gap: 15px;
+
+$break-points: (
+    "lg": 1200px,
+    "md": 992px,
+    "sm": 768px,
+    "xs": 576px,
+    "xxs": 470px
+);
+
+.container {
+    max-width: 1200px;
+    padding-left: $gap;
+    padding-right: $gap;
+    margin: 0 auto;
+}
+
+.row {
+    &_center-center {
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_space-between-center {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &_space-between-top {
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+@mixin media($point) {
+    @media screen and (max-width: map-get($break-points, $point)) {
+        @content;
+    }
+}
+
+@mixin grid($count: 12) {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 (-$gap);
+    }
+
+    @for $i from 1 through $count {
+        $width: math.div(100%, $count) * $i;
+
+        .col-#{$i} {
+            padding: $gap;
+            box-sizing: border-box;
+            max-width: $width;
+            width: 100%;
+            flex-basis: $width;
+        }
+    }
+
+    @each $breakpoint,
+    $breakpoint-value in $break-points {
+        @media screen and (max-width: $breakpoint-value) {
+            @for $i from 1 through $count {
+                $width: math.div(100%, $count) * $i;
+
+                .col-#{$breakpoint}-#{$i} {
+                    max-width: $width;
+                    width: 100%;
+                    flex-basis: $width;
+                }
+            }
+        }
+    }
+}
