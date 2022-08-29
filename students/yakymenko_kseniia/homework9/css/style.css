@@ -117,6 +117,10 @@ p {
     padding-bottom: 50px;
 }
 
+.photo_container {
+    background-color: #F6F6F6;
+}
+
 .button {
     width: 148px;
     height: 24px;
