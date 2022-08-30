@@ -165,11 +165,16 @@ body {
     margin: 0 auto;
 }
 
-.social_network {
+.social_network,
+.skills {
     font-size: 14px;
     line-height: 19px;
     text-align: center;
     color: #828282;
+}
+
+.skills {
+    font-weight: 700;
 }
 
 .button_send_message {
