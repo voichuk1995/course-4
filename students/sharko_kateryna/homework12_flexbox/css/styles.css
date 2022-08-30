@@ -190,6 +190,7 @@ a {
     background-image: url(../images/background_fon.svg);
     background-position: center bottom;
     background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .container_icons {
