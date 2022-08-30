@@ -11,6 +11,23 @@ body {
     padding: 0 15px;
 }
 
+.row {
+    margin: 0 -15px;
+}
+
+[class*="col-"] {
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+col-3 {
+    width: 25%;
+}
+
 .header_size {
     box-sizing: border-box;
     height: 80px;
@@ -35,7 +52,7 @@ body {
 }
 
 .header_float+.header_float {
-    margin-left: 185px;
+    margin-left: 195px;
 }
 
 .menu {
@@ -106,8 +123,8 @@ li+li {
 }
 
 .img_people {
-    max-width: 644px;
     max-height: 495px;
+    width: 100%;
 }
 
 .block_text {
