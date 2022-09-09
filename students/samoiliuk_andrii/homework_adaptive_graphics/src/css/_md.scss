@@ -1,0 +1,49 @@
+@media screen and (max-width:$md) {
+    .page {
+        &__section {
+            margin-bottom: 40px;
+        }
+
+        &__footer {
+            padding-top: 35px;
+            padding-bottom: 35px;
+        }
+    }
+
+    .h1 {
+        font-size: 33px;
+        line-height: 50px;
+    }
+
+    .header {
+        &__subheader {
+            margin-bottom: 68px;
+        }
+
+        &__header {
+            margin-bottom: 50px;
+        }
+    }
+
+    .footer {
+        &__header {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        &__left-part {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__right-part {
+            justify-content: center;
+            margin-bottom: 5px;
+        }
+
+        &__copyright {
+            margin-top: 10px;
+        }
+    }
+}
