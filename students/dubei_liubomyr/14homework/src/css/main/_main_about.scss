@@ -1,0 +1,72 @@
+.about {
+    position: relative;
+
+    &::before {
+        @extend %before-after-block;
+        height: 100%;
+        width: 1px;
+        background-color: $border-color;
+        top: 0;
+        left: 0;
+    }
+
+    &__caption {
+        font-family: $title-font;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 42px;
+        color: #666666;
+        padding-bottom: 21px;
+        position: relative;
+        margin-bottom: 30px;
+
+        &::after {
+            @extend %before-after-block;
+            background-color: $border-color;
+            width: 100px;
+            height: 1px;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    }
+
+    &__inscription {
+        font-family: $default-font-name;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        color: #666666;
+    }
+
+    &__text {
+        max-width: 430px;
+        margin: 0 auto;
+        padding-bottom: 16px;
+        position: relative;
+        margin-bottom: 38px;
+
+        &::after {
+            @extend %before-after-block;
+            width: 50px;
+            height: 4px;
+            background-color: $border-color;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        &::before {
+            @extend %before-after-block;
+            position: absolute;
+            width: 20px;
+            height: 9px;
+            border: 5px solid #fff;
+            top: 94.5%;
+            left: 50%;
+            transform: translate(-50%);
+            z-index: 200;
+        }
+    }
+
+}

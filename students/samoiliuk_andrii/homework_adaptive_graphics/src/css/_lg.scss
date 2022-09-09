@@ -1,0 +1,138 @@
+.page {
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 32px;
+    letter-spacing: 0.05em;
+    color: $color_main;
+
+    &__header {
+        margin-bottom: 60px;
+    }
+
+    &__section {
+        margin-bottom: 40px;
+    }
+
+    &__footer {
+        background-color: $color_bg_footer;
+        padding-top: 55px;
+        padding-bottom: 15px;
+    }
+}
+
+.h1 {
+    font-family: 'Red Hat Display', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: 0.05em;
+    color: $color_header;
+}
+
+.h2 {
+    font-family: 'Red Hat Display', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 166%;
+    letter-spacing: 0.1em;
+    color: $color_header;
+}
+
+.h3 {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: 0.05em;
+    color: $color_header;
+}
+
+.header {
+    &__subheader {
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.5em;
+        text-transform: uppercase;
+        margin-bottom: 38px;
+    }
+
+    &__header {
+        margin-bottom: 70px;
+    }
+}
+
+.section {
+    &__header {
+        margin-bottom: 50px;
+    }
+
+    &__image-wrapper {
+        margin-bottom: 20px;
+    }
+}
+
+
+.footer {
+    &__header {
+        margin-bottom: 30px;
+    }
+
+    &__link {
+        display: block;
+        margin-bottom: 15px;
+        font-size: 16px;
+        line-height: 166%;
+        letter-spacing: 0.1em;
+    }
+
+    &__right-part {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__social-wrapper {
+        display: flex;
+    }
+
+    &__social-list-item {
+        margin-left: 23px;
+    }
+
+    &__social-list-item:first-of-type {
+        margin-left: 0px;
+    }
+
+    &__social {
+        box-sizing: border-box;
+        width: 50px;
+        height: 50px;
+        border: 1px solid $color_main;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background-color: $color_main;
+
+            &>svg>path {
+                fill: white;
+            }
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+    }
+
+    &__copyright-text {
+        font-size: 12px;
+        line-height: 166%;
+        letter-spacing: 0.1em;
+    }
+}

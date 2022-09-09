@@ -1,0 +1,17 @@
+@import "vars", "reset", "grid12";
+@import "fonts";
+@import "header", "left_part", "right_part";
+
+body {
+    text-align: center;
+    font-style: normal;
+    background-color: $color_bg;
+}
+
+.section {
+    padding: $grid_width;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}

@@ -1,0 +1,195 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+:focus {
+    outline: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+body {
+    background-color: rgb(18, 17, 22);
+}
+
+div.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    font-family: open-sans, sans-serif;
+    text-align: center;
+    color: rgb(255 255 255);
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 200;
+    letter-spacing: 2px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+hr {
+    margin-bottom: 20px;
+    width: 230px;
+}
+
+div.icons {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: 200;
+    margin-top: 90px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+span {
+    color: rgb(0, 199, 252);
+}

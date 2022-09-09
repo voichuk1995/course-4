@@ -1,0 +1,25 @@
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: $btn-color;
+    color: $white-color;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+.input {
+    font-family: inherit;
+    font-size: inherit;
+
+    @include placeholder() {
+        color: red;
+        font-size: 20px;
+        opacity: .5;
+    }
+}
