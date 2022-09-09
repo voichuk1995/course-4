@@ -1,0 +1,28 @@
+// colors
+$color-red: red;
+$color-black: black;
+$white-color: white;
+$orang-color: #f76707;
+
+$btn-color: $orang-color;
+
+$bg-color-body: $white-color;
+
+// fonts
+$default-font-name: 'Roboto';
+$main-font: $default-font-name,
+Arial,
+Helvetica,
+sans-serif;
+$path-fonts: '../fonts/';
+
+$gap: 15px;
+$defaulp-count-col: 12;
+
+$default-width: 1200px;
+
+$breack-points: ("lg": 1200px,
+    "md": 992px,
+    "sm": 768px,
+    "xs": 576px,
+    "xxs": 480px);

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Selectors</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        /* * {
+            margin: 0;
+            padding: 0;
+        } */
+
+        header.header {
+            background-color: aliceblue;
+        }
+
+        .header {
+            background-color: blueviolet;
+        }
+
+        /* #menu {
+            background-color: brown;
+        } */
+
+        ul.menu {
+            background-color: aquamarine;
+        }
+
+        p {
+            margin: 10px 0 20px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        a[href] {
+            background-color: red;
+        }
+
+        .header .menu {
+            background-color: cornflowerblue;
+        }
+
+        /* .header .menu {
+            background-color: black;
+        } */
+        .header .menu-wrapper,
+        .menu {
+            font-size: 20px;
+        }
+
+        .menu>li>a {
+            color: #000;
+        }
+
+        .menu>li~li {
+            font-weight: 900;
+        }
+
+        .header+.menu {
+            background-color: #000;
+        }
+
+        p::before {
+            content: '[ ';
+        }
+
+        p::after {
+            content: ' ]';
+        }
+
+        .title::before {
+            content: attr(title);
+        }
+
+        .title::after {
+            content: '';
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: aqua;
+            margin-left: 15px;
+        }
+
+        input.required~span::after {
+            content: '*';
+            color: red;
+        }
+
+        .menu-wrapper .menu li:hover>a {
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="header top">
+        <nav class="menu-wrapper">
+            <ul class="menu" id="menu">
+                <li>
+                    <span><a href="#">sdgfdfsg</a></span>
+                    <ul class="submenu">
+                        <li><a href="#">dfgdsfg</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">sdgfdfsg <span>1</span></a></li>
+                <li><a href="#">sdgfdfsg</a></li>
+                <li><a href="#">sdgfdfsg</a></li>
+                <li><a href="#">sdgfdfsg</a></li>
+                <li><a href="#">sdgfdfsg</a></li>
+            </ul>
+        </nav>
+    </header>
+    <ul class="menu">
+        <li><a href="#">sdgfdfsg</a></li>
+        <li><a href="#">sdgfdfsg</a></li>
+        <li><a href="#">sdgfdfsg</a></li>
+        <li><a href="#">sdgfdfsg</a></li>
+        <li><a href="#">sdgfdfsg</a></li>
+        <li><a href="#">sdgfdfsg</a></li>
+    </ul>
+    <h2 class="title" title="test"></h2>
+    <!-- <main>
+        <section class="hero">
+            <h2></h2>
+            <p></p>
+        </section>
+        <section class="portfolio block">
+            <h2></h2>
+            <p></p>
+        </section>
+        <section class="about-us block">
+            <h2></h2>
+            <p></p>
+        </section>
+    </main> -->
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe exercitationem numquam in neque magnam eligendi
+        iusto accusantium, ipsum explicabo. Quisquam voluptates dignissimos a inventore ipsum ad tenetur minima, fugit
+        quidem.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe exercitationem numquam in neque magnam eligendi
+        iusto accusantium, ipsum explicabo. Quisquam voluptates dignissimos a inventore ipsum ad tenetur minima, fugit
+        quidem.</p>
+    <p>
+        <label>
+            <input name="name" class="required" type="text">
+            <span>name</span>
+        </label>
+        <label>
+            <input name="name" type="text">
+            <span>name</span>
+        </label>
+    </p>
+
+
+</body>
+
+</html>

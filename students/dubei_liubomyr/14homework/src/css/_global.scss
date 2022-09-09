@@ -1,0 +1,26 @@
+body {
+    font-family: $main-font;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #333333;
+}
+
+.container {
+    padding: 0 $gap;
+    max-width: $width_container;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 (-$gap);
+}
+
+.col-6 {
+    margin-top: 40px;
+    @include class-col(50%);
+}

@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'open sans', sans-serif;
+    font-style: normal;
+}
+
+header {
+    width: 100%;
+    padding-left: 16%;
+    padding-right: 16%;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-left: 16%;
+    padding-right: 16%;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.02em;
+    color: #828282;
+}
+
+nav a:visited {
+    color: #828282;
+}
+
+nav a:hover {
+    color: black;
+}
+
+hr {
+    color: #828282;
+    margin-top: 0;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+section {
+    text-align: center;
+    padding-left: 16%;
+    padding-right: 16%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#hero {
+    padding-top: 0;
+}
+
+h1 {
+    text-align: left;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+    color: #070707;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#hero img {
+    width: 100%;
+}
+
+#About,
+#Portfolio {
+    background-color: #F6F6F6;
+}
+
+#Skills,
+footer {
+    background-color: white;
+}
+
+
+h2 {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 46px;
+    color: #070707;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #070707;
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+}
+
+#About h2 {
+    margin-bottom: 50px;
+}
+
+#Skills p {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+.skills_container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#Skills figcaption {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #828282;
+    margin-top: 25px;
+    margin-bottom: 60px;
+    height: 40px;
+}
+
+img.star {
+    width: 26px;
+    height: 26px;
+}
+
+#Portfolio h2 {
+    margin-bottom: 50px;
+}
+
+#Portfolio figcaption {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    text-decoration-line: underline;
+    color: #070707;
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
+#Portfolio ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#Portfolio figcaption.last {
+    margin-bottom: 0;
+}
+
+#Portfolio img {
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    padding-left: 16%;
+    padding-right: 16%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+footer h2 {
+    margin-bottom: 20px;
+}
+
+button {
+    width: 180px;
+    height: 44px;
+    border: none;
+    background: #070707;
+    border-radius: 22px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+
+.container_social {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+p.like_me {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #828282;
+    margin: 0;
+    margin-top: 60px;
+}

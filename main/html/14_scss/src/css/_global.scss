@@ -1,0 +1,43 @@
+@font-face {
+    font-family: $default-font-name;
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+    url('#{$path-fonts}roboto-v30-latin-regular.woff2') format('woff2'),
+    url('#{$path-fonts}roboto-v30-latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: $default-font-name;
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+    url('#{$path-fonts}roboto-v30-latin-700.woff2') format('woff2'),
+    url('#{$path-fonts}roboto-v30-latin-700.woff') format('woff');
+}
+
+body {
+    background-color: $bg-color-body;
+    font-family: $main-font;
+}
+
+.container {
+    max-width: $default-width;
+    margin: 0 auto;
+    padding: 0 $gap;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 (-$gap);
+}
+
+[class*="col-"] {
+    padding: 0 $gap;
+    box-sizing: border-box;
+}
+
+.col-4 {
+    width: 33.3333%;
+}
