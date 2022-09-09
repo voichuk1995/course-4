@@ -1,0 +1,164 @@
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #070707;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.container {
+    max-width: 970px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+header>nav li {
+    display: inline-block;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    margin-right: 40px;
+}
+
+header>nav li:last-child {
+    margin-right: 0;
+}
+
+header>nav a:link {
+    letter-spacing: 0.02em;
+    color: #828282;
+    text-decoration: none;
+}
+
+header>nav a:visited {
+    color: #828282;
+}
+
+header>nav a:hover {
+    color: #070707;
+}
+
+nav.container>ul {
+    border-bottom: 1px solid #828282;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+    text-align: left;
+    margin-top: 12px;
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 46px;
+}
+
+section:nth-of-type(even) {
+    background-color: #F6F6F6;
+}
+
+section,
+footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+section:first-of-type {
+    padding: 0;
+}
+
+section.about_me p {
+    margin-top: 30px;
+}
+
+section.about_me p:first-of-type {
+    margin-top: 50px;
+}
+
+section.skills p {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+section.skills li {
+    display: inline-block;
+}
+
+section.skills li {
+    margin-right: 96px;
+}
+
+section.skills li:last-child {
+    margin-right: 0;
+}
+
+section.skills figcaption {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #828282;
+    margin-top: 25px;
+    margin-bottom: 60px;
+}
+
+section.portfolio h2 {
+    margin-bottom: 50px;
+}
+
+section.portfolio figcaption {
+    text-align: center;
+    text-decoration-line: underline;
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
+section.portfolio figcaption.last {
+    margin-bottom: 0;
+}
+
+footer h2 {
+    margin-bottom: 20px;
+}
+
+a.button:link {
+    display: inline-block;
+    min-width: 180px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #070707;
+    border-radius: 22px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    margin-top: 70px;
+    margin-bottom: 40px;
+    text-decoration: none;
+}
+
+a.button:visited {
+    color: #FFFFFF;
+}
+
+footer li {
+    display: inline-block;
+    margin-right: 40px;
+}
+
+footer li:last-of-type {
+    margin-right: 0;
+}
+
+footer p.like_me {
+    font-size: 14px;
+    line-height: 19px;
+    color: #828282;
+    margin-top: 60px;
+}

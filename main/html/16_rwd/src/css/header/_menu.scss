@@ -1,0 +1,18 @@
+.menu {
+
+    &__wrapper {
+        @extend %flex-jst-wrap;
+    }
+
+    // .menu__item
+
+    &__item {}
+
+    // .menu__link
+
+    &__link {
+        .open & {
+            // opacity: 0;
+        }
+    }
+}

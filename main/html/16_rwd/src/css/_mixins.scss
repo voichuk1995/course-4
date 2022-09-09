@@ -1,0 +1,77 @@
+@mixin clear {
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin font-face($_font-file, $_font-name: $default-font-name, $_font-weight: 400, $_font-style: normal) {
+    @font-face {
+        font-family: $_font-name;
+        font-style: $_font-style;
+        font-weight: $_font-weight;
+        src: local(''),
+        url('#{$path-fonts}#{$_font-file}.woff2') format('woff2'),
+        url('#{$path-fonts}#{$_font-file}.woff') format('woff');
+    }
+}
+
+@mixin dflex($_jst, $_wrap: wrap, $_items: stretch) {
+    display: flex;
+    justify-content: $_jst;
+    flex-wrap: $_wrap;
+    align-items: $_items;
+}
+
+@mixin test {
+    @include dflex(space-between);
+    display: inline;
+
+    @content;
+}
+
+
+@mixin grid($count: 12) {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 (-$gap);
+    }
+
+    [class^="col-"] {
+        padding: $gap;
+        box-sizing: border-box;
+    }
+
+    @for $i from 1 through $count {
+        $width: math.div(100%, $count) * $i;
+
+        .col-#{$i} {
+            max-width: $width;
+            width: 100%;
+            flex-basis: $width;
+        }
+    }
+
+    @each $breackpoint,
+    $breackpoint-value in $breack-points {
+        @media screen and (max-width: $breackpoint-value) {
+            @for $i from 1 through $count {
+                $width: math.div(100%, $count) * $i;
+
+                .col-#{$breackpoint}-#{$i} {
+                    max-width: $width;
+                    width: 100%;
+                    flex-basis: $width;
+                }
+            }
+        }
+    }
+}
+
+@mixin media($point: sm) {
+    @media screen and (max-width: map-get($breack-points, $point)) {
+        @content;
+    }
+}

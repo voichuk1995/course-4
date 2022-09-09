@@ -1,0 +1,36 @@
+.about {
+
+    &__social {
+        display: flex;
+        justify-content: center;
+        margin-top: 18px;
+        margin-bottom: 43px;
+
+        li {
+            margin: 0 5px;
+
+            a {
+                @include link-button-size(30px, 30px, 50%, 2px, solid, #CCCCCC);
+
+                img {
+                    height: 15px;
+                    margin-top: 3px;
+                }
+            }
+
+        }
+    }
+
+    &__link {
+        border: 1px solid $border-color;
+        font-family: $links-font-name;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+        text-transform: $text-transform;
+        color: #666666;
+        text-decoration: none;
+        padding: 5px 10px;
+    }
+}

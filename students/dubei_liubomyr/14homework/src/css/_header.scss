@@ -1,0 +1,44 @@
+.header {
+    &__box {
+        padding: 90px 0 15px;
+        max-width: 450px;
+        margin: 0 auto;
+        border-bottom: 1px solid $border-color;
+        position: relative;
+
+        &::after {
+            @extend %before-after-block;
+            width: 20px;
+            height: 20px;
+            background-image: url(../images/bonfire-sharp.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: #fff;
+            top: 97%;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    }
+
+    .box {
+        &__inscription {
+            display: block;
+            font-family: 'Raleway';
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            text-transform: $text-transform;
+            color: #898F8F;
+        }
+
+        &__caption {
+            font-family: $title-font;
+            font-weight: 900;
+            font-size: 60px;
+            line-height: 66px;
+            text-transform: $text-transform;
+            color: $border-color;
+            margin: 15px 0 40px;
+        }
+    }
+}

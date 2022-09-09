@@ -1,0 +1,45 @@
+.footer_section {
+    background-color: black;
+    height: 420px;
+    opacity: 95%;
+    padding-top: 135px;
+    padding-bottom: 10px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.text_about {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin: 0;
+}
+
+.block {
+    text-align: center;
+}
+
+.networks {
+    margin-top: 90px;
+    margin-bottom: 120px;
+}
+
+.social_networks {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.separator {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sait {
+    margin-top: 55px;
+    color: white;
+    font-size: 15px;
+}
