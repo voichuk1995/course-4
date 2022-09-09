@@ -1,0 +1,12 @@
+@import './main/image_block';
+@import './main/about_me_block';
+
+
+
+.main {
+    @include dflex(center);
+
+    max-width: $default-width;
+    padding-top: $main_content_vertical_paddeng;
+    padding-bottom: $main_content_vertical_paddeng;
+}
