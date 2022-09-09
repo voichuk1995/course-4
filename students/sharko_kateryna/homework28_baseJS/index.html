@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base JS</title>
+    <script></script>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+
+        // Мінімум
+        //1Створи HTML-файл, в ньому пропиши всі можливі способи використання JS;
+        /*2.Тобі потрібно зберігати ім’я та прізвище в змінній, придумай до 4-х імен змінних, що потрібні тобі для даної задачі. 
+        Також напиши до 5 неправильних імен (неправильні імена повинні бути закоментовані);*/
+        //3.Вкажи всі можливі способи коментування коду;
+
+        const myName = 'Kateryna';
+        const mySurname = 'Sharko';
+        const myCity = 'Odesa';
+        const myCountry = 'Ukraine';
+        const fullName = 'My name is ' + myName + ' my surname ' + mySurname + ' my city ' + myCity + ' my country ' + myCountry;
+
+        // const 1name = Kate;
+        // const name+2 = Ann;
+
+        /*
+        const n@me = Olga;
+        const name-second = Nastya;
+        const my*name = Oksana;
+        */
+
+        /*  4. Які стилі написання імен змінних ти знаєш?
+        kebab-case — const my-name
+        snake_case — const my_name
+        CamelCase — const MyName
+        lowerCamelCase - const myName
+        
+        */
+
+
+
+        // Норма
+        //Запитай ім’я користувача та виведи у відповідь “Привіт, *ім’я*”;
+
+        const myname = prompt('What is you name?', ' ');
+        alert('Привіт ' + myname);
+
+        //Запитай рік народження користувача, порахуй його/її вік і виведи результат. Поточний рік вкажи в коді як константу;
+
+        const yearBirthday = prompt('What is your year of birth?', ' ');
+        const thisYear = 2022;
+        alert("You are " + (thisYear - yearBirthday) + " years old");
+
+        //Запитай у користувача довжину сторони квадрату і виведи периметр цього квадрата
+        const squareSide = prompt('Какая длина стороны квадрата??', ' ');
+        alert('Периметр квадрата равен ' + (squareSide * 4));
+
+
+        // Максимум
+
+        // Запитай у користувача радіус кола і виведи площу такої окружності.
+        const circleRadius = prompt('Какой радиус круга?', ' ');
+        alert('Площадь круга ' + (Math.PI * (circleRadius ** 2)));
+
+        //Запитай у користувача відстань в кілометрах між двома містами і за скільки годин він хоче дістатися. Порахуй швидкість, з якою необхідно рухатися, щоб встигнути вчасно.
+        const citiesDistance = prompt('Какое расстояние в километрах между двумя городами?', ' ');
+        const travelTime = prompt('За сколько часов вы хотите добраться во второй город?', ' ');
+        alert('Вам необходимо двигаться со скоростью ' + (citiesDistance / travelTime) + ' километров в час');
+
+        //Реалізуй конвертор валют. Користувач вводить долари, програма переводить їх в євро. Курс валют зберігається в константі.
+        const dollarAmount = prompt('Меняю долларов?', ' ');
+        const euroExchange = 0.99;
+        alert('Получаю ' + (dollarAmount * euroExchange) + ' евро по курсу НБУ');
+
+
+    </script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
