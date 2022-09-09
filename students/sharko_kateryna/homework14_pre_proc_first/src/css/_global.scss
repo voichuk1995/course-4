@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+        url('../fonts/raleway-v28-latin-500.woff2') format('woff2'),
+        url('../fonts/raleway-v28-latin-500.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/raleway-v28-latin-regular.woff2') format('woff2'),
+        url('../fonts/raleway-v28-latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: local(''),
+        url('../fonts/roboto-v30-latin-900.woff2') format('woff2'),
+        url('../fonts/roboto-v30-latin-900.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+        url('../fonts/open-sans-v34-latin-700.woff2') format('woff2'),
+        url('../fonts/open-sans-v34-latin-700.woff') format('woff');
+}
+
+body {
+    font-family: $main-font;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.container {
+    padding: 120px $gap;
+    margin: 0 auto;
+    max-width: $default-width;
+    box-sizing: border-box;
+}
+
+.row {
+    margin: 0 (-$gap);
+    display: flex;
+    justify-content: center;
+}
+
+[class*="col-"] {
+    padding: 0 $gap;
+    box-sizing: border-box;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-12 {
+    width: 100%;
+}

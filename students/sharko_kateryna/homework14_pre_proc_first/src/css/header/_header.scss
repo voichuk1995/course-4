@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header_title {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 66px;
+    text-align: center;
+    color: #FFCC00;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $subtitle_color;
+}
+
+.header_divider {
+    max-width: 450px;
+    width: 100%;
+    height: 40px;
+    border-bottom: $border_size_defolt solid $border-color;
+    position: relative;
+}
+
+.divider_icons {
+    position: absolute;
+    left: 218px;
+    top: 28px;
+    background-color: white;
+    border: 2px solid white;
+}
