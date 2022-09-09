@@ -1,0 +1,56 @@
+@import './logo';
+@import './menu';
+@import './search';
+
+.header {
+    padding: 15px;
+    @include clear;
+
+    >.search {
+        // background-color: $color-red;
+
+        ~form {
+            padding: 15px;
+        }
+    }
+
+    .menu {
+        &__wrapper {
+            list-style-type: none;
+        }
+
+        &__item {
+            padding: 15px;
+
+            @include test {
+                background-color: aquamarine;
+            }
+        }
+
+        &__link {
+            &:hover {
+                background-color: aqua;
+            }
+        }
+    }
+
+    input {
+        padding: 25px;
+    }
+}
+
+.header {
+    @extend %flex-jst-wrap;
+
+    &__menu {
+        width: 100%;
+    }
+}
+
+.header {
+    &__logo {}
+
+    &__search {}
+
+    &__menu {}
+}

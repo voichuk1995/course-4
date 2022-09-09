@@ -1,0 +1,84 @@
+@include font-face('roboto-v30-latin-regular');
+@include font-face($_font-file: 'roboto-v30-latin-700', $_font-name: $default-font-name, $_font-weight: 700, $_font-style: normal);
+
+body {
+    background-color: $bg-color-body;
+    font-family: $main-font;
+}
+
+.container {
+    padding: 15px;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: minmax(100px, 20%) 1fr;
+    grid-template-rows: max-content 1fr max-content;
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "aside footer"
+    ;
+    gap: 30px;
+
+    @include media(sm) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "aside"
+            "main"
+            "footer"
+        ;
+    }
+
+}
+
+.header {
+    grid-area: header;
+}
+
+.header,
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+
+    &__link {
+        display: block;
+        padding: 10px 20px;
+    }
+}
+
+.aside {
+    grid-area: aside;
+    background-color: aqua;
+}
+
+.main {
+    grid-area: main;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: blanchedalmond;
+}

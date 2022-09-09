@@ -1,0 +1,29 @@
+@include font-face('roboto-v30-latin-regular');
+@include font-face($_font-file: 'roboto-v30-latin-700', $_font-name: $default-font-name, $_font-weight: 700, $_font-style: normal);
+
+
+body {
+    background-color: $bg-color-body;
+    font-family: $main-font;
+}
+
+.container {
+    max-width: $default-width;
+    margin: 0 auto;
+    padding: 0 $gap;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 (-$gap);
+}
+
+[class*="col-"] {
+    padding: 0 $gap;
+    box-sizing: border-box;
+}
+
+.col-4 {
+    width: 33.3333%;
+}

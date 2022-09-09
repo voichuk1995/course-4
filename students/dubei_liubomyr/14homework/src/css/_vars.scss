@@ -1,0 +1,16 @@
+// typography
+$default-font-name: 'Raleway';
+$title-font-name: 'Roboto';
+$links-font-name: 'Open Sans';
+$main-font: $default-font-name, Arial, Helvetica, sans-serif;
+$title-font: $title-font-name, Arial, Helvetica, sans-serif;
+$links-font: $links-font-name, Arial, Helvetica, sans-serif;
+$path-fonts: '../fonts/';
+$text-transform: uppercase;
+// gap
+$gap: 15px;
+$gap-top: 40px;
+// width
+$width_container: 1170px;
+// colors
+$border-color: #FFCC00;
