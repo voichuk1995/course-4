@@ -53,19 +53,19 @@
 
         //Запитай рік народження користувача, порахуй його/її вік і виведи результат. Поточний рік вкажи в коді як константу;
 
-        const yearBirthday = prompt('What is your year of birth?', ' ');
+        const yearBirthday = +prompt('What is your year of birth?', ' ');
         const thisYear = 2022;
         alert("You are " + (thisYear - yearBirthday) + " years old");
 
         //Запитай у користувача довжину сторони квадрату і виведи периметр цього квадрата
-        const squareSide = prompt('Какая длина стороны квадрата??', ' ');
+        const squareSide = +prompt('Какая длина стороны квадрата??', ' ');
         alert('Периметр квадрата равен ' + (squareSide * 4));
 
 
         // Максимум
 
         // Запитай у користувача радіус кола і виведи площу такої окружності.
-        const circleRadius = prompt('Какой радиус круга?', ' ');
+        const circleRadius = +prompt('Какой радиус круга?', ' ');
         alert('Площадь круга ' + (Math.PI * (circleRadius ** 2)));
 
         //Запитай у користувача відстань в кілометрах між двома містами і за скільки годин він хоче дістатися. Порахуй швидкість, з якою необхідно рухатися, щоб встигнути вчасно.
@@ -74,7 +74,7 @@
         alert('Вам необходимо двигаться со скоростью ' + (citiesDistance / travelTime) + ' километров в час');
 
         //Реалізуй конвертор валют. Користувач вводить долари, програма переводить їх в євро. Курс валют зберігається в константі.
-        const dollarAmount = prompt('Меняю долларов?', ' ');
+        const dollarAmount = +prompt('Меняю долларов?', ' ');
         const euroExchange = 0.99;
         alert('Получаю ' + (dollarAmount * euroExchange) + ' евро по курсу НБУ');
 
