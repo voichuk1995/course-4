@@ -11,21 +11,21 @@ const seconsNumb = 2;
 console.log(+firstNumb + seconsNumb)
 
 //3. Користувач вказує обсяг флешки в Гб. Програма повинна порахувати скільки файлів розміром в 820 Мб поміщається на флешку.
-const volumeFlash = prompt('Какой объём флешки в Гб?', ' ');
+const volumeFlash = +prompt('Какой объём флешки в Гб?', ' ');
 const fileSize = 820;
 console.log(Math.floor((volumeFlash * 1024) / fileSize))
 
 //Норма
 
 //1.Користувач вводить суму грошей в гаманці і ціну однієї шоколадки. Програма виводить скільки шоколадок може купити користувач і скільки здачі у нього залишиться.
-const amountMoney = prompt('Сколько денег у Вас в кошельке?', ' ');
-const chocolatePrice = prompt('Цена шоколадки?', ' ')
+const amountMoney = +prompt('Сколько денег у Вас в кошельке?', ' ');
+const chocolatePrice = +prompt('Цена шоколадки?', ' ')
 const piecesChocolates = Math.floor(amountMoney / chocolatePrice);
 alert('Вы можете купить ' + piecesChocolates + ' шоколадок');
 alert('У вас останется ' + (amountMoney - (chocolatePrice * piecesChocolates)).toFixed(2) + ' гривен')
 
 //2.Запитай у користувача тризначне число і виведи його задом наперед. Для вирішення завдання тобі знадобиться оператор % (залишок від ділення).
-const threedigitNumber = prompt('Введите трёхзначное число', ' ');
+const threedigitNumber = +prompt('Введите трёхзначное число', ' ');
 const thirdDigit = threedigitNumber % 10;
 const secondDigit = ~~(threedigitNumber / 10) % 10;
 const firstDigit = ~~(threedigitNumber / 100) % 10;
