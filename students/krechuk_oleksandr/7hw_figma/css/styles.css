@@ -1,55 +1,48 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
 }
 
-html {
-
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
 img {
     max-width: 100%;
 }
 
-header ul {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    border-bottom: 1px solid #828282;
-    padding: 25px 0px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 25px;
-    align-items: center;
-    margin: 0;
+.container {
     max-width: 970px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
+
+header nav {
+    max-width: 970px;
+    border-bottom: 1px solid #828282;
+    margin: 0 auto;
+}
+
+header ul {
+    padding: 25px 0;
+    text-align: center;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 0 20px;
+
+}
+
 
 header a {
     color: #828282;
     text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
 }
 
 main {
     padding-top: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
 }
 
 h1 {
@@ -57,6 +50,7 @@ h1 {
     font-size: 48px;
     line-height: 65px;
     color: #070707;
+    padding-bottom: 50px;
 }
 
 h2 {
@@ -69,31 +63,29 @@ h2 {
 
 .photo {
     width: 970px;
-    padding-top: 50px;
     display: block;
 }
 
 .about {
-    width: 100%;
     background: #F6F6F6;
+}
+
+.about_p1 {
+    padding-top: 50px;
+}
+
+.about_p2 {
+    padding-top: 30px;
 }
 
 .about_1 {
     padding: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 50px;
     text-align: center;
-
 }
 
 .skills {
+    text-align: center;
     padding: 100px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 0px 22px;
 }
 
@@ -102,66 +94,50 @@ h2 {
     padding-bottom: 20px;
 }
 
-.skills_more {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-    gap: 97px;
+.skills p {
+    text-align: center;
+    padding-bottom: 50px;
 }
 
-.skills div {
-    padding: 100px;
+.skills_more {
+    margin-bottom: 100px;
+}
+
+.skills_figure {
+    margin-right: 90px;
 }
 
 .skills figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px;
-    gap: 60px;
+    display: inline-block;
+    text-align: center;
+}
+
+.skills figcaption {
+    margin-top: 25px;
+    margin-bottom: 60px;
 }
 
 .portfolio {
-    width: 100%;
     background: #F6F6F6;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 59px 235px;
-    gap: 50px;
 }
 
-.portfolio figure img {
-    width: 970px;
+.portfolio h2 {
+    padding-top: 100px;
+    padding-bottom: 50px;
 }
 
 .portfolio ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px;
-    gap: 70px;
-    text-align: center;
     text-decoration-line: underline;
+    text-align: center;
+    padding-bottom: 30px;
 }
 
-.portfolio figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px;
-    gap: 40px;
+.portfolio ul li {
+    padding-bottom: 70px;
 }
 
 .contacts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 100px 0px;
-    gap: 60px;
     text-align: center;
 }
 
@@ -173,18 +149,14 @@ footer h2 {
 }
 
 .connect {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px;
-    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.con_main {
+    margin-bottom: 60px;
 }
 
 button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding: 0px 16px;
     width: 180px;
     height: 44px;
@@ -197,15 +169,15 @@ button {
 }
 
 .link {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 50px;
+    padding-top: 30px;
 }
 
 .like_me_on {
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
+}
+
+.footer_a-right {
+    margin-right: 50px;
 }
