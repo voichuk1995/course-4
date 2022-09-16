@@ -1,6 +1,8 @@
 @font-face {
     font-family: "Lucida Sans Unicode";
-    src: url("./lucida_sans_unicode.ttf");
+    font-style: normal;
+    font-weight: 400;
+    src: local(''), url("./lucida_sans_unicode.ttf") format('ttf');
 }
 
 body {
