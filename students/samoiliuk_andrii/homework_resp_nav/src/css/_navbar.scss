@@ -60,36 +60,6 @@
     }
 }
 
-.page {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: $color-main;
-}
-
-.logo {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 30px 0px 40px 13px;
-    transition: padding .3s ease-in-out;
-
-    &__img {
-        display: block;
-        max-width: 32px;
-        margin-right: 7px;
-        transition: margin-right .3s ease-in-out;
-    }
-}
-
-.h1 {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
-    color: $color-headers;
-}
 
 
 .nav {
@@ -97,6 +67,7 @@
     max-width: 220px;
     box-shadow: 0px 0px 20px $color-nav-shadow;
     transition: max-width .3s ease-in-out;
+    min-height: 100vh;
 
     &__div {
         margin-bottom: 30px;
