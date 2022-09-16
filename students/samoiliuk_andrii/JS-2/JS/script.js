@@ -12,27 +12,28 @@ console.log(sum1);
 console.log('Виконай додавання рядка "1" і цифри 2 (обидві операнди повинні бути в змінних), добийся математично правильної відповіді.');
 const c = "1";
 const d = 2;
-const sum2 = +c + +d;
+const sum2 = +c + d;
 console.log(sum2);
 
 //Користувач вказує обсяг флешки в Гб. Програма повинна порахувати скільки файлів розміром в 820 Мб поміщається на флешку.
 
 const flashVolume = parseInt(prompt('Task 3. Користувач вказує обсяг флешки в Гб. Програма повинна порахувати скільки файлів розміром в 820 Мб поміщається на флешку.\nEnter flash volume in GB', '2'));
 const fileCount = flashVolume * 1024 / 820;
-console.log("Number of files: " + Math.floor(fileCount));
+const answer_1 = "Number of files: " + Math.floor(fileCount)
+console.log(answer_1);
 
 
 //Норма
 
 //Користувач вводить суму грошей в гаманці і ціну однієї шоколадки. Програма виводить скільки шоколадок може купити користувач і скільки здачі у нього залишиться.
-const moneyAmount = parseFloat(prompt('Task 4. Користувач вводить суму грошей в гаманці і ціну однієї шоколадки. Програма виводить скільки шоколадок може купити користувач і скільки здачі у нього залишиться.\nHow much money do you have?', '45.5')).toFixed(2);
-const chocolatePrice = parseFloat(prompt('Task 4. \nWhat is the price of a chocolate', '5')).toFixed(2);
-console.log('You have ' + moneyAmount + '$');
-console.log('Chocolate costs ' + chocolatePrice + '$');
+const moneyAmount = +prompt('Task 4. Користувач вводить суму грошей в гаманці і ціну однієї шоколадки. Програма виводить скільки шоколадок може купити користувач і скільки здачі у нього залишиться.\nHow much money do you have?', '45.5');
+const chocolatePrice = +prompt('Task 4. \nWhat is the price of a chocolate', '5');
+let answer_2 = 'You have ' + moneyAmount.toFixed(2) + '$\n' + 'Chocolate costs ' + chocolatePrice.toFixed(2) + '$\n';
 const chocolateAmount = Math.floor(moneyAmount / chocolatePrice);
-console.log('You can buy ' + chocolateAmount + ' chocolates');
+answer_2 = answer_2 + 'You can buy ' + chocolateAmount + ' chocolates\n';
 const rest = (moneyAmount % chocolatePrice).toFixed(2);
-console.log('You will keep ' + rest + '$');
+answer_2 = answer_2 + 'You will keep ' + rest + '$';
+console.log(answer_2);
 
 //Запитай у користувача тризначне число і виведи його задом наперед. Для вирішення завдання тобі знадобиться оператор % (залишок від ділення).
 
@@ -41,19 +42,20 @@ const firstDigit = (digit - digit % 100) / 100;
 const secondDigit = ((digit - firstDigit * 100) - (digit - firstDigit * 100) % 10) / 10;
 const thirdDigit = digit - firstDigit * 100 - secondDigit * 10;
 const upsideDownDigit = thirdDigit * 100 + secondDigit * 10 + firstDigit;
-console.log('Число задом наперед ' + upsideDownDigit);
+const answer_3 = 'Число задом наперед ' + upsideDownDigit;
+console.log(answer_3);
 
 
 //Максимум
 
 //Користувач вводить суму вкладу в банк на 2 місяці, з процентною ставкою депозиту 5% річних. Вивести суму нарахованих відсотків.
-let deposit = parseFloat(prompt('What is the deposit?', '50.00')).toFixed(2);
-const firstMonthIncome = parseFloat((deposit * (0.05 / 12)).toFixed(2));
-deposit = +deposit + +firstMonthIncome;
-console.log(deposit);
+let deposit = +prompt('What is the deposit?', '50.00');
+const firstMonthIncome = deposit * (0.05 / 12);
+deposit = deposit + firstMonthIncome;
 const secondMonthIncome = (deposit) * (0.05 / 12);
 const totalIncome = firstMonthIncome + secondMonthIncome;
-console.log('Your two month income is ' + totalIncome.toFixed(2));
+const answer_4 = 'Your two month income is ' + totalIncome.toFixed(2);
+console.log(answer_4);
 
 
 
@@ -68,7 +70,7 @@ console.log(2 && 0 && 3);
 
 // 2 || 0 || 3
 //true(2) or false(0) --> true(2)
-//true(2) or true(3) --> true(2) ??? ask
+//true(2) or true(3) --> true(2) 
 
 console.log(2 || 0 || 3);
 
