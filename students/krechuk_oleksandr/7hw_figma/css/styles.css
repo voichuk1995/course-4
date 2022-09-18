@@ -1,0 +1,183 @@
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 970px;
+    margin: 0 auto;
+}
+
+header nav {
+    max-width: 970px;
+    border-bottom: 1px solid #828282;
+    margin: 0 auto;
+}
+
+header ul {
+    padding: 25px 0;
+    text-align: center;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 0 20px;
+
+}
+
+
+header a {
+    color: #828282;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+main {
+    padding-top: 12px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+    color: #070707;
+    padding-bottom: 50px;
+}
+
+h2 {
+    color: #070707;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 46px;
+    text-align: center;
+}
+
+.photo {
+    width: 970px;
+    display: block;
+}
+
+.about {
+    background: #F6F6F6;
+}
+
+.about_p1 {
+    padding-top: 50px;
+}
+
+.about_p2 {
+    padding-top: 30px;
+}
+
+.about_1 {
+    padding: 100px;
+    text-align: center;
+}
+
+.skills {
+    text-align: center;
+    padding: 100px 0;
+    padding: 0px 22px;
+}
+
+.skills h2 {
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+.skills p {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.skills_more {
+    margin-bottom: 100px;
+}
+
+.skills_figure {
+    margin-right: 90px;
+}
+
+.skills figure {
+    display: inline-block;
+    text-align: center;
+}
+
+.skills figcaption {
+    margin-top: 25px;
+    margin-bottom: 60px;
+}
+
+.portfolio {
+    background: #F6F6F6;
+}
+
+.portfolio h2 {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.portfolio ul {
+    text-decoration-line: underline;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.portfolio ul li {
+    padding-bottom: 70px;
+}
+
+.contacts {
+    padding: 100px 0px;
+    text-align: center;
+}
+
+footer h2 {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 46px;
+    padding-bottom: 20px;
+}
+
+.connect {
+    margin-bottom: 60px;
+}
+
+.con_main {
+    margin-bottom: 60px;
+}
+
+button {
+    padding: 0px 16px;
+    width: 180px;
+    height: 44px;
+    background: #070707;
+    border-radius: 22px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+.link {
+    padding-top: 30px;
+}
+
+.like_me_on {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.footer_a-right {
+    margin-right: 50px;
+}
