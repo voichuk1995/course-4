@@ -36,11 +36,8 @@
         */
 
         /*  4. Які стилі написання імен змінних ти знаєш?
-        kebab-case — const my-name
         snake_case — const my_name
-        CamelCase — const MyName
-        lowerCamelCase - const myName
-        
+        сamelCase — const myName      
         */
 
 
@@ -49,35 +46,39 @@
         //Запитай ім’я користувача та виведи у відповідь “Привіт, *ім’я*”;
 
         const myname = prompt('What is you name?', ' ');
-        alert('Привіт ' + myname);
+        console.log('Привіт ' + myname);
 
         //Запитай рік народження користувача, порахуй його/її вік і виведи результат. Поточний рік вкажи в коді як константу;
 
         const yearBirthday = +prompt('What is your year of birth?', ' ');
         const thisYear = 2022;
-        alert("You are " + (thisYear - yearBirthday) + " years old");
+        const userAge = thisYear - yearBirthday;
+        console.log("You are " + userAge + " years old");
 
         //Запитай у користувача довжину сторони квадрату і виведи периметр цього квадрата
         const squareSide = +prompt('Какая длина стороны квадрата??', ' ');
-        alert('Периметр квадрата равен ' + (squareSide * 4));
+        const perimeterSquare = squareSide * 4;
+        console.log('Периметр квадрата равен ' + perimeterSquare);
 
 
         // Максимум
 
         // Запитай у користувача радіус кола і виведи площу такої окружності.
         const circleRadius = +prompt('Какой радиус круга?', ' ');
-        alert('Площадь круга ' + (Math.PI * (circleRadius ** 2)));
+        const areaCircle = Math.PI * (circleRadius ** 2);
+        console.log('Площадь круга ' + areaCircle);
 
         //Запитай у користувача відстань в кілометрах між двома містами і за скільки годин він хоче дістатися. Порахуй швидкість, з якою необхідно рухатися, щоб встигнути вчасно.
         const citiesDistance = prompt('Какое расстояние в километрах между двумя городами?', ' ');
         const travelTime = prompt('За сколько часов вы хотите добраться во второй город?', ' ');
-        alert('Вам необходимо двигаться со скоростью ' + (citiesDistance / travelTime) + ' километров в час');
+        const movementSpeed = citiesDistance / travelTime;
+        console.log('Вам необходимо двигаться со скоростью ' + movementSpeed + ' километров в час');
 
         //Реалізуй конвертор валют. Користувач вводить долари, програма переводить їх в євро. Курс валют зберігається в константі.
         const dollarAmount = +prompt('Меняю долларов?', ' ');
         const euroExchange = 0.99;
-        alert('Получаю ' + (dollarAmount * euroExchange) + ' евро по курсу НБУ');
-
+        const euroConversion = dollarAmount * euroExchange;
+        console.log('Получаю ' + euroConversion + ' евро по курсу НБУ');
 
     </script>
     <script src="./js/script.js"></script>
