@@ -1,12 +1,11 @@
-.container {
-    display: flex;
-
-    &__content {
-        width: 100%;
-        background-color: rgba(226, 226, 226, .1);
-    }
-}
-
-.content__image {
+.content {
+    box-sizing: border-box;
     max-width: 100%;
+    padding-left: 220px;
+    background-color: rgba(226, 226, 226, .1);
+    transition: padding-left 0.3s ease-in-out;
+
+    &__image {
+        width: 100%;
+    }
 }

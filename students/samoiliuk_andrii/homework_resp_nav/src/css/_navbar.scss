@@ -1,10 +1,11 @@
 .nav-switch {
     display: inline-block;
-    position: absolute;
+    position: sticky;
     top: 36px;
     left: 185px;
     transition: left .3s ease-in-out, transform .3s ease-in-out;
     cursor: pointer;
+    z-index: 1010;
 
     &>svg {
         background-color: $color-bg;
@@ -57,17 +58,27 @@
             margin-left: 30px;
         }
 
+        &~.content {
+            padding-left: 100px;
+        }
+
     }
 }
 
 
 
 .nav {
-    overflow: hidden;
     max-width: 220px;
     box-shadow: 0px 0px 20px $color-nav-shadow;
     transition: max-width .3s ease-in-out;
-    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: white;
 
     &__div {
         margin-bottom: 30px;
