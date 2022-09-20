@@ -2,14 +2,12 @@
 
 //Мінімум
 //Виконай додавання 0,1 і 0,2 добийся математично правильної відповіді.
-console.log('Виконай додавання 0,1 і 0,2 добийся математично правильної відповіді.');
 const a = 0.1;
 const b = 0.2;
 const sum1 = (a * 10 + b * 10) / 10;
 console.log(sum1);
 
 //Виконай додавання рядка "1" і цифри 2 (обидві операнди повинні бути в змінних), добийся математично правильної відповіді.
-console.log('Виконай додавання рядка "1" і цифри 2 (обидві операнди повинні бути в змінних), добийся математично правильної відповіді.');
 const c = "1";
 const d = 2;
 const sum2 = +c + d;
@@ -17,7 +15,7 @@ console.log(sum2);
 
 //Користувач вказує обсяг флешки в Гб. Програма повинна порахувати скільки файлів розміром в 820 Мб поміщається на флешку.
 
-const flashVolume = parseInt(prompt('Task 3. Користувач вказує обсяг флешки в Гб. Програма повинна порахувати скільки файлів розміром в 820 Мб поміщається на флешку.\nEnter flash volume in GB', '2'));
+const flashVolume = parseInt(prompt('Enter flash volume in GB', '2'));
 const fileCount = flashVolume * 1024 / 820;
 const answer_1 = "Number of files: " + Math.floor(fileCount)
 console.log(answer_1);
@@ -26,8 +24,8 @@ console.log(answer_1);
 //Норма
 
 //Користувач вводить суму грошей в гаманці і ціну однієї шоколадки. Програма виводить скільки шоколадок може купити користувач і скільки здачі у нього залишиться.
-const moneyAmount = +prompt('Task 4. Користувач вводить суму грошей в гаманці і ціну однієї шоколадки. Програма виводить скільки шоколадок може купити користувач і скільки здачі у нього залишиться.\nHow much money do you have?', '45.5');
-const chocolatePrice = +prompt('Task 4. \nWhat is the price of a chocolate', '5');
+const moneyAmount = +prompt('How much money do you have?', '45.5');
+const chocolatePrice = +prompt('What is the price of a chocolate', '5');
 let answer_2 = 'You have ' + moneyAmount.toFixed(2) + '$\n' + 'Chocolate costs ' + chocolatePrice.toFixed(2) + '$\n';
 const chocolateAmount = Math.floor(moneyAmount / chocolatePrice);
 answer_2 = answer_2 + 'You can buy ' + chocolateAmount + ' chocolates\n';
