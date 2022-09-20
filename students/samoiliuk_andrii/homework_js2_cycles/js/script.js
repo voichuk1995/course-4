@@ -143,28 +143,32 @@ let digitOne = 0;
 let digitTwo = 0;
 
 do {
+    if (digitTwo <= digitOne) {
+        console.log('друге число має бути більшим за перше');
+    }
     digitOne = +prompt("введіть перше число", "1");
     digitTwo = +prompt("введіть друге число", "10");
-    if (digitTwo < digitOne) {
-        alert('друге число має бути більшим за перше')
-    }
+
 }
 while (digitTwo < digitOne);
 
-
-var sum = 0;
+let sum = 0;
 for (let i = digitOne; i <= digitTwo; i++) {
     sum = sum + i;
 }
-console.log('Сума чисел всіх чисел у проміжку ' + digitOne + '-' + digitTwo + ' = ' + sum);
-alert('Сума чисел всіх чисел у проміжку ' + digitOne + '-' + digitTwo + ' = ' + sum);
+
+const answerSumOfDigits = 'Сума чисел всіх чисел у проміжку ' + digitOne + '-' + digitTwo + ' = ' + sum;
+console.log(answerSumOfDigits);
+
 
 // Запитай у користувача 2 числа і знайди найбільший спільний дільник.
 
 
-let digitFive = +prompt("введіть перше число ", "9");
-let digitSix = +prompt("введіть друге число ", "33");
-const answerString = "Найбільший спільний дільник чисел " + digitFive + " та " + digitSix + " : ";
+const firstDigitForDeviderSearch = +prompt("введіть перше число ", "9");
+const secondDigitForDeviderSearch = +prompt("введіть друге число ", "33");
+
+let digitFive = firstDigitForDeviderSearch;
+let digitSix = secondDigitForDeviderSearch;
 do {
     if (digitFive > digitSix) {
         digitFive = digitFive - digitSix;
@@ -173,8 +177,8 @@ do {
     }
 }
 while (digitFive !== digitSix);
-
-console.log(answerString + digitSix);
+const answerString = "Найбільший спільний дільник чисел " + firstDigitForDeviderSearch + " та " + secondDigitForDeviderSearch + " : " + digitSix;
+console.log(answerString);
 
 
 // Запитай у користувача число і виведи всі дільники цього числа.
@@ -182,12 +186,9 @@ console.log(answerString + digitSix);
 const digitThree = +prompt("введіть число", "9");
 let answer = 'Дільники числа ' + digitThree + ': ';
 for (let i = 1; i <= digitThree; i++) {
-    if (digitThree % i) {
-        continue;
-    } else {
-        answer = answer + i + ' ';
-    }
+    if (!(digitThree % i)) { answer = answer + i + ' ' };
 }
+
 console.log(answer);
 
 // Норма
@@ -195,29 +196,25 @@ console.log(answer);
 //Запитай у користувача п’ятирозрядне число і визначи, чи є воно паліндромом.
 
 
-let digitSeven;
+let normalDigit;
 do {
-    digitSeven = +prompt('Введіть число з п\'яти розрядів', '12345')
+    normalDigit = +prompt('Введіть число з п\'яти розрядів', '12345')
 }
-while ((digitSeven.toFixed(0)).length != 5);
+while ((normalDigit.toFixed(0)).length != 5);
 
-let array = [];
+let calcDigit = normalDigit;
+let upsideDownDigit = 0;
 
 for (let i = 4; i >= 0; i--) {
-    array[i] = (digitSeven - digitSeven % (Math.pow(10, i))) / (Math.pow(10, i));
-    digitSeven = digitSeven - array[i] * Math.pow(10, i);
+    upsideDownDigit = upsideDownDigit + (calcDigit - calcDigit % (Math.pow(10, i))) / (Math.pow(10, i)) * Math.pow(10, 4 - i);
+    calcDigit = calcDigit - (calcDigit - calcDigit % (Math.pow(10, i)));
 }
 
-if (array[4] === array[0] && array[3] === array[1]) {
+if (normalDigit === upsideDownDigit) {
     console.log('Ура! Введене число є поліндромом!');
 } else {
     console.log('Введене число не поліндром');
 }
-
-
-
-
-
 
 
 // Запитай у користувача суму покупки і виведи суму до оплати зі знижкою:
@@ -229,19 +226,20 @@ const check = +prompt('Введіть суму покупки', '12');
 let answerTwo = 'Cума до сплати: ';
 
 if (check < 200) {
-    console.log(answerTwo + check.toFixed(2));
+    answerTwo = answerTwo + check.toFixed(2);
+    console.log(answerTwo);
 } else if (check > 200 && check <= 300) {
-    console.log(answerTwo + (check * 0.97).toFixed(2));
+    answerTwo = answerTwo + (check * 0.97).toFixed(2);
+    console.log(answerTwo);
 } else if (check > 300 && check <= 500) {
-    console.log(answerTwo + (check * 0.95).toFixed(2));
+    answerTwo = answerTwo + (check * 0.95).toFixed(2);
+    console.log(answerTwo);
 } else if (check > 500) {
-    console.log(answerTwo + (check * 0.93).toFixed(2));
+    answerTwo = answerTwo + (check * 0.93).toFixed(2);
+    console.log(answerTwo);
 } else {
     console.log('Помилка');
 }
-
-
-
 
 // Запитай у користувача 10 чисел і порахуй, скільки він ввів додатніх, від’ємних і нулів. При цьому також порахуй, скільки з них парних і непарних. 
 // Виведи статистику на екран. Враховуй, що достатньо однієї змінної (не 10) для введення чисел користувачем.
@@ -250,9 +248,9 @@ let vid = 0;
 let zer = 0;
 let par = 0;
 let nopar = 0;
-let input;
+
 for (let i = 1; i < 11; i++) {
-    input = +prompt('введіть число №' + i);
+    let input = +prompt('введіть число №' + i);
     if (input > 0) {
         dod++;
     }
@@ -270,24 +268,41 @@ for (let i = 1; i < 11; i++) {
 }
 console.log('Статистика:\nВведено додатніх чисел: ' + dod + '\nВведено від\'ємних чисел: ' + vid + '\nВведено нулів: ' + zer + '\nВведено парних чисел: ' + par + '\nВведено непарних чисел: ' + nopar);
 
-// // Зацикли відображення днів тижня таким чином: «День тижня. Хочеш побачити наступний день? » і так до тих пір, поки користувач натискає OK.
+// Зацикли відображення днів тижня таким чином: «День тижня. Хочеш побачити наступний день? » і так до тих пір, поки користувач натискає OK.
 
 let count = 0;
-const dict = [
-    'Понеділок',
-    'Вівторок',
-    'Середа',
-    'Четвер',
-    'П\'ятниця',
-    'Субота',
-    'Неділя']
+let weekDay = "";
+do {
+    switch (count) {
+        case 0:
+            weekDay = 'Понеділок';
+            break;
+        case 1:
+            weekDay = 'Вівторок';
+            break;
+        case 2:
+            weekDay = 'Середа';
+            break;
+        case 3:
+            weekDay = 'Четвер';
+            break;
+        case 4:
+            weekDay = 'П\'ятниця';
+            break;
+        case 5:
+            weekDay = 'Субота';
+            break;
+        case 6:
+            weekDay = 'Неділя';
+            break;
+    }
 
-while (confirm(dict[count] + '. Хочеш побачити наступний день?')) {
     count++;
     if (count > 6) {
         count = 0;
     }
 }
+while (confirm(weekDay + '. Хочеш побачити наступний день?'));
 
 // Максимум
 
@@ -300,20 +315,24 @@ var start = 0;
 var end = 100;
 var n = Math.round((end - start) / 2);
 
-alert('Загадай число від  0 до 100');
+console.log('Загадай число від  0 до 100');
 
 do {
-    if (confirm('Загадане число більше за ' + n + '?') === true) {
+    let ask = prompt('Загадане більше (>), меньше (<) чи дорівнює (=) ' + n + '?');
+    if (ask === ">") {
         start = n;
         n = n + Math.round((end - start) / 2);
-    } else {
+    } else if (ask === "<") {
         end = n;
         n = n - Math.round((end - start) / 2);
+    } else if (ask === "=") {
+        break;
     }
-
 } while (n != end);
-alert('Загадане число: ' + n);
-console.log('Загадане число: ' + n);
+
+const guessedDigit = 'Загадане число: ' + n
+
+console.log(guessedDigit);
 
 
 
