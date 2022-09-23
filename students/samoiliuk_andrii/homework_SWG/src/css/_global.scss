@@ -1,0 +1,50 @@
+.page {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #16133D;
+
+    &__header {
+        margin-bottom: 100px;
+    }
+
+
+    &__main {}
+
+
+
+    &__footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+.headerOne {
+    font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: 0.2px;
+
+    &__subheader {
+        display: block;
+        font-family: 'Roboto', Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: #7690A8;
+        margin-bottom: 15px;
+    }
+}
+
+.headerTwo {
+    font-size: 24px;
+    line-height: 21px;
+    letter-spacing: 0.2px;
+}
