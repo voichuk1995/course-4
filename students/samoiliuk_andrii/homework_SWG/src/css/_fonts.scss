@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/roboto-v30-latin-ext-regular.woff2') format('woff2'),
+        url('../fonts/roboto-v30-latin-ext-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+        url('../fonts/roboto-v30-latin-ext-700.woff2') format('woff2'),
+        url('../fonts/roboto-v30-latin-ext-700.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+        url('../fonts/quicksand-v30-latin-500.woff2') format('woff2'),
+        url('../fonts/quicksand-v30-latin-500.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+        url('../fonts/nunito-sans-v12-latin-600.woff2') format('woff2'),
+        url('../fonts/nunito-sans-v12-latin-600.woff') format('woff');
+}

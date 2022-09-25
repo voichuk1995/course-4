@@ -1,0 +1,157 @@
+.header {
+    border-bottom: 1px solid #EFEEF3;
+    padding-top: 22px;
+    padding-bottom: 23px;
+
+    &__container {}
+
+    &__row {}
+}
+
+.logo {
+    display: flex;
+    align-self: center;
+
+    &__link {
+        color: #16133D;
+        text-decoration: none;
+        display: flex;
+    }
+
+    &__image {
+        margin-right: 13px;
+        display: flex;
+        align-self: center;
+    }
+
+    &__picture {
+        max-width: 30px;
+    }
+
+
+    &__text {
+        font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 35px;
+
+        &_footer {
+            color: #FFFFFF;
+        }
+    }
+}
+
+.main {
+    &__header {
+        margin-bottom: 40px;
+    }
+}
+
+
+.feature {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid #E5EAF4;
+    border-radius: 8px;
+    padding: 40px;
+
+    &:hover {
+        border: 1px solid #3DB370;
+    }
+
+
+    &__img {
+        margin-bottom: 30px;
+        border: 1px solid rgba(21, 101, 216, 0.1);
+        border-radius: 16px;
+        width: 64px;
+        height: 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            border: 1px solid #3DB370;
+
+            &>svg>path.svg__border {
+                fill: #52C29D;
+            }
+
+            &>svg>path.svg__bg_3 {
+                fill: #CAEFF2;
+            }
+
+            &>svg>path.svg__bg {
+                fill: #E1F4F5;
+            }
+
+            &>svg>path.svg__bg_2 {
+                fill: #E8F3FF;
+            }
+        }
+    }
+
+    &__header {
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        margin-bottom: 30px;
+    }
+
+    &__link {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        text-decoration: none;
+        color: #3DB370;
+    }
+}
+
+.footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #16133D;
+    ;
+
+    &__logo {
+        margin-bottom: 42px;
+    }
+
+}
+
+.social {
+    display: flex;
+
+    &__item {
+        width: 38px;
+        height: 38px;
+        background: #EFEEF3;
+        border-radius: 5px;
+        margin-right: 10px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        width: 100%;
+    }
+}
+
+.icon {
+    width: 100%;
+    height: 100%;
+    padding: 9px;
+    box-sizing: border-box;
+    margin: 0;
+    fill: #16133D;
+
+    &:hover {
+        fill: #3DB370;
+    }
+}
