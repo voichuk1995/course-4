@@ -1,0 +1,15 @@
+/*Colors*/
+$color_upper_title: #898F8F;
+$color_contrast: #FFCC00;
+$color_headers: #666666;
+$color_icons: #CCCCCC;
+$color_text: #333333;
+$color_bg: #fff;
+
+/*Grid*/
+$grid_width: 70px;
+$grid_gap: 30px;
+$grid_count: 12;
+$grid_content-max-width: (
+    $grid_width * $grid_count) + ($grid_gap * ($grid_count - 1)
+);

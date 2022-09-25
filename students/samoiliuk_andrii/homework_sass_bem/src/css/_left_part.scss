@@ -1,0 +1,46 @@
+.page__col-6_yellow-right-border {
+    border-right: 1px solid $color_contrast;
+}
+
+.section {
+    padding: $grid_width;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+%image-container_fake-squares {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: $color_bg;
+    transform: translate(-50%, -50%);
+}
+
+.image-container {
+    z-index: 100;
+    padding: calc($grid_gap / 2);
+    border: 1px solid $color_contrast;
+    position: relative;
+
+    &__image {
+        position: relative;
+        z-index: 200;
+        border: 1px solid $color_contrast;
+    }
+
+    &::before {
+        width: 57.5%;
+        height: 110%;
+        @extend %image-container_fake-squares;
+    }
+
+    &::after {
+        width: 110%;
+        height: 57.5%;
+        @extend %image-container_fake-squares;
+    }
+}
