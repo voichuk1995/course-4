@@ -1,0 +1,194 @@
+.productCard {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &__labelContainer {
+        position: absolute;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        top: 0;
+        left: 0;
+        padding: 5px;
+        pointer-events: none;
+        z-index: 100;
+    }
+
+    &__picture {
+        position: relative;
+        padding-top: 75%;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+
+    &__name {
+        margin-bottom: 10px;
+    }
+
+    &__tech {
+        margin-bottom: 10px;
+    }
+
+    &__row {
+        display: flex;
+        margin-bottom: 10px;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__rating {
+        max-width: 40%;
+    }
+
+    &__reviews {
+        max-width: 60%;
+    }
+
+    &__price {
+        max-width: 40%;
+    }
+
+    &__quantity {
+        max-width: 60%;
+    }
+
+    &__buttons {
+        margin-bottom: 10px;
+    }
+}
+
+.label {
+    background-color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    padding: 2px;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.picture {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.tech {
+    list-style: square;
+    padding-left: $gap;
+
+    &__item {
+        margin-bottom: 3px;
+    }
+}
+
+.button {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: 700;
+
+    &_add {
+        background-color: #009f36;
+        color: #fff;
+    }
+
+    &_inform {
+        background-color: #c79641;
+        color: #515151;
+    }
+}
+
+.price {
+
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 5px;
+
+    &::after {
+        content: "₴";
+        font-weight: 400;
+        margin-left: 5px;
+    }
+
+    &_old {
+        font-weight: 700;
+        font-size: 16px;
+        color: #D3D3D3;
+        text-decoration: line-through;
+        margin-bottom: 5px;
+
+        &::after {
+            content: "₴";
+            font-weight: 400;
+            margin-left: 5px;
+        }
+    }
+
+    // .price_special
+
+    &_special {
+        font-size: 24px;
+        font-weight: 700;
+        color: #ff2d37;
+        margin-bottom: 5px;
+
+        &::after {
+            content: "₴";
+            font-weight: 400;
+            margin-left: 5px;
+        }
+    }
+}
+
+.qty {
+
+    &__label {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        margin-bottom: 10px;
+    }
+
+
+
+    &__wrapper {
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+
+    }
+
+    &__btn {
+        background-color: transparent;
+        width: 20px;
+        padding: 0;
+        cursor: pointer;
+        background-color: transparent;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        border: none;
+    }
+
+    &__input-qty {
+        text-align: center;
+        width: 25px;
+        background-color: transparent;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        border: none;
+    }
+}

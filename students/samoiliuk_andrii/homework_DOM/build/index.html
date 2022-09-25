@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework DOM</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="page">
+    <main class="main page__main">
+        <div class="container main__container">
+            <div class="row main__row">
+                <div class="col-3">
+                    <div class="productCard">
+                        <div class="productCard__labelContainer">
+                            <div class="label"><img src="./images/new.png" alt="new" class="label__picture"></div>
+                            <div class="label"><img src="./images/best-price.png" alt="new" class="label__picture">
+                            </div>
+                            <div class="label"><img src="./images/free_shipping.png" alt="new" class="label__picture">
+                            </div>
+                        </div>
+                        <div class="productCard__picture"><img src="./images/1.jpg" class="picture" alt="product image">
+                        </div>
+                        <h2 class="name productCard__name">Ноутбук Asus ROG Zephyrus Duo 15 GX550LXS-HC068R</h2>
+                        <ul class="productCard__tech tech">
+                            <li class="tech__item">Екран 15.6\" IPS (3840x2160) Ultra HD 4K, матовий</li>
+                            <li class="tech__item">Intel Core i9-10980HK (2.4 — 5.3 ГГц)</li>
+                            <li class="tech__item">RAM 32 ГБ</li>
+                            <li class="tech__item">SSD 2 ТБ (2 х 1 ТБ)</li>
+                            <li class="tech__item">nVidia GeForce RTX 2080 Super Max-Q, 8 ГБ</li>
+                            <li class="tech__item">Windows 10 Pro</li>
+                        </ul>
+                        <div class="productCard__row">
+                            <div class="productCard__rating">
+                                <div class="rating">
+                                    <div class="rating__gray"></div>
+                                    <div class="rating__yellow"></div>
+                                </div>
+                            </div>
+                            <div class="productCard__reviews"><a href="#" class="review">147 reviews</a></div>
+                        </div>
+                        <div class="productCard__row">
+                            <div class="productCard__price">
+                                <div class="price">86599</div>
+                                <div class="price_old">86599</div>
+                                <div class="price_special">76599</div>
+                            </div>
+                            <div class="productCard__quantity">
+                                <div class="qty">
+                                    <label class="qty__label" for="">Qty</label>
+                                    <div class="qty__wrapper">
+                                        <button class="qty__btn" type="button">-</button>
+                                        <input class="qty__input-qty" value="1" type="number">
+                                        <button class="qty__btn" type="button">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="productCard__buttons">
+                            <a href="#" class="button button_add">Add to cart</a>
+                            <a href="#" class="button button_inform">Out of stock</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
