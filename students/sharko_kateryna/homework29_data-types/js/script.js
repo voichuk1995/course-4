@@ -1,28 +1,30 @@
 //Мінімум
 
 //1.Виконай додавання 0,1 і 0,2 добийся математично правильної відповіді.
-const firstNumber = 0.1;
-const seconsNumber = 0.2;
-console.log((firstNumber + seconsNumber).toFixed(1))
+const summNumber = (0.1 * 10 + 0.2 * 10) / 10;
+console.log(summNumber);
 
 //2. Виконай додавання рядка "1" і цифри 2 (обидві операнди повинні бути в змінних), добийся математично правильної відповіді.
 const firstNumb = '1';
 const seconsNumb = 2;
-console.log(+firstNumb + seconsNumb)
+const summNumb = +firstNumb + seconsNumb;
+console.log(+summNumb)
 
 //3. Користувач вказує обсяг флешки в Гб. Програма повинна порахувати скільки файлів розміром в 820 Мб поміщається на флешку.
 const volumeFlash = +prompt('Какой объём флешки в Гб?', ' ');
 const fileSize = 820;
-console.log(Math.floor((volumeFlash * 1024) / fileSize))
+const numberFiles = Math.floor((volumeFlash * 1024) / fileSize);
+console.log(numberFiles)
 
 //Норма
 
 //1.Користувач вводить суму грошей в гаманці і ціну однієї шоколадки. Програма виводить скільки шоколадок може купити користувач і скільки здачі у нього залишиться.
 const amountMoney = +prompt('Сколько денег у Вас в кошельке?', ' ');
-const chocolatePrice = +prompt('Цена шоколадки?', ' ')
+const chocolatePrice = +prompt('Цена шоколадки?', ' ');
 const piecesChocolates = Math.floor(amountMoney / chocolatePrice);
-alert('Вы можете купить ' + piecesChocolates + ' шоколадок');
-alert('У вас останется ' + (amountMoney - (chocolatePrice * piecesChocolates)).toFixed(2) + ' гривен')
+const changeAmount = (amountMoney - (chocolatePrice * piecesChocolates)).toFixed(2);
+console.log('Вы можете купить ' + piecesChocolates + ' шоколадок');
+console.log('У вас останется ' + changeAmount + ' гривен')
 
 //2.Запитай у користувача тризначне число і виведи його задом наперед. Для вирішення завдання тобі знадобиться оператор % (залишок від ділення).
 const threedigitNumber = +prompt('Введите трёхзначное число', ' ');
@@ -39,7 +41,8 @@ const depositAmount = prompt('Какая сумма вклада?', ' ');
 const depositTerm = 2;
 const annualInterest = 5;
 const percentYear = depositAmount / 100 * annualInterest;
-console.log(percentYear / 12 * depositTerm);
+const interestAmount = percentYear / 12 * depositTerm;
+console.log(interestAmount);
 
 
 // 2. Що повернуть вирази:
