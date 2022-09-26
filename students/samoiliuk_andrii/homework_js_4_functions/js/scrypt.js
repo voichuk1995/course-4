@@ -18,20 +18,10 @@ let funcArrowMultiply = (a, b) => a * b;
 // Створи функцію, яка буде виводити кількість переданих їй аргументів.
 
 function length() {
-    return arguments.length;
+    console.log(arguments.length);
 }
 
-let array = [];
-let i = 0;
-
-do {
-    array[i] = prompt("введіть аргумент");
-    i++;
-} while (confirm("Хочете ввести ще один аргумент") === true);
-
-const answer = "Кількість аргументів: " + length(...array);
-console.log(answer);
-
+length(1, 2, 3, 4, 5, 6);
 
 
 
@@ -39,11 +29,23 @@ console.log(answer);
 // -1, якщо перше число менше, ніж друге;
 // 1 - якщо перше число більше, ніж друге;
 // 0 - якщо числа рівні.
+function isNumber(a) {
+    if (typeof a === 'number' && (!isNaN(a))) {
+        return true
+    } else { return false }
+}
+
+function isNatural(a) {
+    if (isNumber(a) && a > 0 && a % 1 == 0) {
+        return true;
+    } else { return false }
+}
+
 
 function numCompare(a, b) {
     a = +a;
     b = +b;
-    if (typeof a === 'number' && (isNaN(a) === false) && typeof b === 'number' && (isNaN(b) === false)) {
+    if (isNumber(a) && isNumber(b)) {
         if (a < b) {
             return -1;
         } else if (a > b) {
@@ -51,9 +53,8 @@ function numCompare(a, b) {
         } else if (a === b) {
             return 0;
         }
-
     } else {
-        return "error";
+        throw "error";
     }
 }
 
@@ -67,7 +68,7 @@ console.log(numCompare(prompt("Введіть перше число для по�
 function factorial(a) {
     a = +a;
     let ans = 1;
-    if (typeof a === 'number' && isNaN(a) === false && a >= 0) {
+    if (isNumber(a) && a >= 0) {
         if (a === 0) {
             ans = 1;
             return ans;
@@ -77,24 +78,21 @@ function factorial(a) {
             }
             return ans;
         }
-    } else { return "неможливо обчислити" }
+    } else { throw "wrong input" }
 
 }
 
 console.log(factorial(prompt("Введіть число для обчислення факторіалу", "")));
 
 
-
-
-
 // Напиши функцію, яка приймає три окремі цифри і перетворює їх в одне число.
 // Наприклад: цифри 1, 4, 9 перетворяться в число 149.
 
 function numberCreator(a, b, c) {
-    if ((typeof a === 'number') && (typeof b === 'number') && (typeof c === 'number') && (a.toFixed(0).length === 1) && (b.toFixed(0).length === 1) && (c.toFixed(0).length === 1)) {
+    if (isNumber(a) && isNumber(b) && isNumber(c) && (a.toFixed(0).length === 1) && (b.toFixed(0).length === 1) && (c.toFixed(0).length === 1)) {
         return a * 100 + b * 10 + c;
     } else {
-        return 'error';
+        throw 'wrong input';
     }
 
 }
@@ -108,11 +106,9 @@ function rectArea(a, b) {
     a = +a;
     b = +b;
     if (arguments.length === 1) {
-        if (typeof a === 'number' && (isNaN(a) === false) && (a >= 0)) {
-            return a * a;
-        } else { return 'error'; }
+        if (isNumber(a) && (a >= 0)) { return a * a; } else { throw 'wrong input'; }
     } else {
-        if (typeof a === 'number' && (isNaN(a) === false) && (a >= 0) && typeof b === 'number' && (isNaN(b) === false) && (b >= 0)) { return a * b; } else { return "error"; }
+        if (isNumber(a) && (a >= 0) && isNumber(b) && (b >= 0)) { return a * b; } else { throw 'wrong input'; }
     }
 }
 
@@ -125,52 +121,40 @@ console.log(rectArea(prompt("Введіть ширину квадрата", "50"
 // Напиши функцію, яка перевіряє, чи є передане їй число “досконалим числом”.
 // Досконале число - це число, яке дорівнює сумі всіх своїх дільників.
 
-function perfectNumber(a) {
+function isPerfectNumber(a) {
     a = +a;
-    if (typeof a === 'number' && isNaN(a) === false && a > 0 && a % 1 === 0) {
-        let deviders = [];
+    if (isNatural(a)) {
+        let sum = 0;
         for (let i = 0; i < a; i++) {
             if (a % i === 0) {
-                deviders.push(i);
+                sum = sum + i;
             }
         }
-
-        let b = 0;
-        for (let i in deviders) {
-            b = b + deviders[i];
-        }
-
-
-        if (a === b) {
+        if (sum === a) {
             return true;
         } else {
             return false;
         }
-
     }
     else {
-        return false;
+        throw "wrong input";
     }
 }
 
-console.log(perfectNumber(prompt("введіть натуральне число для перевірки на досконалість", "1")));
+console.log(isPerfectNumber(prompt("введіть натуральне число для перевірки на досконалість", "1")));
 
 // Напиши функцію, яка приймає мінімальне і максимальне значення для діапазону,
 // і виводить тільки ті числа з діапазону, які є досконалими.
 // Використовуй написану раніше функцію, щоб дізнатися, чи є це число досконалим.
 
-function isPerfect(a, b) {
+function searchPerfect(a, b) {
     a = +a;
     b = +b;
-    let answer = []
-    if (typeof a === 'number' && isNaN(a) === false && a > 0 && a % 1 === 0 && typeof b === 'number' && isNaN(b) === false && b > 0 && b % 1 === 0 && b > a) {
+    if (isNatural(a) && isNatural(b) && a < b) {
         for (let i = a; i <= b; i++) {
-            if (perfectNumber(i) === true) {
-                answer.push(i);
-            }
+            if (isPerfectNumber(i)) { console.log(i); }
         }
-        return answer;
-    } else { return "невірний діапазон" }
+    } else { throw "wrong input" }
 }
 
-console.log(isPerfect(prompt("Введіть початок діапазону пошуку досконалих чисел", "1"), prompt("Введіть кінець діапазону пошуку досконалих чисел", "1")))
+searchPerfect(prompt("Введіть початок діапазону пошуку досконалих чисел", "1"), prompt("Введіть кінець діапазону пошуку досконалих чисел", "1"))
