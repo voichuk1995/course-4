@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    height: 100%;
+
 
     &__labelContainer {
         position: absolute;
@@ -28,6 +30,7 @@
 
     &__tech {
         margin-bottom: 10px;
+        flex-grow: 10;
     }
 
     &__row {
@@ -47,6 +50,10 @@
 
     &__price {
         max-width: 40%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: end;
+        flex-direction: column;
     }
 
     &__quantity {
@@ -82,6 +89,7 @@
     list-style: square;
     padding-left: $gap;
 
+
     &__item {
         margin-bottom: 3px;
     }
@@ -113,7 +121,8 @@
 
     font-weight: 700;
     font-size: 24px;
-    margin-bottom: 5px;
+
+
 
     &::after {
         content: "₴";
@@ -141,7 +150,7 @@
         font-size: 24px;
         font-weight: 700;
         color: #ff2d37;
-        margin-bottom: 5px;
+
 
         &::after {
             content: "₴";

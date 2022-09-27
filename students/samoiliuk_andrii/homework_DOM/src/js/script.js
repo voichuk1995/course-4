@@ -17,7 +17,9 @@ const database = [
         },
         instock: false,
         img: "1.jpg",
-        sku: "SDW123"
+        sku: "SDW123",
+        rating: 5,
+        reviews: 145,
     },
     {
         id: 2,
@@ -38,7 +40,9 @@ const database = [
         },
         instock: true,
         img: "2.jpg",
-        sku: "QWE321"
+        sku: "QWE321",
+        rating: 4,
+        reviews: 10,
     },
     {
         id: 3,
@@ -58,7 +62,9 @@ const database = [
         },
         instock: false,
         img: "3.jpg",
-        sku: "CXZ221"
+        sku: "CXZ221",
+        rating: 3,
+        reviews: 15,
     },
     {
         id: 4,
@@ -76,7 +82,9 @@ const database = [
         },
         instock: true,
         img: "4.jpg",
-        sku: "FGH721"
+        sku: "FGH721",
+        rating: 5,
+        reviews: 12,
     },
     {
         id: 5,
@@ -94,7 +102,9 @@ const database = [
         },
         instock: true,
         img: "5.jpg",
-        sku: "FGH721"
+        sku: "FGH721",
+        rating: 2,
+        reviews: 10,
     },
     {
         id: 6,
@@ -114,6 +124,92 @@ const database = [
         },
         instock: true,
         img: "6.jpg",
-        sku: "RFV821"
+        sku: "RFV821",
+        rating: 5,
+        reviews: 145,
     }
 ]
+
+function generateProductCardHTML(item) {
+    let productCardHTML = '<div class="productCard">';
+    productCardHTML = productCardHTML + `<div class="productCard__labelContainer">`;
+    if (!item.labels.new) {
+        productCardHTML = productCardHTML + `<div class="label"><img src="./images/new.png" alt="new" class="label__picture"></div>`;
+    }
+    if (!item.labels.bestPrice) {
+        productCardHTML = productCardHTML + `<div class="label"><img src="./images/best-price.png" alt="best price" class="label__picture"></div>`;
+    }
+    if (!item.labels.freeShipping) {
+        productCardHTML = productCardHTML + `<div class="label"><img src="./images/free_shipping.png" alt="new" class="label__picture"></div>`;
+    }
+    productCardHTML = productCardHTML + `</div>`;
+
+    productCardHTML = productCardHTML + `<div class="productCard__picture">
+    <img src="./images/${item.img} " class="picture" alt="product image">
+    </div>
+    <h2 class="name productCard__name">${item.name}</h2>
+    <ul class="productCard__tech tech">\n`
+    for (let i in item.characteristics) {
+        productCardHTML = productCardHTML + `<li class="tech__item">${item.characteristics[i]}</li>\n`
+    }
+    productCardHTML = productCardHTML + `</ul>
+    <div class="productCard__row">
+        <div class="productCard__rating">
+            <div class="rating">
+                <div class="rating__gray"></div>
+                <div class="rating__yellow rating__yellow_${item.rating}"></div>
+            </div>
+        </div>
+        <div class="productCard__reviews"><a href="#" class="review">${item.reviews} reviews</a></div>
+    </div>
+    <div class="productCard__row">
+        <div class="productCard__price">`;
+    if (item.price === item.specialPrice) {
+        productCardHTML = productCardHTML + `<div class="price">86599</div>`;
+    } else {
+        productCardHTML = productCardHTML + `
+        <div class="price_old">${item.price}</div>
+        <div class="price_special">${item.specialPrice}</div>`;
+    }
+    productCardHTML = productCardHTML + `</div >
+            <div class="productCard__quantity">
+                <div class="qty">
+                    <label class="qty__label" for="">Qty</label>
+                    <div class="qty__wrapper">
+                        <button class="qty__btn" type="button">-</button>
+                        <input class="qty__input-qty" value="1" type="number">
+                            <button class="qty__btn" type="button">+</button>
+                    </div>
+                </div>
+            </div>
+    </div > 
+    <div class="productCard__buttons">`;
+    if (item.instock) {
+        productCardHTML = productCardHTML + ` <a href="#" class="button button_add">Add to cart</a>`;
+    } else {
+        productCardHTML = productCardHTML + `  <a href="#" class="button button_inform">Out of stock</a>`;
+    }
+    productCardHTML = productCardHTML + '\n</div>\n</div>';
+    return productCardHTML;
+}
+
+
+function sortByStock(array) {
+    array.sort(function compareFn(a, b) {
+        if (a.instock > b.instock) { return -1 } else { return 1 }
+    })
+    return array;
+}
+
+function displayProducts(array) {
+    for (let item of array) {
+        const newDiv = document.createElement("div");
+        newDiv.classList.add("col-3", "col-md-4", "col-sm-6", "col-xs-12");
+        const newContent = generateProductCardHTML(item);
+        newDiv.innerHTML = newContent;
+        document.getElementById("productContainer").appendChild(newDiv);
+    }
+}
+
+sortByStock(database);
+displayProducts(database);
