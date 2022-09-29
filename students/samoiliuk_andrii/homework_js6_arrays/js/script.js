@@ -213,12 +213,12 @@ function sortShopping(array, sort = ">") {
                 return b.sum - a.sum;
             });
         }
-        let List = "Відсортований список покупок:\n"
+        let sortedList = "Відсортований список покупок:\n"
         array.forEach(function (element, index, array) {
-            List = List + makeString(element, longestNameLength(array));
+            sortedList = sortedList + makeString(element, longestNameLength(array));
         }
         );
-        console.log(List);
+        console.log(sortedList);
     }
 }
 
