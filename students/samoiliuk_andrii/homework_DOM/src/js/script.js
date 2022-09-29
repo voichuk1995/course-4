@@ -175,10 +175,10 @@ function generateProductCardHTML(item) {
             <div class="productCard__quantity">
                 <div class="qty">
                     <label class="qty__label" for="">Qty</label>
-                    <div class="qty__wrapper">
-                        <button class="qty__btn" type="button">-</button>
+                    <div class="qty__wrapper" id="${item.id}">
+                        <button class="qty__btn buttonMinus" type="button">-</button>
                         <input class="qty__input-qty" value="1" type="number">
-                            <button class="qty__btn" type="button">+</button>
+                            <button class="qty__btn buttonPlus" type="button">+</button>
                     </div>
                 </div>
             </div>
@@ -207,9 +207,21 @@ function displayProducts(array) {
         newDiv.classList.add("col-3", "col-md-4", "col-sm-6", "col-xs-12");
         const newContent = generateProductCardHTML(item);
         newDiv.innerHTML = newContent;
-        document.getElementById("productContainer").appendChild(newDiv);
+        document.querySelector(".productContainer").appendChild(newDiv);
     }
 }
 
+function itemCounter(event) {
+    if (event.target.classList.contains("buttonPlus")) {
+        event.target.previousElementSibling.value = +event.target.previousElementSibling.value + 1;
+    }
+    if (event.target.classList.contains("buttonMinus")) {
+        if (+event.target.nextElementSibling.value > 1) {
+            event.target.nextElementSibling.value = +event.target.nextElementSibling.value - 1;
+        }
+    }
+}
+
+document.querySelector(".productContainer").addEventListener("click", itemCounter);
 sortByStock(database);
 displayProducts(database);

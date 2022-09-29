@@ -163,7 +163,7 @@ function generateProductCardHTML(item) {
     productCardHTML = productCardHTML + "\n        <div class=\"price_old\">".concat(item.price, "</div>\n        <div class=\"price_special\">").concat(item.specialPrice, "</div>");
   }
 
-  productCardHTML = productCardHTML + "</div >\n            <div class=\"productCard__quantity\">\n                <div class=\"qty\">\n                    <label class=\"qty__label\" for=\"\">Qty</label>\n                    <div class=\"qty__wrapper\">\n                        <button class=\"qty__btn\" type=\"button\">-</button>\n                        <input class=\"qty__input-qty\" value=\"1\" type=\"number\">\n                            <button class=\"qty__btn\" type=\"button\">+</button>\n                    </div>\n                </div>\n            </div>\n    </div > \n    <div class=\"productCard__buttons\">";
+  productCardHTML = productCardHTML + "</div >\n            <div class=\"productCard__quantity\">\n                <div class=\"qty\">\n                    <label class=\"qty__label\" for=\"\">Qty</label>\n                    <div class=\"qty__wrapper\" id=\"".concat(item.id, "\">\n                        <button class=\"qty__btn buttonMinus\" type=\"button\">-</button>\n                        <input class=\"qty__input-qty\" value=\"1\" type=\"number\">\n                            <button class=\"qty__btn buttonPlus\" type=\"button\">+</button>\n                    </div>\n                </div>\n            </div>\n    </div > \n    <div class=\"productCard__buttons\">");
 
   if (item.instock) {
     productCardHTML = productCardHTML + " <a href=\"#\" class=\"button button_add\">Add to cart</a>";
@@ -197,7 +197,7 @@ function displayProducts(array) {
       newDiv.classList.add("col-3", "col-md-4", "col-sm-6", "col-xs-12");
       var newContent = generateProductCardHTML(item);
       newDiv.innerHTML = newContent;
-      document.getElementById("productContainer").appendChild(newDiv);
+      document.querySelector(".productContainer").appendChild(newDiv);
     }
   } catch (err) {
     _iterator.e(err);
@@ -206,5 +206,18 @@ function displayProducts(array) {
   }
 }
 
+function itemCounter(event) {
+  if (event.target.classList.contains("buttonPlus")) {
+    event.target.previousElementSibling.value = +event.target.previousElementSibling.value + 1;
+  }
+
+  if (event.target.classList.contains("buttonMinus")) {
+    if (+event.target.nextElementSibling.value > 1) {
+      event.target.nextElementSibling.value = +event.target.nextElementSibling.value - 1;
+    }
+  }
+}
+
+document.querySelector(".productContainer").addEventListener("click", itemCounter);
 sortByStock(database);
 displayProducts(database);
