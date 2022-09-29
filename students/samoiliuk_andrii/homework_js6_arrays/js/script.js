@@ -42,197 +42,212 @@ const shoppingList = [
 ];
 
 function calculateSum(array) {
-    array.map(function (element, index, array) {
+    for (let element of array) {
         element.sum = element.price * element.quantity;
-    })
+    }
     return array;
 }
 
-// Виводити весь список на екран таким чином, щоб спочатку йшли продукти, що ще не придбані, а потім - ті, що вже придбали.
-function displayShoppingList(array) {
-    calculateSum(array);
-    let shoppingList = "Cписок покупок:\n"
-    let totalPrice = 0;
+function sortByBought(array) {
+    array.sort(function (a, b) {
+        if (a.isBought > b.isBought) { return 1 };
+        if (a.isBought < b.isBought) { return -1 };
+    })
+}
+
+function longestNameLength(array) {
     let nameMaxLength = 0;
-    array.map(function (element, index, array) {
+    array.forEach(element => {
         if (element.name.length > nameMaxLength) {
             nameMaxLength = element.name.length;
         }
     });
-    array.map(function (element, index, array) {
-        let spaces = nameMaxLength - element.name.length;
+    return nameMaxLength;
+}
+
+function getIndex(array, productName) {
+    let arrayIndex = -1;
+    for (let index = 0; index < array.length; index++) {
+        if (array[index].name.toLowerCase() === productName.toLowerCase()) {
+            arrayIndex = index;
+            break;
+        }
+    }
+    return arrayIndex;
+}
+
+
+// Виводити весь список на екран таким чином, щоб спочатку йшли продукти, що ще не придбані, а потім - ті, що вже придбали.
+function displayShoppingList(array) {
+    calculateSum(array);
+    sortByBought(array);
+    const nameMaxLength = longestNameLength(array);
+    let shoppingList = "Cписок покупок:\n"
+    array.forEach(function (element, index, array) {
+        const spaces = nameMaxLength - element.name.length;
         let spaceIncert = "";
         for (let i = 0; i < spaces; i++) {
             spaceIncert = spaceIncert + " ";
         }
-        if (!element.isBought) {
-            shoppingList = shoppingList + element.name + spaceIncert + " " + element.quantity + element.units + "    " + element.price + "грн/" + element.units + " " + element.sum + " грн\n";
-            totalPrice = totalPrice + +element.price * element.quantity;
-        }
-    });
-    array.map(function (element, index, array) {
-        let spaces = nameMaxLength - element.name.length;
-        let spaceIncert = "";
-        for (let i = 0; i < spaces; i++) {
-            spaceIncert = spaceIncert + " ";
-        }
-        if (element.isBought) {
-            shoppingList = shoppingList + element.name + spaceIncert + " " + element.quantity + element.units + "    " + element.price + "грн/" + element.units + " " + element.sum + " грн    V\n"
-            totalPrice = totalPrice + +element.price * element.quantity;
-        }
-    });
-    shoppingList = shoppingList + "----\nВартість покупок: " + totalPrice + " грн\n";
+        let string = element.name + spaceIncert + " " + element.quantity + element.units + "    " + element.price + "грн/" + element.units + " " + element.sum + " грн";
+        if (element.isBought) { string = string + '  V\n' } else { string = string + '\n' };
+        shoppingList = shoppingList + string
+    }
+    );
     console.log(shoppingList);
 }
 
+displayShoppingList(shoppingList);
+
 // Покупка продукту. Функція приймає назву продукту і відзначає його як придбаний.
-function setAsBought(array, name) {
-    array.map(function (element, index, array) {
-        if (element.name.toLowerCase() === name.toLowerCase()) {
-            element.isBought = true;
-        }
-    });
+function setAsBought(array, productName) {
+    const index = getIndex(array, productName);
+    if (index !== -1) {
+        array[index].isBought = true;
+    }
     return array;
 }
+
+console.log(getIndex(shoppingList, "Cир"));
 
 displayShoppingList(shoppingList);
 setAsBought(shoppingList, prompt("Який продукт куплено?", "Сир"));
 displayShoppingList(shoppingList);
 
 
-// Норма
+// // Норма
 
-// Видалення продукту зі списку (видалення повинно проводитися шляхом створення нового масиву, в якому продукт, що ми шукаємо, буде відсутнім)
+// // Видалення продукту зі списку (видалення повинно проводитися шляхом створення нового масиву, в якому продукт, що ми шукаємо, буде відсутнім)
 
-function removeItem(array, name) {
-    let number = array.findIndex(function (element, index, array) {
-        if (element.name.toLowerCase() === name.toLowerCase()) {
-            return true;
-        }
-    });
-    if (number !== -1) {
-        array.splice(number, 1);
-    }
-    return array;
-}
+// function removeItem(array, name) {
+//     let number = array.findIndex(function (element, index, array) {
+//         if (element.name.toLowerCase() === name.toLowerCase()) {
+//             return true;
+//         }
+//     });
+//     if (number !== -1) {
+//         array.splice(number, 1);
+//     }
+//     return array;
+// }
 
-// Додавання покупки в список. Враховуй, що при додаванні покупки з уже існуючим в списку продуктом, необхідно збільшувати кількість в існуючій покупці, а не додавати нову. При цьому також повинна змінитися сума, наприклад, якщо ціна за одиницю 12, а кількості товарів стало 2, то сума буде 24.
-
-
-
-function addItem(array, name, price, quantity = 1, units = "шт") {
-    if ((array !== undefined) && (name !== undefined) && (price !== undefined)) {
-        let number = array.findIndex(function (element, index, array) {
-            if (element.name.toLowerCase() === name.toLowerCase()) {
-                return true;
-            }
-        });
-        if (number === -1) {
-            const newItem = {
-                name: name,
-                price: price,
-                quantity: quantity,
-                sum: price * quantity,
-                units: units,
-                isBought: false,
-            }
-            array.push(newItem);
-            return array;
-        } else {
-            let newArray = array.map(function (element, index, array) {
-                if (element.name.toLowerCase() === name.toLowerCase()) {
-                    element.quantity = element.quantity + quantity;
-                }
-
-            })
-            return newArray
-        }
-    }
-}
-
-const newCart = removeItem(shoppingList, prompt("Який продукт вилучити", "Вода"));
-displayShoppingList(newCart);
-addItem(shoppingList, prompt("Який продукт додати", "Майонез"), +prompt("Скільки коштує", '14'), +prompt("Скільки одиниць", '5'), prompt("Одиниці виміру", 'шт'));
-displayShoppingList(shoppingList);
+// // Додавання покупки в список. Враховуй, що при додаванні покупки з уже існуючим в списку продуктом, необхідно збільшувати кількість в існуючій покупці, а не додавати нову. При цьому також повинна змінитися сума, наприклад, якщо ціна за одиницю 12, а кількості товарів стало 2, то сума буде 24.
 
 
-// Максимум
 
-// Підрахунок суми всіх продуктів (враховуючи кількість кожного) в списку.
+// function addItem(array, name, price, quantity = 1, units = "шт") {
+//     if ((array !== undefined) && (name !== undefined) && (price !== undefined)) {
+//         let number = array.findIndex(function (element, index, array) {
+//             if (element.name.toLowerCase() === name.toLowerCase()) {
+//                 return true;
+//             }
+//         });
+//         if (number === -1) {
+//             const newItem = {
+//                 name: name,
+//                 price: price,
+//                 quantity: quantity,
+//                 sum: price * quantity,
+//                 units: units,
+//                 isBought: false,
+//             }
+//             array.push(newItem);
+//             return array;
+//         } else {
+//             let newArray = array.map(function (element, index, array) {
+//                 if (element.name.toLowerCase() === name.toLowerCase()) {
+//                     element.quantity = element.quantity + quantity;
+//                 }
 
-function totalPrice(array) {
-    let totalPrice = 0;
-    array.map(function (element, index, array) {
-        totalPrice = totalPrice + +element.price * +element.quantity;
-    })
-    return totalPrice;
-}
+//             })
+//             return newArray
+//         }
+//     }
+// }
 
-const total = "Загальна вартість усіх покупок: " + totalPrice(shoppingList) + " грн";
-console.log(total);
+// const newCart = removeItem(shoppingList, prompt("Який продукт вилучити", "Вода"));
+// displayShoppingList(newCart);
+// addItem(shoppingList, prompt("Який продукт додати", "Майонез"), +prompt("Скільки коштує", '14'), +prompt("Скільки одиниць", '5'), prompt("Одиниці виміру", 'шт'));
+// displayShoppingList(shoppingList);
 
-// Підрахунок суми всіх (не) придбаних продуктів.
-function boughtPrice(array) {
-    let boughtPrice = 0;
-    array.map(function (element, index, array) {
-        if (element.isBought) {
-            boughtPrice = boughtPrice + +element.price * +element.quantity;
-        }
 
-    })
-    return boughtPrice;
-}
+// // Максимум
 
-const totalBought = "Загальна вартість усіх придбаних покупок: " + boughtPrice(shoppingList) + " грн";
-console.log(totalBought);
+// // Підрахунок суми всіх продуктів (враховуючи кількість кожного) в списку.
 
-function notBoughtPrice(array) {
-    let notBoughtPrice = 0;
-    array.map(function (element, index, array) {
-        if (!element.isBought) {
-            notBoughtPrice = notBoughtPrice + +element.price * +element.quantity;
-        }
+// function totalPrice(array) {
+//     let totalPrice = 0;
+//     array.map(function (element, index, array) {
+//         totalPrice = totalPrice + +element.price * +element.quantity;
+//     })
+//     return totalPrice;
+// }
 
-    })
-    return notBoughtPrice;
-}
+// const total = "Загальна вартість усіх покупок: " + totalPrice(shoppingList) + " грн";
+// console.log(total);
 
-const totalNotBought = "Загальна вартість усіх не придбаних покупок: " + notBoughtPrice(shoppingList) + " грн";
-console.log(totalNotBought);
+// // Підрахунок суми всіх (не) придбаних продуктів.
+// function boughtPrice(array) {
+//     let boughtPrice = 0;
+//     array.map(function (element, index, array) {
+//         if (element.isBought) {
+//             boughtPrice = boughtPrice + +element.price * +element.quantity;
+//         }
 
-// Показання продуктів в залежності від суми, (від більшого до меншого / від меншого до більшого, в залежності від параметра функції, який вона приймає)
+//     })
+//     return boughtPrice;
+// }
 
-function sortShopping(array, sort = ">") {
-    if (sort === ">" || sort === "<") {
-        calculateSum(array);
-        if (sort === ">") {
-            array.sort(function (a, b) {
-                return a.sum - b.sum;
-            });
-        }
-        if (sort === "<") {
-            array.sort(function (a, b) {
-                return b.sum - a.sum;
-            });
-        }
-        let List = "Відсортований список покупок:\n"
-        let nameMaxLength = 0;
-        array.map(function (element, index, array) {
-            if (element.name.length > nameMaxLength) {
-                nameMaxLength = element.name.length;
-            }
-        });
-        array.map(function (element, index, array) {
-            let spaces = nameMaxLength - element.name.length;
-            let spaceIncert = "";
-            for (let i = 0; i < spaces; i++) {
-                spaceIncert = spaceIncert + " ";
-            }
-            List = List + element.name + spaceIncert + " " + element.quantity + element.units + "    " + element.price + "грн/" + element.units + " " + element.sum + " грн\n";
-        });
-        console.log(List);
-    }
-}
+// const totalBought = "Загальна вартість усіх придбаних покупок: " + boughtPrice(shoppingList) + " грн";
+// console.log(totalBought);
 
-sortShopping(shoppingList, prompt("Введіть '>' щоб відсортувати список за зростанням або '<' щоб відсортувати список за спаданням", ">"));
+// function notBoughtPrice(array) {
+//     let notBoughtPrice = 0;
+//     array.map(function (element, index, array) {
+//         if (!element.isBought) {
+//             notBoughtPrice = notBoughtPrice + +element.price * +element.quantity;
+//         }
+
+//     })
+//     return notBoughtPrice;
+// }
+
+// const totalNotBought = "Загальна вартість усіх не придбаних покупок: " + notBoughtPrice(shoppingList) + " грн";
+// console.log(totalNotBought);
+
+// // Показання продуктів в залежності від суми, (від більшого до меншого / від меншого до більшого, в залежності від параметра функції, який вона приймає)
+
+// function sortShopping(array, sort = ">") {
+//     if (sort === ">" || sort === "<") {
+//         calculateSum(array);
+//         if (sort === ">") {
+//             array.sort(function (a, b) {
+//                 return a.sum - b.sum;
+//             });
+//         }
+//         if (sort === "<") {
+//             array.sort(function (a, b) {
+//                 return b.sum - a.sum;
+//             });
+//         }
+//         let List = "Відсортований список покупок:\n"
+//         let nameMaxLength = 0;
+//         array.map(function (element, index, array) {
+//             if (element.name.length > nameMaxLength) {
+//                 nameMaxLength = element.name.length;
+//             }
+//         });
+//         array.map(function (element, index, array) {
+//             let spaces = nameMaxLength - element.name.length;
+//             let spaceIncert = "";
+//             for (let i = 0; i < spaces; i++) {
+//                 spaceIncert = spaceIncert + " ";
+//             }
+//             List = List + element.name + spaceIncert + " " + element.quantity + element.units + "    " + element.price + "грн/" + element.units + " " + element.sum + " грн\n";
+//         });
+//         console.log(List);
+//     }
+// }
+
+// sortShopping(shoppingList, prompt("Введіть '>' щоб відсортувати список за зростанням або '<' щоб відсортувати список за спаданням", ">"));
 
