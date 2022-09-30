@@ -1,0 +1,53 @@
+<!-- 
+    Створити HTML-сторінку з кнопкою "Відкрити" і модальним вікном. На модальном вікні повинен бути текст і кнопка 
+"Закрити". Спочатку модальне вікно не відображається. При кліку на кнопку 
+"Відкрити" з'являється модальне вікно, на кнопку "Закрити" — зникає.
+
+
+Створити HTML-сторінку зі світлофором і кнопкою, яка перемикає світлофор на наступний колір. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework JS_events</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="page">
+    <div class="page__task">
+        <h3>1</h3>
+        <p>Створити HTML-сторінку з кнопкою "Відкрити" і модальним вікном. На модальном вікні повинен бути текст і
+            кнопка
+            "Закрити". Спочатку модальне вікно не відображається. При кліку на кнопку
+            "Відкрити" з'являється модальне вікно, на кнопку "Закрити" — зникає.</p>
+        <button class="button button_open">Open</button>
+        <div class="modal modal_close">
+            <div class="modal__wrapper">
+                <h2 class="headerTwo">Modal window example</h2>
+                <p class="modal__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi aut ex eaque
+                    harum
+                    voluptatem, neque rerum nisi dolor ipsa? Eum nostrum inventore sed deserunt pariatur. Perferendis
+                    tempora harum quaerat voluptates?</p>
+                <button class="button button_close">Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="page__task">
+        <h3>2</h3>
+        <p>Створити HTML-сторінку зі світлофором і кнопкою, яка перемикає світлофор на наступний колір. </p>
+        <ul class="traffic">
+            <li class="traffic__light light red light_off"></li>
+            <li class="traffic__light light yellow light_off"></li>
+            <li class="traffic__light light green light_green"></li>
+        </ul>
+        <button class="trafficSwitch">Next Light</button>
+        <script src="./js/script-debug.js"></script>
+    </div>
+</body>
+
+</html>
