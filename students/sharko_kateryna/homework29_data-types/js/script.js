@@ -31,7 +31,9 @@ const threedigitNumber = +prompt('Введите трёхзначное числ
 const thirdDigit = threedigitNumber % 10;
 const secondDigit = ~~(threedigitNumber / 10) % 10;
 const firstDigit = ~~(threedigitNumber / 100) % 10;
-console.log(' ' + thirdDigit + secondDigit + firstDigit)
+const userNumbRevers = +(' ' + thirdDigit + secondDigit + firstDigit)
+//Пустая строка, чтоб числа между собой не суммировались
+console.log(userNumbRevers)
 
 
 // Максимум
