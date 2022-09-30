@@ -3,15 +3,15 @@
 // 1.Запитай у користувача його вік і визначи, ким він є: дитиною (0-11), підлітком (12-17), дорослим (18_59) або пенсіонером (60 ...), передбач можливість введення невірних даних.
 const userAge = +prompt('Сколько Вам лет?', '0')
 if (userAge >= 0 && userAge <= 11) {
-    alert('Вы ребёнок!');
+    console.log('Вы ребёнок!');
 } else if (userAge >= 12 && userAge <= 17) {
-    alert('Вы подросток!');
+    console.log('Вы подросток!');
 } else if (userAge >= 18 && userAge <= 59) {
-    alert('Вы взрослый!');
+    console.log('Вы взрослый!');
 } else if (userAge >= 60 && userAge <= 120) {
-    alert('Вы пенсионер!');
+    console.log('Вы пенсионер!');
 } else {
-    alert('Ошибочное значение')
+    console.log('Ошибочное значение')
 }
 
 // 2. Запитай у користувача число від 0 до 9 і виведи йому спецсимвол, який розташований на цій клавіші (1 !, 2 @, 3 # і т. д).
@@ -64,21 +64,21 @@ const secondNumb = +prompt('Введите любое число', ' ');
 const minNumber = firstNumb < secondNumb ? firstNumb : secondNumb;
 let commonDivider;
 for (let i = minNumber; i >= 1; i--) {
-    if ((firstNumb && secondNumb) % i === 0) {
+    if ((firstNumb % i === 0) && (secondNumb % i === 0)) {
         commonDivider = i;
     }
 }
-alert('Наибольший общий делитель: ' + commonDivider);
+console.log('Наибольший общий делитель: ' + commonDivider);
 
 // 5. Запитай у користувача число і виведи всі дільники цього числа.
 const anyNumb = +prompt('Введите любое число?', ' ');
-const allDividers = [];
-for (let i = 1; i <= anyNumb; i++) {
+let allDividers = '1';
+for (let i = 2; i <= anyNumb; i++) {
     if (anyNumb % i === 0) {
-        allDividers.push(i);
+        allDividers = allDividers + ', ' + i;
     }
 }
-alert('Все делители данного числа: ' + allDividers);
+console.log('Все делители данного числа: ' + allDividers);
 
 // Норма
 
@@ -90,9 +90,9 @@ const thirdDigit = ~~(fivedigitNumber / 100) % 10;
 const fourthdDigit = ~~(fivedigitNumber / 1000) % 10;
 const fifthDigit = ~~(fivedigitNumber / 10000) % 10;
 if (firstDigit === fifthDigit && secondDigit === fourthdDigit) {
-    alert(fivedigitNumber + ' полиндром');
+    console.log(fivedigitNumber + ' полиндром');
 } else {
-    alert(fivedigitNumber + ' не полиндром');
+    console.log(fivedigitNumber + ' не полиндром');
 }
 
 // // 2. Запитай у користувача суму покупки і виведи суму до оплати зі знижкою:
@@ -108,7 +108,7 @@ if (200 <= purchaseAmount && purchaseAmount < 300) {
 } else if (500 <= purchaseAmount) {
     afterDiscount = purchaseAmount - (purchaseAmount * 0.07);
 }
-alert('Сумма со скидкой: ' + afterDiscount + ' грн');
+console.log('Сумма со скидкой: ' + afterDiscount + ' грн');
 
 
 // 3.Запитай у користувача 10 чисел і порахуй, скільки він ввів додатніх, від’ємних і нулів. При цьому також порахуй, скільки з них парних і непарних. Виведи статистику на екран.
@@ -116,16 +116,33 @@ alert('Сумма со скидкой: ' + afterDiscount + ' грн');
 
 
 // 4.Зацикли відображення днів тижня таким чином: «День тижня. Хочеш побачити наступний день? » і так до тих пір, поки користувач натискає OK.
-let dayWeek = ['Понедельник',
-    'Вторник',
-    'Среда',
-    'Четверг',
-    'Пятница',
-    'Суббота',
-    'Воскресенье',
-];
-let i = 0;
 
-while (confirm(dayWeek[i % 7] + '. Хотите увидеть следующий день?')) {
+let i = 0;
+let day = 'Понедельник';
+
+while (confirm(day + '. Хотите увидеть следующий день?')) {
     i++;
+    switch (i % 7) {
+        case 0:
+            day = 'Понедельник';
+            break;
+        case 1:
+            day = 'Вторник';
+            break;
+        case 2:
+            day = 'Среда';
+            break;
+        case 3:
+            day = 'Четверг';
+            break;
+        case 4:
+            day = 'Пятница';
+            break;
+        case 5:
+            day = 'Суббота';
+            break;
+        case 6:
+            day = 'Воскресенье';
+            break;
+    }
 }
