@@ -1,0 +1,42 @@
+.header {
+    @include dflex(stretch, center, column);
+}
+
+.header-text {
+
+    &__subtitle {
+        @include font($main-font, 18px, $subtitle_color);
+
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__title {
+        @include font($title-font, 60px, #FFCC00, 900, 66px);
+
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+    }
+
+    &__divider {
+        max-width: 450px;
+        width: 100%;
+        margin: 0 auto;
+        height: 40px;
+        border-bottom: $border_size_defolt solid $border-color;
+        position: relative;
+    }
+}
+
+.divider {
+
+    &__divider-icons {
+        @include abs-position(28px, auto, auto, 218px);
+
+        background-color: white;
+        border: 2px solid white;
+    }
+
+}

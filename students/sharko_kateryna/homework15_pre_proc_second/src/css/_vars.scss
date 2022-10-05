@@ -1,0 +1,37 @@
+$default-width: 1170px;
+
+$gap: 15px;
+
+$border_size_defolt: 1px;
+
+$img_frame_size: 100px;
+
+$main_content_vertical_paddeng: 70px;
+
+
+// colors
+$border-color: #FFCC00;
+$text_color: #666666;
+$subtitle_color: #898F8F;
+
+
+
+// fonts
+$default-font-name: 'Raleway';
+$main-font: $default-font-name,
+    Arial,
+    Helvetica,
+    sans-serif;
+$path-fonts: '../fonts/';
+
+$title-font-name: 'Roboto';
+$title-font: $title-font-name,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+$btn-font-name: 'Open Sans';
+$btn-font: $btn-font-name,
+    Arial,
+    Helvetica,
+    sans-serif;

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+    <main>
+        <section class="add-student-block mb-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="display-2 fw-bolder mb-5">Create course</h2>
+                    </div>
+                </div>
+                <form class="add-student-form" method="post" action="#">
+                    <div class="form-floating mb-4 reqaired">
+                        <input type="text" name="course-name" data-error-message="This fild is reqaired"
+                            class="form-control reqaired" id="courseName" placeholder="Course name" value="">
+                        <label for="courseName">Course name</label>
+                    </div>
+                    <div class="form-floating mb-4 reqaired">
+                        <input type="number" name="duration" data-error-message="This fild is reqaired sdfsdfsd"
+                            class="form-control reqaired" id="duration" placeholder="Course name" value="">
+                        <label for="duration">Duration</label>
+                    </div>
+                    <div class="form-floating mb-4 reqaired">
+                        <input type="date" name="start-date" class="form-control reqaired" id="startDate"
+                            data-error-message="This fild is reqaired sdfsdfsd" placeholder="Course name" value="">
+                        <label for="startDate">Start date</label>
+                    </div>
+                    <div class="form-floating mb-4 reqaired">
+                        <select class="form-select reqaired" data-error-message="This fild is reqaired select"
+                            name="speakers" id="speakers">
+                            <option value="" selected>Select the speaker</option>
+                            <option value="1">Speaker One</option>
+                            <option value="2">Speaker Two</option>
+                            <option value="3">Speaker Three</option>
+                        </select>
+                        <label for="speakers">Speakers</label>
+                    </div>
+                    <div class="form-floating mb-4 d-flex justify-content-between">
+                        <button type="reset" class="btn btn-secondary">Cansel</button>
+                        <button type="submit" class="btn btn-primary">Add Course</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="course-list-block">
+            <div class="container">
+                <div class="row">
+                    <h3 class="col-12 display-4 fw-bolder mb-5">Course list</h3>
+                    <div class="table-responsive">
+                        <table class="table course-list">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Speakers</th>
+                                    <th scope="col">Students</th>
+                                    <th scope="col">Remove Course</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/script-debug.js"></script>
+</body>
+
+</html>

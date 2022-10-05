@@ -1,0 +1,30 @@
+@include font-face('raleway-v28-latin-500', $default-font-name, 500);
+@include font-face('raleway-v28-latin-regular', $default-font-name, 400);
+@include font-face('roboto-v30-latin-900', $title-font-name, 900);
+@include font-face('open-sans-v34-latin-700', 'Open Sans', 700);
+
+body {
+    @include font($main-font);
+}
+
+.container {
+    padding: 120px $gap;
+    margin: 0 auto;
+    max-width: $default-width;
+    box-sizing: border-box;
+}
+
+.row {
+    @include dflex(center);
+
+    margin: 0 (-$gap);
+}
+
+[class*="col-"] {
+    padding: 0 $gap;
+    box-sizing: border-box;
+}
+
+.col-6 {
+    width: 50%;
+}

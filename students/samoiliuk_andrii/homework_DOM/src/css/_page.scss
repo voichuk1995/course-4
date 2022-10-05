@@ -1,0 +1,77 @@
+.page {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+
+    &__main {}
+}
+
+.main {
+    &__container {}
+
+    &__row {
+        align-items: stretch;
+    }
+}
+
+.name {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.rating {
+
+    width: 100px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+
+    &__gray {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url("../images/star-grey.svg");
+        background-position: left center;
+        background-repeat: repeat;
+        background-size: contain;
+    }
+
+
+    &__yellow {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        background-image: url("../images/star-yellow.svg");
+        background-position: left center;
+        background-repeat: repeat;
+        background-size: contain;
+
+        &_5 {
+            width: 100%;
+        }
+
+        &_4 {
+            width: 80%;
+        }
+
+        &_3 {
+            width: 60%;
+        }
+
+        &_2 {
+            width: 40%;
+        }
+
+        &_1 {
+            width: 20%;
+        }
+    }
+}

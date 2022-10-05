@@ -1,0 +1,42 @@
+.h2 {
+    text-transform: uppercase;
+
+    &__main-header {
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 66px;
+        color: $color_contrast;
+        padding-bottom: 40px;
+    }
+
+    &__subheader {
+        font-family: "Raleway", Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: $color_upper_title;
+        padding-bottom: 15px;
+    }
+}
+
+.bonefire-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__image {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+.bonefire-img::before,
+.bonefire-img::after {
+    content: ' ';
+    box-sizing: border-box;
+    display: inline-block;
+    width: calc($grid_content-max-width / 100 * 18);
+    height: 1px;
+    border-bottom: 1px solid $color_contrast;
+}

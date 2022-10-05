@@ -1,0 +1,68 @@
+@include font-face('roboto-v30-latin-regular');
+@include font-face($_font-file: 'roboto-v30-latin-700', $_font-name: $default-font-name, $_font-weight: 700, $_font-style: normal);
+@include grid();
+
+.test {
+    background-color: red;
+    padding: 15px;
+}
+
+body {
+    background-color: $bg-color-body;
+    font-family: $main-font;
+}
+
+.container {
+    max-width: $default-width;
+    margin: 0 auto;
+    padding: 0 $gap;
+}
+
+.title {
+    width: 700px;
+    color: aqua;
+    font-size: 45px;
+
+    @media screen and (max-width: 600px) {
+        background-color: bisque;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        color: green;
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .title {
+        color: red;
+    }
+}
+
+.r {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background-color: black;
+
+    @include media(md) {
+        top: 0;
+        transform: translateX(-50%);
+    }
+
+    @include media() {
+        top: unset;
+        bottom: 0;
+    }
+}
+
+.header__login-block {
+    @include media(sm) {
+        display: none;
+    }
+}

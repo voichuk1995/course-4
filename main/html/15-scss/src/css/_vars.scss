@@ -1,0 +1,18 @@
+// colors
+$color-red: red;
+$color-black: black;
+$color-white: white;
+
+$bg-color-body: $color-white;
+
+// fonts
+$default-font-name: 'Roboto';
+$main-font: $default-font-name,
+Arial,
+Helvetica,
+sans-serif;
+$path-fonts: '../fonts/';
+
+$gap: 15px;
+
+$default-width: 1200px;

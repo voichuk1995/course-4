@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('./fonts/open-sans-v29-latin-ext_latin-regular.woff2') format('woff2'),
+         url('./fonts/open-sans-v29-latin-ext_latin-regular.woff') format('woff');
+  }
+ 
+  @font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('./fonts/open-sans-v29-latin-ext_latin-700.woff2') format('woff2'),
+         url('./fonts/open-sans-v29-latin-ext_latin-700.woff') format('woff');
+  }
+
+body {
+    font-family:'Open Sans', Arial, Helvetica, sans-serif;
+ }
+header li{
+   display: inline-block;   
+   font-size: 18px;
+   color: #828282;  
+}
+ul{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.name{
+    color:#070707;
+}
+h1{
+    font-size: 48px;
+    font-style: normal;
+    color: #070707;
+}
+.name>li {
+    display: inline-block;
+}
+h2{
+    font-size: 34px;
+    font-style: normal;
+    color: #070707;
+    line-height: 46px;
+}
+p{
+    font-size: 18px;
+    color: #070707;    
+}
+h3{
+    font-size: 14px;
+    color:#828282;
+}
+section{
+    text-align: center;
+}
+
+.icon>li {
+    display: inline-block;
+}
+button{
+    font-size: 18px;
+    color: #ffffff; 
+    background-color: Black;   
+}
+.footer{
+    text-align: center;
+}

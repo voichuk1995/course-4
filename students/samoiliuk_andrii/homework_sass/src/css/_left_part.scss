@@ -1,0 +1,40 @@
+.border-right {
+    border-right: 1px solid $color_contrast;
+}
+
+img.img-author {
+    position: relative;
+    z-index: 200;
+    border: 1px solid $color_contrast;
+}
+
+div.image-container {
+    z-index: 100;
+    padding: calc($grid_gap / 2);
+    border: 1px solid $color_contrast;
+    position: relative;
+}
+
+.image-container::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 57.5%;
+    height: 110%;
+    background-color: $color_bg;
+}
+
+.image-container::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    height: 57.5%;
+    background-color: $color_bg;
+}

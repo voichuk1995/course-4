@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .menu {
+            display: flex;
+        } */
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, .7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.open {
+            display: flex;
+        }
+
+        .modal__window {
+            background-color: white;
+            min-width: 320px;
+        }
+
+        .modal__content,
+        .modal__footer {
+            padding: 10px 15px;
+        }
+
+        .modal__footer {
+            border-top: 1px solid lightgray;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav id="menu" title="ffff" data-nav="5">
+        <h2>previous</h2>
+        <ul class="menu">
+            <li class="menu__item"><a href="https://www.google.com/" class="menu__link"><span>Home</span></a></li>
+            <li class="menu__item"><a href="#2" class="menu__link"><span>Text</span></a></li>
+            <li class="menu__item"><a href="#3" class="menu__link"><span>Form</span></a></li>
+            <li class="menu__item"><a href="#4" class="menu__link"><span>Sing <span>in</span></span></a></li>
+            <li class="menu__item"><a href="#5" class="menu__link"><span>Sing <span>up</span></span></a></li>
+        </ul>
+        <h2>next</h2>
+    </nav>
+    <button class="my-first-button">button</button>
+    <button class="modal-open">Open</button>
+    <div class="modal">
+        <div class="modal__window">
+            <div class="modal__content">
+                <p>sdfgdfgdfgdgf</p>
+            </div>
+            <div class="modal__footer">
+                <button class="modal__close close"><span>Close</span></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script-debug.js"></script>
+</body>
+
+</html>
