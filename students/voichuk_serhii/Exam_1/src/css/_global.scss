@@ -1,0 +1,54 @@
+@include grid();
+
+@import './vars';
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+
+.theme{
+    @extend %transition;
+}
+
+body{
+    font-family: $default-font-name;
+}
+
+.container {
+    max-width: $default-width;
+    margin: 0 auto;
+    padding: 0 $gap;
+}
+
+.light{
+    @extend %span-light;
+}
+
+.link {
+    @extend %link-light;
+    transition: all ease-in-out .4s;
+
+    &:hover{
+        @extend %hover-link-light;
+
+        &::before{
+            background-color: $link-bg-light-hover;
+        }
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        background-color: $link-bg-light;
+        bottom: -3px;
+        left: 10px;
+        width: calc(100% - 3px);
+        height: 13px; 
+        transition: all ease-in-out .4s;
+    }
+}
