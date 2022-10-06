@@ -1,0 +1,131 @@
+.promises {
+
+    &__wrapper {
+        @extend %df;
+        flex-wrap: nowrap;
+        position: relative;
+    }
+
+
+    &__img {
+        img {
+            width: 100%;
+        }
+    }
+
+
+    &__content {
+        width: 100%;
+        max-width: 770px;
+        background-color: $bg-block-light;
+        padding: 75px 0 75px 70px;
+        position: absolute;
+        right: 0;
+        top: 45px;
+        @extend %df;
+        align-items: flex-start;
+        @extend %transition;
+
+        @media screen and (max-width: 992px) {
+            max-width: 650px;
+            padding: 65px 0 65px 70px;
+            top: 80px;
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            left: 50%;
+            top: 50%;
+            max-width: 420px;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+
+    &__content-box {
+        max-width: 300px;
+        width: 100%;
+
+        &:nth-child(1),
+        &:nth-child(2){
+            margin-bottom: 70px;
+
+            @media screen and (max-width: 768px) {
+                margin-bottom: 20px;
+            }
+
+            @media screen and (max-width: 576px) {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            max-width: 250px;
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 576px) {
+            margin-bottom: 10px;
+        }
+    }
+
+
+    &__title {
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 48px;
+        color: $title-light;
+        margin-bottom: 15px;
+        @extend %transition;
+
+        @media screen and (max-width: 992px) {
+            font-size: 22px;
+            line-height: 30px;
+        }
+
+        @media screen and (max-width: 768px) {
+            text-align: center;
+        }
+
+        @media screen and (max-width: 576px) {
+            font-size: 18px;
+            line-height: 20px;
+            margin-bottom: 5px;
+        }
+    }
+    
+
+
+    &__text {
+        @extend %main-text-light;
+
+        @media screen and (max-width: 768px) {
+            text-align: center;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        margin-bottom: unset;
+    }
+}
+
+.link-box{
+    border: 1px solid $dolar-light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 33px 0;
+    @extend %transition;
+
+    @media screen and (max-width: 576px) {
+        padding: 10px 0;
+        border: unset;
+    }
+}
