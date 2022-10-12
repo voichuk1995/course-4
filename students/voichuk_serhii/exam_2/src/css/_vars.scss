@@ -1,0 +1,29 @@
+// colors
+$color-black: black;
+$color-white: white;
+$color-gray: #2C4058;;
+
+$bg-color-body: $color-white;
+
+// fonts
+
+$def-font: 'Montserrat';
+
+// $default-font-name: 'Montserrat';
+// $main-font: $default-font-name,
+// Arial,
+// Helvetica,
+// sans-serif;
+// $path-fonts: '../fonts/';
+
+$gap: 15px;
+
+$default-width: 1200px;
+
+$breack-points: ("lg": 1200px,
+    "md": 1024px,
+    "sm": 768px,
+    "xs": 576px,
+    "xxs": 480px);
+
+$transition: all .4s ease-in-out;

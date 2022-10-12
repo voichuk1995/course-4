@@ -1,0 +1,110 @@
+.hero-swiper{
+    background-image: url(../images/hero_bg.png);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+
+    &__title{
+        font-family: $def-font;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 98px;
+        letter-spacing: 0.1em;
+        color: $color-white;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+
+    &__subtitle{
+        font-family: $def-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.3em;
+        color: $color-white;
+        margin: 0;
+
+    }
+
+
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.swiper-pagination {
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    left: auto; 
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+    width: unset;
+    left: unset;
+    bottom: unset;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, 
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    border: 1px solid $color-white;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    margin-bottom: 40px;
+
+    &:last-child{
+        margin-bottom: unset;
+    }
+}
+
+
+.hero-arrow{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    cursor: pointer; 
+}

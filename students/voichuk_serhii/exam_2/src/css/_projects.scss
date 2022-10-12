@@ -1,0 +1,127 @@
+.projects{
+    padding-top: 130px;
+
+    &__wraper{
+        justify-content: space-between;
+        margin-bottom: 177px;
+
+        &:last-child{
+            margin-bottom: 150px;
+        }
+    }
+
+    &__title{
+        font-family: $def-font;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 54px;
+        text-align: center;
+        color: $color-gray;
+        position: relative;
+        margin: 0 0 147px;
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 1px;
+            background-color: $color-gray;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+
+    &__image-left{
+        position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 585px;
+            height: 470px;
+            background-color: #55B7FF;
+            top: 0;
+            left: 0;
+
+        }
+        
+        
+    }
+
+    &__image-right{
+        margin-left: 70px;
+        position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 585px;
+            height: 470px;
+            background-color: #7E5AFF;
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+
+
+
+.content{
+    padding: 94px 0 26px;
+
+    &__uptitle{
+        font-family: $def-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 27px;
+        color: $color-gray;
+    }
+
+    &__title{
+        font-family: $def-font;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 54px;
+        color: $color-gray;
+        margin-bottom: 19px;
+    }
+
+    &__subtitle{
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        color: $color-gray;
+        margin-bottom: 40px;
+    }
+
+    &__map{
+        margin-top: 77px;
+        margin-left: 19px;
+        font-family: 'Open Sans';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: $color-black;
+        position: relative;
+
+        &::before{
+            content: url(../images/project_geometka.svg);
+            position: absolute;
+            width: 9px;
+            height: 17px;
+            left: -19px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+}
