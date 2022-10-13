@@ -1291,3 +1291,127 @@ template {
   width: 100%;
   margin: 0 auto;
 }
+.gallery {
+  padding: 180px 0 150px;
+}
+.gallery__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 54px;
+  text-align: center;
+  color: #2C4058;
+  position: relative;
+  margin: 0 0 90px;
+}
+.gallery__title::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  background-color: #2C4058;
+  top: -30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.gallery__link {
+  margin-top: 76px;
+  margin-bottom: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.gallery-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: -5px;
+}
+
+.glightbox {
+  text-decoration: none;
+  display: block;
+  line-height: 0;
+  max-width: 50%;
+}
+
+.gallery-box__big {
+  width: 50%;
+}
+.gallery-box__big .glightbox {
+  max-width: unset;
+}
+
+.gallery-box__small {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.gallery-box__bottom {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.glight-image {
+  padding: 5px;
+}
+
+.contact {
+  height: 700px;
+  position: relative;
+}
+.contact__wraper {
+  position: absolute;
+  width: 770px;
+  height: 450px;
+  background: white;
+  padding: 90px 60px 70px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: -150px;
+}
+.contact__title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 54px;
+  text-align: center;
+  color: #2C4058;
+  position: relative;
+  margin: 0 0 45px;
+}
+.contact__title::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  background-color: #2C4058;
+  top: -30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+#map {
+  height: 700px;
+  width: 100%;
+}

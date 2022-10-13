@@ -1,0 +1,43 @@
+.contact{
+    height: 700px;
+    position: relative;
+
+    &__wraper{
+        position: absolute;
+        width: 770px;
+        height: 450px;
+        background: $color-white;
+        padding: 90px 60px 70px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -150px;
+    }
+
+    &__title{
+        font-family: $def-font;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 54px;
+        text-align: center;
+        color: $color-gray;
+        position: relative;
+        margin: 0 0 45px;
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 1px;
+            background-color: $color-gray;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+#map{
+    height: 700px;
+    width: 100%;
+}
