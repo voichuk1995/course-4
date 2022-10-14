@@ -1,0 +1,34 @@
+.footer{
+    background-image: url(../images/footer_bg.jpg);
+    background-size: cover;
+    padding: 203px 0 234px;
+
+    &__wraper{
+        width: 100%;
+        max-width: 770px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__copyrights{
+        margin-top: 41px;
+        font-family: $def-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: $color-white;
+    }
+
+    &__go-top{
+
+    }
+
+    &__arrow-svg{
+        transform: rotate(180deg);
+        position: fixed;
+        right: 25px;
+        bottom: 25px;
+    }
+}
