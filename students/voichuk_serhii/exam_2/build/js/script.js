@@ -78,14 +78,60 @@ function myForm() {
     }
     function _formSend() {
       _formSend = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(e) {
-        var error;
+        var error, formData, contactWrapper, response, result, nameError, emailError;
         return _regeneratorRuntime().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 e.preventDefault();
                 error = formValidate(form);
-              case 2:
+                formData = new FormData(form);
+                contactWrapper = document.querySelector(".contact__wraper");
+                if (!(error === 0)) {
+                  _context.next = 22;
+                  break;
+                }
+                contactWrapper.classList.add("sending");
+                _context.next = 8;
+                return fatch("sendmale.php", {
+                  method: "POST",
+                  body: formData
+                });
+              case 8:
+                response = _context.sent;
+                if (!response.ok) {
+                  _context.next = 18;
+                  break;
+                }
+                _context.next = 12;
+                return response.json();
+              case 12:
+                result = _context.sent;
+                alert(result.message);
+                form.reset();
+                contactWrapper.classList.remove("sending");
+                _context.next = 20;
+                break;
+              case 18:
+                alert("Помилка!");
+                contactWrapper.classList.remove("sending");
+              case 20:
+                _context.next = 27;
+                break;
+              case 22:
+                nameError = document.querySelector(".name");
+                emailError = document.querySelector(".email");
+                if (nameError.value === "") {
+                  nameError.setAttribute("placeholder", "Введіть ваше ім'я");
+                }
+                ;
+                if (emailError.value === "") {
+                  emailError.setAttribute("placeholder", "Введіть вашу пошту");
+                } else {
+                  emailError.value = "";
+                  emailError.setAttribute("placeholder", "Ваша пошта невірна");
+                }
+              case 27:
               case "end":
                 return _context.stop();
             }
@@ -112,6 +158,7 @@ function myForm() {
           }
         }
       }
+      return error;
     }
     function formAddError(input) {
       input.parentElement.classList.add("error");
@@ -124,8 +171,7 @@ function myForm() {
 
     // Validate email
     function validateEmail(input) {
-      var EMAIL_REQ = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-      return EMAIL_REQ.test(String(input).toLowerCase());
+      return !/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/.test(input.value);
     }
   });
 }
@@ -141,6 +187,10 @@ function myForm() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "gallery": function() { return /* binding */ gallery; },
+/* harmony export */   "seeMoreButton": function() { return /* binding */ seeMoreButton; }
+/* harmony export */ });
 function gallery() {
   var lightbox = GLightbox({
     selector: ".glightbox",
@@ -160,7 +210,16 @@ function gallery() {
   });
 }
 ;
-/* harmony default export */ __webpack_exports__["default"] = (gallery);
+function seeMoreButton() {
+  var buttonSeeMore = document.querySelector(".see-more");
+  var galeryBoxBoottom = document.querySelector(".gallery-box__bottom");
+  buttonSeeMore.addEventListener("click", function (e) {
+    e.preventDefault();
+    galeryBoxBoottom.classList.add("open");
+    this.classList.add("hidden");
+  });
+}
+
 
 /***/ }),
 
@@ -260,7 +319,8 @@ __webpack_require__.r(__webpack_exports__);
 
 (0,_headerSwiper__WEBPACK_IMPORTED_MODULE_0__["default"])();
 (0,_newsSlicker__WEBPACK_IMPORTED_MODULE_1__["default"])();
-(0,_gallery__WEBPACK_IMPORTED_MODULE_2__["default"])();
+(0,_gallery__WEBPACK_IMPORTED_MODULE_2__.gallery)();
+(0,_gallery__WEBPACK_IMPORTED_MODULE_2__.seeMoreButton)();
 (0,_form__WEBPACK_IMPORTED_MODULE_4__["default"])();
 
 /***/ }),

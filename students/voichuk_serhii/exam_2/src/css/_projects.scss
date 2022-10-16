@@ -1,9 +1,11 @@
 .projects{
     padding-top: 130px;
+    position: relative;
 
     &__wraper{
         justify-content: space-between;
         margin-bottom: 177px;
+        
 
         &:last-child{
             margin-bottom: 150px;
@@ -33,38 +35,40 @@
         }
     }
 
+    &__img{
+        z-index: 1;
 
-    &__image-left{
-        position: relative;
-
-        &::before{
-            content: "";
-            position: absolute;
-            width: 585px;
-            height: 470px;
-            background-color: #55B7FF;
-            top: 0;
-            left: 0;
-
-        }
-        
-        
     }
 
     &__image-right{
         margin-left: 70px;
-        position: relative;
-
-        &::before{
-            content: "";
-            position: absolute;
-            width: 585px;
-            height: 470px;
-            background-color: #7E5AFF;
-            top: 0;
-            right: 0;
-        }
     }
+}
+
+.bg-fon{
+    
+    &::before{
+        content: "";
+        position: absolute;
+        width: calc(52% - 260px);
+        height: 470px;
+        background-color: #55B7FF;
+        top: 274px;
+        left: 0;
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        width: calc(52% - 260px);
+        height: 470px;
+        background-color: #7E5AFF;
+        bottom: 57px;
+        right: 0;
+        z-index: -1;
+    }
+    
+
 }
 
 

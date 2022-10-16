@@ -13,15 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-
-
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
-
-    
-    
-
     <link rel="stylesheet" href="css/style.css">
 
     
@@ -122,7 +115,7 @@
       </div>
       <div class="swiper-pagination"></div>
     </div>
-    <div class="hero-arrow">
+    <a href="#projects" class="hero-arrow">
       <svg class="hero-arrow__svg" width="42" height="40" viewBox="0 0 42 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M24.9048 19.111C24.9606 19.1669 24.9885 19.231 24.9885 19.3036C24.9885 19.3761 24.9606 19.4403 24.9048 
         19.4961L21.0041 23.3968C20.9483 23.4526 20.8841 23.4805 20.8116 23.4805C20.7391 23.4805 20.6749 23.4526 20.6191 
@@ -133,10 +126,10 @@
         <path opacity="0.7" d="M40.5447 20C40.5447 30.7685 31.7958 39.5 21.0011 39.5C10.2064 39.5 1.45746 30.7685 
         1.45746 20C1.45746 9.23147 10.2064 0.5 21.0011 0.5C31.7958 0.5 40.5447 9.23147 40.5447 20Z" stroke="white"/>
       </svg> 
-    </div>
+    </a>
   </section>
 
-  <section class="projects" id="projects">
+  <section class="projects bg-fon" id="projects">
     <div class="container">
       <h2 class="projects__title">WHAT WE DO</h2>
         <div class="projects__wraper row">
@@ -164,7 +157,7 @@
             <a href="#" class="link-box">MORE DETAILS</a>
             <p class="content__map">Hong Kong - 1588 feet</p>
           </div>
-          <div class="projects__img col-7">
+          <div class="projects__image col-7">
             <img src="./images/projects_right.jpg" alt="" class="projects__image-right">
           </div>
         </div>
@@ -269,7 +262,7 @@
       <div class="gallery-box">
         <div class="gallery-box__big">
           <a href="images/gallery_1.jpeg" class="glightbox">
-            <img src="images/gallery_1.jpeg" alt="image" class="glight-image"/>
+            <img src="images/gallery_1.jpeg" alt="image" class="glight-image big"/>
           </a>
         </div>
         <div class="gallery-box__small">
@@ -302,7 +295,7 @@
         </div>
       </div>
       <div class="gallery__link">
-        <a href="#" class="link-box">SEE MORE</a>
+        <a href="#" class="link-box see-more">SEE MORE</a>
       </div>
     </div>
   </section>
@@ -312,7 +305,7 @@
     <div class="container">
       <div class="contact__wraper">
         <h2 class="contact__title">GET IN TOUCH</h2>
-        <form action="#" class="contact__form form" id="form">
+        <form action="#" class="contact__form form" id="form" novalidate>
           <div class="form__info">
             <a href="https://www.google.com.ua/maps/place/I-91,+United+States/@43.3264813,-72.6166777,8.27z/data=!4m5!3m4!1s0x89e1a4f0987bdbcb:0x98fbb99b83dd358c!8m2!3d43.1595493!4d-72.4672609?hl=en" 
               class="form__info-item" target="_blank">91 Nolan Extensions Suite 670</a>
@@ -321,7 +314,7 @@
             <span class="form__info-item">From 07:05AM to 19:30PM</span>
           </div>
           <div class="form__enter">
-            <input type="text" class="form__enter-input req" placeholder="Name">
+            <input type="text" class="form__enter-input req name" placeholder="Name">
             <input type="email" class="form__enter-input req email" placeholder="Email">
             <button type="submit" class="form__enter-submit">SUBMIT</button>
           </div>
