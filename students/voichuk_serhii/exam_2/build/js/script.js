@@ -274,6 +274,36 @@ function headerSwiper() {
 
 /***/ }),
 
+/***/ "./src/js/_myScroll.js":
+/*!*****************************!*\
+  !*** ./src/js/_myScroll.js ***!
+  \*****************************/
+/***/ (function() {
+
+// function myScroll(){
+
+//     const body = document.querySelector('body');
+
+//     body.addEventListener('scroll', () => { 
+//         let scrollTop = body.scrollHeight;
+//         console.log(scrollTop);
+//     });
+
+//     let headerWrapper = document.querySelector('.header-wrapper');
+//     console.log(headerWrapper);
+
+//     if(scrollTop >= 100){
+//         headerWrapper.classList.add('hide');
+//     }else{    
+//         headerWrapper.classList.remove('hide');
+//     }
+
+// }
+
+// export default myScroll;
+
+/***/ }),
+
 /***/ "./src/js/_newsSlicker.js":
 /*!********************************!*\
   !*** ./src/js/_newsSlicker.js ***!
@@ -290,8 +320,7 @@ function newsSlicker() {
       slidesToScroll: 1,
       // autoplay: true,
       autoplaySpeed: 4000,
-      dots: true,
-      dotsClass: 'slick-dots'
+      dots: true
     });
   });
 }
@@ -312,6 +341,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _gallery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_gallery */ "./src/js/_gallery.js");
 /* harmony import */ var _googleMaps__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_googleMaps */ "./src/js/_googleMaps.js");
 /* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_form */ "./src/js/_form.js");
+/* harmony import */ var _myScroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_myScroll */ "./src/js/_myScroll.js");
+/* harmony import */ var _myScroll__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_myScroll__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
@@ -322,6 +354,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_gallery__WEBPACK_IMPORTED_MODULE_2__.gallery)();
 (0,_gallery__WEBPACK_IMPORTED_MODULE_2__.seeMoreButton)();
 (0,_form__WEBPACK_IMPORTED_MODULE_4__["default"])();
+_myScroll__WEBPACK_IMPORTED_MODULE_5___default()();
 
 /***/ }),
 
@@ -5820,6 +5853,7 @@ handlePrototype(DOMTokenListPrototype, 'DOMTokenList');
 /******/ 	__webpack_require__("./src/js/_gallery.js");
 /******/ 	__webpack_require__("./src/js/_googleMaps.js");
 /******/ 	__webpack_require__("./src/js/_headerSwiper.js");
+/******/ 	__webpack_require__("./src/js/_myScroll.js");
 /******/ 	__webpack_require__("./src/js/_newsSlicker.js");
 /******/ 	var __webpack_exports__ = __webpack_require__("./src/js/script.js");
 /******/ 	

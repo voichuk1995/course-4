@@ -26,10 +26,6 @@
         }
     }
 
-    &__card {
-        
-
-    }
 }
 
 .slick-clider {
@@ -44,14 +40,6 @@
     max-width: 370px;
     width: 100%;
     padding-bottom: 20px;
-
-
-
-
-    &__img {
-        
-    }
-
 
     &__title {
         font-family: $def-font;
@@ -117,41 +105,56 @@
     position: relative;
 }
 
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
 .slick-prev{
     background-color: transparent;
+    left: 0;
 
     &::before{
         content: url(../images/hero_arrow.svg);
-        transform: rotate(90deg) translateX(-50%) translateY(-50%);
+        transform: rotate(90deg) translateY(50%);
         position: absolute;
-        bottom: 50%;
-        left: -100px;
+        bottom: 0;
+        left: -60px;
         cursor: pointer;
     }
 }
 
 .slick-next{
     background-color: transparent;
+    right: 0;
 
     &::before{
         content: url(../images/hero_arrow.svg);
-        transform: rotate(-90deg) translateX(-50%);
+        transform: rotate(-90deg) translateY(50%);
         position: absolute;
-        bottom: 50%;
-        right: -100px;
+        bottom: 0;
+        right: -60px;
         cursor: pointer;
     }
 }
 
 .slick-dots{
-    display: flex;
-    max-width: 210px;
-    width: 100%;
-    margin: 0 auto;
+   bottom: -65px;
+  
+}
 
-    li{
-        button{
-            
-        }
-    }
+
+.slick-dots li button:before{
+    content: "";
+    font-style: 0;
+    border: 1px solid $color-white;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    opacity: .7;
+}
+
+.slick-dots li.slick-active button:before{
+    opacity: 1;
+    background-color: $color-white;
 }

@@ -848,6 +848,11 @@ html {
   top: 0;
   left: 0;
   z-index: 2;
+  background-color: rgba(137, 150, 246, 0.6);
+  padding-top: 53px;
+  padding-bottom: 53px;
+  -webkit-backdrop-filter: blur(9px);
+  backdrop-filter: blur(9px);
 }
 .header__wraper {
   display: -webkit-box;
@@ -856,7 +861,6 @@ html {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 53px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1004,6 +1008,19 @@ html {
   left: auto;
 }
 
+.swiper-pagination-bullet {
+  border: 1px solid white;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  opacity: 1;
+  margin-bottom: 40px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: white;
+}
+
 .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
   width: unset;
   left: unset;
@@ -1013,19 +1030,6 @@ html {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
-
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  border: 1px solid white;
-  width: 10px;
-  height: 10px;
-  background-color: transparent;
-  margin-bottom: 40px;
-}
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet:last-child,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:last-child {
-  margin-bottom: unset;
 }
 
 .hero-arrow {
@@ -1182,6 +1186,7 @@ html {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+
 .slick-clider {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1261,42 +1266,60 @@ html {
   position: relative;
 }
 
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
 .slick-prev {
   background-color: transparent;
+  left: 0;
 }
 .slick-prev::before {
   content: url(../images/hero_arrow.svg);
-  -webkit-transform: rotate(90deg) translateX(-50%) translateY(-50%);
-  -ms-transform: rotate(90deg) translateX(-50%) translateY(-50%);
-  transform: rotate(90deg) translateX(-50%) translateY(-50%);
+  -webkit-transform: rotate(90deg) translateY(50%);
+  -ms-transform: rotate(90deg) translateY(50%);
+  transform: rotate(90deg) translateY(50%);
   position: absolute;
-  bottom: 50%;
-  left: -100px;
+  bottom: 0;
+  left: -60px;
   cursor: pointer;
 }
 
 .slick-next {
   background-color: transparent;
+  right: 0;
 }
 .slick-next::before {
   content: url(../images/hero_arrow.svg);
-  -webkit-transform: rotate(-90deg) translateX(-50%);
-  -ms-transform: rotate(-90deg) translateX(-50%);
-  transform: rotate(-90deg) translateX(-50%);
+  -webkit-transform: rotate(-90deg) translateY(50%);
+  -ms-transform: rotate(-90deg) translateY(50%);
+  transform: rotate(-90deg) translateY(50%);
   position: absolute;
-  bottom: 50%;
-  right: -100px;
+  bottom: 0;
+  right: -60px;
   cursor: pointer;
 }
 
 .slick-dots {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 210px;
-  width: 100%;
-  margin: 0 auto;
+  bottom: -65px;
 }
+
+.slick-dots li button:before {
+  content: "";
+  font-style: 0;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  opacity: 0.7;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  background-color: white;
+}
+
 .gallery {
   padding: 180px 0 150px;
 }
