@@ -4,16 +4,24 @@
   top: 0;
   left: 0;
   z-index: 2;
-  background-color: rgba(137, 150, 246, 0.6);
   padding-top: 53px;
-  padding-bottom: 53px;
+  padding-bottom: 30px;
   backdrop-filter: blur(9px);
+  transition: all ease .4s;
+
+
+  &.hide{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(137, 150, 246, 0.6);
+  }
 
   &__wraper{
     display: flex;
     justify-content: space-between;
-    
     align-items: center;
+
+
   }
 
   &__menu{
@@ -22,6 +30,7 @@
     align-items: center;
   }
 }
+
 
 .menu{
 

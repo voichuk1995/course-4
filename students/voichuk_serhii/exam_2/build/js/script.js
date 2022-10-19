@@ -278,29 +278,30 @@ function headerSwiper() {
 /*!*****************************!*\
   !*** ./src/js/_myScroll.js ***!
   \*****************************/
-/***/ (function() {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-// function myScroll(){
-
-//     const body = document.querySelector('body');
-
-//     body.addEventListener('scroll', () => { 
-//         let scrollTop = body.scrollHeight;
-//         console.log(scrollTop);
-//     });
-
-//     let headerWrapper = document.querySelector('.header-wrapper');
-//     console.log(headerWrapper);
-
-//     if(scrollTop >= 100){
-//         headerWrapper.classList.add('hide');
-//     }else{    
-//         headerWrapper.classList.remove('hide');
-//     }
-
-// }
-
-// export default myScroll;
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function myScroll() {
+  window.addEventListener('scroll', function () {
+    var scrolltop = scrollY;
+    var header = document.querySelector('.header');
+    var arrowTop = document.querySelector('.footer__go-top');
+    if (scrolltop >= 370) {
+      header.classList.add('hide');
+    } else {
+      header.classList.remove('hide');
+    }
+    ;
+    if (scrolltop >= 22) {
+      arrowTop.classList.add('hide-arrow');
+    } else {
+      arrowTop.classList.remove('hide-arrow');
+    }
+    ;
+  });
+}
+/* harmony default export */ __webpack_exports__["default"] = (myScroll);
 
 /***/ }),
 
@@ -342,7 +343,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _googleMaps__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_googleMaps */ "./src/js/_googleMaps.js");
 /* harmony import */ var _form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./_form */ "./src/js/_form.js");
 /* harmony import */ var _myScroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./_myScroll */ "./src/js/_myScroll.js");
-/* harmony import */ var _myScroll__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_myScroll__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
@@ -354,7 +354,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_gallery__WEBPACK_IMPORTED_MODULE_2__.gallery)();
 (0,_gallery__WEBPACK_IMPORTED_MODULE_2__.seeMoreButton)();
 (0,_form__WEBPACK_IMPORTED_MODULE_4__["default"])();
-_myScroll__WEBPACK_IMPORTED_MODULE_5___default()();
+(0,_myScroll__WEBPACK_IMPORTED_MODULE_5__["default"])();
 
 /***/ }),
 
