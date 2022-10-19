@@ -917,6 +917,9 @@ html {
 .menu__link:last-child {
   margin-right: unset;
 }
+.menu__link--active::before {
+  background-color: white;
+}
 
 .social__link {
   width: 40px;

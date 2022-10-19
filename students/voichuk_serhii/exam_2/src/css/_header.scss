@@ -52,8 +52,6 @@
       }
     }
 
-    
-
     &::before{
       content: "";
       position: absolute;
@@ -69,6 +67,13 @@
 
     &:last-child{
       margin-right: unset;
+    }
+  }
+
+  &__link--active{
+
+    &::before {
+      background-color: $color-white;
     }
   }
 }
