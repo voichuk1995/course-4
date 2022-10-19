@@ -1467,7 +1467,6 @@ html {
 .contact__wraper {
   position: absolute;
   width: 770px;
-  height: 450px;
   background: white;
   padding: 90px 60px 70px;
   left: 50%;
@@ -1521,6 +1520,11 @@ html {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
+.contact__img {
+  width: 17px;
+  height: 17px;
+  margin-right: 10px;
+}
 
 #map {
   height: 700px;
@@ -1536,8 +1540,8 @@ html {
   justify-content: space-between;
 }
 .form__info {
-  width: 268px;
-  margin-right: 54px;
+  width: 293px;
+  margin-right: 47px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1555,6 +1559,9 @@ html {
   font-size: 18px;
   line-height: 27px;
   margin-bottom: 40px;
+}
+.form__info-item:last-child {
+  margin-bottom: 0;
 }
 .form__enter {
   width: 310px;

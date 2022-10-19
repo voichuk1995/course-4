@@ -2,10 +2,11 @@ function myScroll(){
 
     window.addEventListener('scroll', function() {
         const scrollTop = scrollY;
+        console.log(scrollTop);
         
         const header = document.querySelector('.header');
         
-        if(scrollTop >= 370){
+        if(scrollTop >= 650){
             header.classList.add('hide');
         }else{    
             header.classList.remove('hide');

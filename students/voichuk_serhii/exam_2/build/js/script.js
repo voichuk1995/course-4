@@ -285,8 +285,9 @@ __webpack_require__.r(__webpack_exports__);
 function myScroll() {
   window.addEventListener('scroll', function () {
     var scrollTop = scrollY;
+    console.log(scrollTop);
     var header = document.querySelector('.header');
-    if (scrollTop >= 370) {
+    if (scrollTop >= 650) {
       header.classList.add('hide');
     } else {
       header.classList.remove('hide');
