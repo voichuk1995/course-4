@@ -59,7 +59,21 @@
         line-height: 25px;
         color: $color-gray;
         margin: 0 20px 39px;
+        overflow: hidden;
+	    text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        max-width: 330px;
+        width: 100%;
+        
+
     }
+
+    @media screen and (max-width: 1200px){
+        margin: auto;
+    }
+
 }
 
 .user {
@@ -103,6 +117,12 @@
 
 .mySlick{
     position: relative;
+    margin: 0 -15px;
+}
+
+
+.slick-initialized .slick-slide{
+    padding: 0 15px;
 }
 
 .slick-dotted.slick-slider {
@@ -120,6 +140,14 @@
         bottom: 0;
         left: -60px;
         cursor: pointer;
+
+        @media screen and (max-width: 1366px){
+            left: -30px;
+        }
+
+        @media screen and (max-width: 1300px){
+            display: none;
+        }
     }
 }
 
@@ -134,6 +162,14 @@
         bottom: 0;
         right: -60px;
         cursor: pointer;
+
+        @media screen and (max-width: 1366px){
+            right: -30px;
+        }
+
+        @media screen and (max-width: 1300px){
+            display: none;
+        }
     }
 }
 

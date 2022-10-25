@@ -5,6 +5,7 @@
     &__wraper{
         justify-content: space-between;
         margin-bottom: 177px;
+        display: flex;
         
 
         &:last-child{
@@ -37,12 +38,19 @@
 
     &__img{
         z-index: 1;
+        width: 100%;
+
+        // @media screen and (max-width: 1200px){
+            
+        // }
 
     }
 
-    &__image-right{
-        margin-left: 70px;
+    &__img-item{
+        max-width: 630px;
+        width: 100%;
     }
+
 }
 
 .bg-fon{
@@ -76,6 +84,7 @@
 
 .content{
     padding: 94px 0 26px;
+    max-width: 476px;
 
     &__uptitle{
         font-family: $def-font;
@@ -128,4 +137,12 @@
         }
     }
 
+}
+
+.content-right{
+    margin-left: 70px;
+}
+
+.content-left{
+    margin-right: 70px;
 }

@@ -8,6 +8,15 @@ function newsSlicker(){
           // autoplay: true,
           autoplaySpeed: 4000,
           dots: true,
+          responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                slidesToShow: 2,
+                centerMode: true,
+              },
+            },
+          ]
         });
       
     });
