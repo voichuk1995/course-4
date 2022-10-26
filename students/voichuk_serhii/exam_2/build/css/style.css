@@ -1257,6 +1257,15 @@ html {
 .projects__wraper:last-child {
   margin-bottom: 150px;
 }
+@media screen and (max-width: 768px) {
+  .projects__wraper:last-child {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    margin-bottom: 25px;
+  }
+}
 @media screen and (max-width: 1200px) {
   .projects__wraper {
     padding: 0 15px;
@@ -1266,6 +1275,18 @@ html {
   .projects__wraper {
     -ms-flex-pack: distribute;
     justify-content: space-around;
+  }
+}
+@media screen and (max-width: 768px) {
+  .projects__wraper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 10px;
   }
 }
 .projects__title {
@@ -1296,6 +1317,18 @@ html {
     margin: 0 0 75px;
   }
 }
+@media screen and (max-width: 768px) {
+  .projects__title {
+    margin: 0 0 45px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .projects__title {
+    margin: 0 0 30px;
+    font-size: 38px;
+    line-height: 40px;
+  }
+}
 .projects__img-item {
   z-index: 1;
   max-width: 630px;
@@ -1312,6 +1345,16 @@ html {
     max-width: 400px;
   }
 }
+@media screen and (max-width: 768px) {
+  .projects {
+    padding-top: 85px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .projects {
+    padding-top: 60px;
+  }
+}
 
 .bg-fon::before {
   content: "";
@@ -1325,6 +1368,11 @@ html {
 @media screen and (max-width: 992px) {
   .bg-fon::before {
     top: 225px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bg-fon::before {
+    display: none;
   }
 }
 .bg-fon::after {
@@ -1347,6 +1395,11 @@ html {
     bottom: 54px;
   }
 }
+@media screen and (max-width: 768px) {
+  .bg-fon::after {
+    display: none;
+  }
+}
 
 .content {
   padding: 0;
@@ -1364,6 +1417,12 @@ html {
   .content__uptitle {
     font-size: 19px;
     line-height: 27px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .content__uptitle {
+    font-size: 17px;
+    line-height: 24px;
   }
 }
 .content__title {
@@ -1387,6 +1446,14 @@ html {
     line-height: 38px;
   }
 }
+@media screen and (max-width: 480px) {
+  .content__title {
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
 .content__subtitle {
   font-family: "Open Sans";
   font-style: normal;
@@ -1401,6 +1468,18 @@ html {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+}
+@media screen and (max-width: 768px) {
+  .content__subtitle {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .content__subtitle {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 25px;
+  }
 }
 .content__map {
   margin-top: 77px;
@@ -1424,9 +1503,25 @@ html {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+@media screen and (max-width: 480px) {
+  .content__map::before {
+    left: 50%;
+    top: -25px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
 @media screen and (max-width: 1200px) {
   .content__map {
     margin-top: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .content__map {
+    margin-top: 35px;
+    text-align: center;
+    margin-left: unset;
   }
 }
 @media screen and (max-width: 992px) {
@@ -1434,13 +1529,38 @@ html {
     max-width: 430px;
   }
 }
+@media screen and (max-width: 768px) {
+  .content {
+    margin: 30px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
 
 .content-right {
   margin-left: 70px;
 }
+@media screen and (max-width: 768px) {
+  .content-right {
+    margin-left: unset;
+  }
+}
 
 .content-left {
   margin-right: 64px;
+}
+@media screen and (max-width: 768px) {
+  .content-left {
+    margin-right: unset;
+  }
 }
 
 .news {
