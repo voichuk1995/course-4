@@ -12,7 +12,7 @@
         text-align: center;
         color: $color-white;
         position: relative;
-        margin: 0 0 90px;
+        margin-bottom: 90px;
 
         &::before{
             content: "";
@@ -24,7 +24,32 @@
             left: 50%;
             transform: translateX(-50%);
         }
+
+        @media screen and (max-width: 992px){
+            margin-bottom: 70px;
+            font-size: 44px;
+            line-height: 54px;
+        }
+        @media screen and (max-width: 768px){
+            margin-bottom: 50px;
+        }
+        @media screen and (max-width: 480px){
+            margin-bottom: 70px;
+            font-size: 38px;
+            line-height: 40px;
+        }
+
     }
+
+    @media screen and (max-width: 992px){
+        padding: 120px 0 110px;
+
+    }
+    @media screen and (max-width: 768px){
+        padding: 90px 0 90px;
+
+    }
+
 
 }
 
@@ -41,6 +66,10 @@
     width: 100%;
     padding-bottom: 20px;
 
+    &__content{
+        padding: 30px 20px 0;
+    }
+
     &__title {
         font-family: $def-font;
         font-style: normal;
@@ -48,7 +77,16 @@
         font-size: 22px;
         line-height: 27px;
         color: $color-gray;
-        margin: 30px 20px 15px;
+        margin-bottom: 15px;
+
+        @media screen and (max-width: 992px){
+            font-size: 21px;
+            line-height: 25px;
+        }
+        @media screen and (max-width: 768px){
+            font-size: 20px;
+            line-height: 23px;
+        }
     }
 
     &__subtitle {
@@ -58,7 +96,7 @@
         font-size: 18px;
         line-height: 25px;
         color: $color-gray;
-        margin: 0 20px 39px;
+        margin-bottom: 39px;
         overflow: hidden;
 	    text-overflow: ellipsis;
         display: -webkit-box;
@@ -67,7 +105,16 @@
         max-width: 330px;
         width: 100%;
         
-
+        @media screen and (max-width: 992px){
+            font-size: 17px;
+            line-height: 23px;
+            margin-bottom: 30px;
+        }
+        @media screen and (max-width: 768px){
+            font-size: 16px;
+            line-height: 21px;
+            margin-bottom: 25px;
+        }
     }
 
     @media screen and (max-width: 1200px){
@@ -78,9 +125,6 @@
 
 .user {
     display: flex;
-    margin-left: 30px;
-    
-
 
     &__img {
         border-radius: 50%;
@@ -118,6 +162,10 @@
 .mySlick{
     position: relative;
     margin: 0 -15px;
+
+    @media screen and (max-width: 1200px){
+        margin: unset;
+    }
 }
 
 
@@ -188,6 +236,8 @@
     height: 10px;
     background-color: transparent;
     opacity: .7;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .slick-dots li.slick-active button:before{
