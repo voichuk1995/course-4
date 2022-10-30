@@ -31,4 +31,10 @@ html{
     text-decoration: none;
     border: 1px solid $color-gray;
     padding: 16px 41px 17px;
+    transition: all ease .4s;
+
+    &:hover{
+        border: 1px solid #7E5AFF;
+        color: #7E5AFF;
+    }
 }

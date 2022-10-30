@@ -12,5 +12,5 @@ newsSlicker();
 gallery();
 seeMoreButton();
 myForm();
-myScroll();
+myScroll();;
 burger();
